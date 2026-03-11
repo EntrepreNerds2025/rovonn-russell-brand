@@ -29,6 +29,7 @@ const tools = [
 ];
 
 const AITools = () => {
+  const navigate = useNavigate();
   const [emails, setEmails] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState<Record<string, boolean>>({});
   const { mutate, isPending } = useToolSignupSubmit();
