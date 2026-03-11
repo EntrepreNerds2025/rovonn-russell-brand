@@ -165,7 +165,7 @@ const Navbar = () => {
         {/* Services mega menu — full width below nav */}
         {servicesOpen && (
           <div
-            className="hidden lg:block border-t border-border bg-background"
+            className="hidden md:block border-t border-border bg-background"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
