@@ -1,6 +1,7 @@
 import { Bot, BarChart3, Search, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useToolSignupSubmit } from "@/hooks/use-crm-submit";
 
 const tools = [
@@ -28,6 +29,7 @@ const tools = [
 ];
 
 const AITools = () => {
+  const navigate = useNavigate();
   const [emails, setEmails] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState<Record<string, boolean>>({});
   const { mutate, isPending } = useToolSignupSubmit();
@@ -63,7 +65,11 @@ const AITools = () => {
                 <tool.icon size={36} className="text-accent-highlight mx-auto mb-5" />
                 <h2 className="font-serif text-xl font-semibold mb-3 group-hover:text-accent-highlight transition-colors">{tool.title}</h2>
                 <p className="text-sm text-muted-foreground mb-6 leading-relaxed">{tool.desc}</p>
-                {submitted[tool.toolName] ? (
+                {tool.toolName === "impact_story_diagnostic" ? (
+                  <Button variant="hero" className="w-full" size="default" onClick={() => navigate("/diagnostic")}>
+                    {tool.cta} <ArrowRight className="ml-2" size={14} />
+                  </Button>
+                ) : submitted[tool.toolName] ? (
                   <p className="text-sm text-accent-highlight font-semibold">✓ You're signed up!</p>
                 ) : (
                   <div className="space-y-3">
