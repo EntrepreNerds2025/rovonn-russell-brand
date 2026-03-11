@@ -57,8 +57,16 @@ const Navbar = () => {
     timeoutRef.current = setTimeout(() => setServicesOpen(false), 200);
   };
 
+  const isHome = location.pathname === "/";
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all ${
+        isHome
+          ? "bg-background/80 backdrop-blur-md"
+          : "bg-background border-b border-border shadow-sm"
+      }`}
+    >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12 h-16 md:h-20">
         <Link to="/" className="font-serif text-lg md:text-xl font-bold tracking-tight text-foreground">
           ROVONN <span className="text-accent-highlight">RUSSELL</span>
