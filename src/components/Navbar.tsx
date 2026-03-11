@@ -117,7 +117,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop links */}
-          <div className="hidden lg:flex items-center gap-7">
+          <div className="hidden md:flex items-center gap-7">
             {navLinks.map((link) =>
               link.hasDropdown ? (
                 <button
@@ -157,7 +157,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile toggle */}
-          <button onClick={() => setOpen(!open)} className="lg:hidden text-foreground">
+          <button onClick={() => setOpen(!open)} className="md:hidden text-foreground">
             {open ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -165,7 +165,7 @@ const Navbar = () => {
         {/* Services mega menu — full width below nav */}
         {servicesOpen && (
           <div
-            className="hidden lg:block border-t border-border bg-background"
+            className="hidden md:block border-t border-border bg-background"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
@@ -244,7 +244,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {open && (
-        <div className="fixed top-16 left-0 right-0 z-40 lg:hidden bg-background border-t border-border px-6 py-6 space-y-1 max-h-[80vh] overflow-y-auto">
+        <div className="fixed top-16 left-0 right-0 z-40 md:hidden bg-background border-t border-border px-6 py-6 space-y-1 max-h-[80vh] overflow-y-auto">
           {navLinks.map((link) =>
             link.hasDropdown ? (
               <div key={link.href}>
