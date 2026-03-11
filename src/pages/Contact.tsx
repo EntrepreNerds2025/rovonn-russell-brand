@@ -1,9 +1,19 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useContactFormSubmit } from "@/hooks/use-crm-submit";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", org: "", interest: "", message: "" });
+  const { mutate, isPending } = useContactFormSubmit();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!form.name || !form.email) return;
+    mutate(form, {
+      onSuccess: () => setForm({ name: "", email: "", org: "", interest: "", message: "" }),
+    });
+  };
 
   return (
     <main>
@@ -16,7 +26,7 @@ const Contact = () => {
           <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
             Whether you're interested in strategy, speaking, consulting, or storytelling production — this is where it begins.
           </p>
-          <div className="bg-card border border-border rounded p-8 md:p-10">
+          <form onSubmit={handleSubmit} className="bg-card border border-border rounded p-8 md:p-10">
             <div className="grid sm:grid-cols-2 gap-4 mb-4">
               {(["name", "email"] as const).map((field) => (
                 <div key={field}>
@@ -27,6 +37,7 @@ const Contact = () => {
                     className="w-full border border-border bg-background rounded px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent/30"
                     value={form[field]}
                     onChange={(e) => setForm({ ...form, [field]: e.target.value })}
+                    required
                   />
                 </div>
               ))}
@@ -64,10 +75,10 @@ const Contact = () => {
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
               />
             </div>
-            <Button variant="hero" size="lg" className="w-full">
-              Send Message <ArrowRight className="ml-2" size={16} />
+            <Button variant="hero" size="lg" className="w-full" type="submit" disabled={isPending}>
+              {isPending ? "Sending..." : "Send Message"} {!isPending && <ArrowRight className="ml-2" size={16} />}
             </Button>
-          </div>
+          </form>
         </div>
       </section>
     </main>

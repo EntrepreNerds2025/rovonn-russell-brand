@@ -1,6 +1,7 @@
 import { Bot, BarChart3, Search, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { useToolSignupSubmit } from "@/hooks/use-crm-submit";
 
 const tools = [
   {
@@ -8,23 +9,42 @@ const tools = [
     title: "Impact Story Diagnostic",
     desc: "Answer questions about your organization and receive an AI-generated storytelling clarity score, messaging insights, and actionable improvement suggestions.",
     cta: "Take the Diagnostic",
+    toolName: "impact_story_diagnostic",
   },
   {
     icon: BarChart3,
     title: "Authority Content Planner",
     desc: "Get a personalized content strategy plan that positions your organization as an authority in your space through strategic storytelling.",
     cta: "Plan Your Content",
+    toolName: "authority_content_planner",
   },
   {
     icon: Search,
     title: "Story Clarity Analyzer",
     desc: "Paste your current messaging or about page and receive an analysis of clarity, narrative strength, and areas for improvement.",
     cta: "Analyze Your Story",
+    toolName: "story_clarity_analyzer",
   },
 ];
 
 const AITools = () => {
-  const [email, setEmail] = useState("");
+  const [emails, setEmails] = useState<Record<string, string>>({});
+  const [submitted, setSubmitted] = useState<Record<string, boolean>>({});
+  const { mutate, isPending } = useToolSignupSubmit();
+
+  const handleSubmit = (toolName: string) => {
+    const email = emails[toolName];
+    if (!email) return;
+    mutate(
+      { email, tool_name: toolName },
+      {
+        onSuccess: () => {
+          setSubmitted((prev) => ({ ...prev, [toolName]: true }));
+          setEmails((prev) => ({ ...prev, [toolName]: "" }));
+        },
+      }
+    );
+  };
 
   return (
     <main>
@@ -43,18 +63,28 @@ const AITools = () => {
                 <tool.icon size={36} className="text-accent-highlight mx-auto mb-5" />
                 <h2 className="font-serif text-xl font-semibold mb-3 group-hover:text-accent-highlight transition-colors">{tool.title}</h2>
                 <p className="text-sm text-muted-foreground mb-6 leading-relaxed">{tool.desc}</p>
-                <div className="space-y-3">
-                  <input
-                    type="email"
-                    placeholder="Your email"
-                    className="w-full border border-border bg-background rounded px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent/30"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                  <Button variant="hero" className="w-full" size="default">
-                    {tool.cta} <ArrowRight className="ml-2" size={14} />
-                  </Button>
-                </div>
+                {submitted[tool.toolName] ? (
+                  <p className="text-sm text-accent-highlight font-semibold">✓ You're signed up!</p>
+                ) : (
+                  <div className="space-y-3">
+                    <input
+                      type="email"
+                      placeholder="Your email"
+                      className="w-full border border-border bg-background rounded px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent/30"
+                      value={emails[tool.toolName] || ""}
+                      onChange={(e) => setEmails((prev) => ({ ...prev, [tool.toolName]: e.target.value }))}
+                    />
+                    <Button
+                      variant="hero"
+                      className="w-full"
+                      size="default"
+                      onClick={() => handleSubmit(tool.toolName)}
+                      disabled={isPending}
+                    >
+                      {isPending ? "Signing up..." : tool.cta} {!isPending && <ArrowRight className="ml-2" size={14} />}
+                    </Button>
+                  </div>
+                )}
               </div>
             ))}
           </div>
