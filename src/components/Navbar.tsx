@@ -117,7 +117,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop links */}
-          <div className="hidden lg:flex items-center gap-7">
+          <div className="hidden md:flex items-center gap-7">
             {navLinks.map((link) =>
               link.hasDropdown ? (
                 <button
