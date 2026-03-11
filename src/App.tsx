@@ -12,6 +12,7 @@ import CaseStudiesPage from "./pages/CaseStudies";
 import Speaking from "./pages/Speaking";
 import Insights from "./pages/Insights";
 import AITools from "./pages/AITools";
+import DiagnosticTool from "./pages/DiagnosticTool";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
