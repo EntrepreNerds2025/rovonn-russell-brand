@@ -1,1 +1,4 @@
 project_id = "dhyutpazhpdtrbulgrdj"
+
+[functions.submit-website-form]
+verify_jwt = false

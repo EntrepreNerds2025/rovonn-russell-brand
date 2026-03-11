@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Mic, ArrowRight } from "lucide-react";
+import { useSpeakingInquirySubmit } from "@/hooks/use-crm-submit";
 
 const topics = [
   {
@@ -23,6 +24,15 @@ const topics = [
 
 const Speaking = () => {
   const [form, setForm] = useState({ name: "", email: "", org: "", event: "", message: "" });
+  const { mutate, isPending } = useSpeakingInquirySubmit();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!form.name || !form.email) return;
+    mutate(form, {
+      onSuccess: () => setForm({ name: "", email: "", org: "", event: "", message: "" }),
+    });
+  };
 
   return (
     <main>
@@ -51,7 +61,7 @@ const Speaking = () => {
               </div>
             </div>
             <div>
-              <div className="bg-card border border-border rounded p-8">
+              <form onSubmit={handleSubmit} className="bg-card border border-border rounded p-8">
                 <h2 className="font-serif text-xl font-semibold mb-6">Booking Inquiry</h2>
                 <div className="space-y-4">
                   {(["name", "email", "org", "event"] as const).map((field) => (
@@ -63,6 +73,7 @@ const Speaking = () => {
                         className="w-full border border-border bg-background rounded px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent/30"
                         value={form[field]}
                         onChange={(e) => setForm({ ...form, [field]: e.target.value })}
+                        required={field === "name" || field === "email"}
                       />
                     </div>
                   ))}
@@ -74,11 +85,11 @@ const Speaking = () => {
                       onChange={(e) => setForm({ ...form, message: e.target.value })}
                     />
                   </div>
-                  <Button variant="hero" className="w-full" size="lg">
-                    Submit Inquiry <ArrowRight className="ml-2" size={16} />
+                  <Button variant="hero" className="w-full" size="lg" type="submit" disabled={isPending}>
+                    {isPending ? "Submitting..." : "Submit Inquiry"} {!isPending && <ArrowRight className="ml-2" size={16} />}
                   </Button>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
