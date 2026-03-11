@@ -244,7 +244,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {open && (
-        <div className="fixed top-16 left-0 right-0 z-40 lg:hidden bg-background border-t border-border px-6 py-6 space-y-1 max-h-[80vh] overflow-y-auto">
+        <div className="fixed top-16 left-0 right-0 z-40 md:hidden bg-background border-t border-border px-6 py-6 space-y-1 max-h-[80vh] overflow-y-auto">
           {navLinks.map((link) =>
             link.hasDropdown ? (
               <div key={link.href}>
