@@ -25,7 +25,7 @@ const About = () => (
             As an Impact Story Architect, Rovonn works with nonprofits, foundations, mission-driven businesses, and social impact organizations to design storytelling systems that build trust faster, attract opportunity, and amplify the work that matters.
           </p>
           <p>
-            <strong className="text-foreground">Impact Loop</strong> serves as the execution engine — the production partner that brings these storytelling systems to life through documentary-style media, campaign content, and narrative-driven assets.
+            <strong className="text-foreground">Impact Loop</strong> — the production studio Rovonn also founded — operationalizes Impact Story Architecture through <strong className="text-foreground">The Storytelling Standard</strong>, a production playbook for documentary-style media, campaign content, and narrative-driven assets.
           </p>
           <p>
             The vision is simple: every organization doing meaningful work deserves a story system that matches the quality of their impact.

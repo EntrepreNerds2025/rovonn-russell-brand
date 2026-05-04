@@ -6,14 +6,14 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Index from "./pages/Index";
-import About from "./pages/About";
-import Services from "./pages/Services";
-import CaseStudiesPage from "./pages/CaseStudies";
 import Speaking from "./pages/Speaking";
-import Insights from "./pages/Insights";
-import AITools from "./pages/AITools";
-import DiagnosticTool from "./pages/DiagnosticTool";
 import Contact from "./pages/Contact";
+import StartHere from "./pages/StartHere";
+import Resources from "./pages/Resources";
+import VisibilityStarterKit from "./pages/VisibilityStarterKit";
+import AdaptFramework from "./pages/AdaptFramework";
+import WorkWithMe from "./pages/WorkWithMe";
+import YouTubePage from "./pages/YouTubePage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,13 +27,13 @@ const App = () => (
         <Navbar />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/case-studies" element={<CaseStudiesPage />} />
+          <Route path="/start-here" element={<StartHere />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/resources/visibility-starter-kit" element={<VisibilityStarterKit />} />
+          <Route path="/frameworks/adapt" element={<AdaptFramework />} />
+          <Route path="/youtube" element={<YouTubePage />} />
           <Route path="/speaking" element={<Speaking />} />
-          <Route path="/insights" element={<Insights />} />
-          <Route path="/ai-tools" element={<AITools />} />
-          <Route path="/diagnostic" element={<DiagnosticTool />} />
+          <Route path="/work-with-me" element={<WorkWithMe />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -1,46 +1,90 @@
 import { Link } from "react-router-dom";
+import { Linkedin, Instagram, Youtube, Mail, ArrowUpRight } from "lucide-react";
+
+const IMPACT_LOOP_URL = import.meta.env.VITE_IMPACT_LOOP_URL || "https://impactloop.ca";
+const LINKEDIN_URL = import.meta.env.VITE_LINKEDIN_URL || "https://www.linkedin.com/in/rovonnrussell";
+const YOUTUBE_URL = import.meta.env.VITE_YOUTUBE_URL || "https://youtube.com";
+const INSTAGRAM_URL = import.meta.env.VITE_INSTAGRAM_URL || "https://instagram.com";
+const BLOG_URL = "https://blog.rovonnrussell.com";
 
 const Footer = () => (
-  <footer className="section-dark px-6 md:px-12 lg:px-20 py-16">
+  <footer className="bg-foreground text-background px-6 md:px-12 lg:px-20 py-16 md:py-20">
     <div className="max-w-7xl mx-auto">
-      <div className="grid md:grid-cols-4 gap-10 mb-12">
-        <div>
-          <h3 className="font-serif text-xl font-bold mb-4">
-            ROVONN <span className="text-accent-highlight">RUSSELL</span>
-          </h3>
-          <p className="text-sm opacity-70 leading-relaxed">
-            Impact Story Architect. Designing storytelling systems that help organizations communicate their impact clearly.
+      <div className="grid md:grid-cols-12 gap-10 md:gap-14 mb-14">
+        {/* Brand */}
+        <div className="md:col-span-5">
+          <Link to="/" className="font-serif text-2xl font-bold tracking-tight inline-block mb-4">
+            Rovonn <span className="italic text-accent">Russell</span>
+          </Link>
+          <p className="text-base opacity-70 leading-relaxed font-serif italic max-w-md mb-6">
+            Storytelling, systems, and AI for people building something that matters.
           </p>
+          <a
+            href={IMPACT_LOOP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-semibold tracking-[0.18em] uppercase text-accent hover:text-background transition-colors"
+          >
+            For Organizations: Impact Loop <ArrowUpRight size={14} />
+          </a>
         </div>
-        <div>
-          <h4 className="text-xs font-semibold tracking-widest uppercase mb-4 opacity-60">Navigate</h4>
-          <div className="space-y-2">
-            {["About", "Services", "Case Studies", "Speaking", "Insights"].map((l) => (
-              <Link key={l} to={`/${l.toLowerCase().replace(" ", "-")}`} className="block text-sm opacity-70 hover:opacity-100 transition-opacity">
-                {l}
-              </Link>
-            ))}
+
+        {/* Navigate */}
+        <div className="md:col-span-3">
+          <h4 className="text-xs font-semibold tracking-[0.22em] uppercase mb-5 opacity-60">Navigate</h4>
+          <div className="space-y-2.5">
+            <Link to="/start-here" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Start Here</Link>
+            <a href={BLOG_URL} target="_blank" rel="noopener noreferrer" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Articles ↗</a>
+            <a href={YOUTUBE_URL} target="_blank" rel="noopener noreferrer" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">YouTube ↗</a>
+            <Link to="/resources" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Resources</Link>
+            <Link to="/speaking" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Speaking</Link>
+            <Link to="/work-with-me" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Work With Me</Link>
           </div>
         </div>
-        <div>
-          <h4 className="text-xs font-semibold tracking-widest uppercase mb-4 opacity-60">Tools</h4>
-          <div className="space-y-2">
-            <Link to="/ai-tools" className="block text-sm opacity-70 hover:opacity-100 transition-opacity">Impact Story Diagnostic</Link>
-            <Link to="/ai-tools" className="block text-sm opacity-70 hover:opacity-100 transition-opacity">Authority Content Planner</Link>
-            <Link to="/ai-tools" className="block text-sm opacity-70 hover:opacity-100 transition-opacity">Story Clarity Analyzer</Link>
+
+        {/* Frameworks + Resources */}
+        <div className="md:col-span-2">
+          <h4 className="text-xs font-semibold tracking-[0.22em] uppercase mb-5 opacity-60">Featured</h4>
+          <div className="space-y-2.5">
+            <Link to="/resources/visibility-starter-kit" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Visibility Starter Kit</Link>
+            <Link to="/frameworks/adapt" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">ADAPT Framework</Link>
+            <Link to="/contact" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Contact</Link>
           </div>
         </div>
-        <div>
-          <h4 className="text-xs font-semibold tracking-widest uppercase mb-4 opacity-60">Connect</h4>
-          <div className="space-y-2 text-sm opacity-70">
-            <p>hello@rovonnrussell.com</p>
-            <Link to="/contact" className="block hover:opacity-100 transition-opacity">Book a Strategy Call</Link>
+
+        {/* Connect / Socials */}
+        <div className="md:col-span-2">
+          <h4 className="text-xs font-semibold tracking-[0.22em] uppercase mb-5 opacity-60">Connect</h4>
+          <div className="flex gap-3 mb-5">
+            <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+               className="w-10 h-10 rounded-md border border-background/20 flex items-center justify-center hover:border-accent hover:text-accent transition-colors">
+              <Linkedin size={16} />
+            </a>
+            <a href={YOUTUBE_URL} target="_blank" rel="noopener noreferrer" aria-label="YouTube"
+               className="w-10 h-10 rounded-md border border-background/20 flex items-center justify-center hover:border-accent hover:text-accent transition-colors">
+              <Youtube size={16} />
+            </a>
+            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+               className="w-10 h-10 rounded-md border border-background/20 flex items-center justify-center hover:border-accent hover:text-accent transition-colors">
+              <Instagram size={16} />
+            </a>
           </div>
+          <a
+            href="mailto:hello@rovonnrussell.com"
+            className="inline-flex items-center gap-2 text-sm opacity-75 hover:opacity-100 transition-opacity"
+          >
+            <Mail size={14} /> hello@rovonnrussell.com
+          </a>
         </div>
       </div>
-      <div className="border-t border-border/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs opacity-50">
-        <p>© {new Date().getFullYear()} Rovonn Russell. All rights reserved.</p>
-        <p>Impact Story Architecture™</p>
+
+      <div className="border-t border-background/15 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs opacity-50">
+        <p>© {new Date().getFullYear()} Rovonn Russell. Toronto, Ontario.</p>
+        <div className="flex gap-5">
+          <Link to="/contact" className="hover:opacity-100">Privacy</Link>
+          <Link to="/contact" className="hover:opacity-100">Terms</Link>
+          <span className="font-serif italic">Storytelling + Systems</span>
+        </div>
       </div>
     </div>
   </footer>

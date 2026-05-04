@@ -64,3 +64,19 @@ export function useToolSignupSubmit() {
     onError: (err: Error) => toast.error(err.message || "Something went wrong. Please try again."),
   });
 }
+
+export function useStarterKitSubmit() {
+  return useMutation({
+    mutationFn: (data: { firstName: string; email: string; audience: string }) =>
+      submitWebsiteForm({
+        form_type: "tool_signup",
+        tool_name: "visibility_starter_kit",
+        name: data.firstName,
+        email: data.email,
+        interest: data.audience,
+        message: `Visibility Starter Kit signup. Audience: ${data.audience}`,
+      }),
+    onSuccess: () => toast.success("Your kit is ready. Download below."),
+    onError: (err: Error) => toast.error(err.message || "Something went wrong. Please try again."),
+  });
+}
