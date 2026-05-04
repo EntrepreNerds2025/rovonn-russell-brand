@@ -103,7 +103,7 @@ const HeroSection = () => (
         <span className="italic text-accent-highlight">build visibility.</span>
       </h1>
       <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-        Practical resources for founders, creators, and impact-driven leaders. Most are free. All are designed to live next to your real work, not on a shelf.
+        Practical resources for founders, businesses, and impact-driven leaders. Most are free. All are designed to live next to your real work, not on a shelf.
       </p>
     </div>
   </section>
@@ -205,7 +205,7 @@ const Resources = () => {
   useEffect(() => {
     setSEO({
       title: "Resources | Rovonn Russell",
-      description: "Tools, templates, and systems to help you build visibility. Practical resources for founders, creators, and impact-driven leaders. Most are free.",
+      description: "Tools, templates, and systems to help you build visibility. Practical resources for founders, businesses, and impact-driven leaders. Most are free.",
       path: "/resources",
     });
     return resetSEO;

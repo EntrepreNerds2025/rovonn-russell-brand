@@ -31,7 +31,7 @@ const primaryPaths = [
     icon: UserRoundSearch,
     label: "For Leaders + Entrepreneurs",
     title: "Work with Rovonn directly.",
-    desc: "Advisory, strategy sessions, and workshops for founders, creators, and leaders who want help building visibility and AI-supported systems.",
+    desc: "Advisory, strategy sessions, and workshops for founders, businesses, and leaders who want help building visibility and AI-supported systems.",
     cta: "See engagement options",
     href: "#leaders",
     external: false,

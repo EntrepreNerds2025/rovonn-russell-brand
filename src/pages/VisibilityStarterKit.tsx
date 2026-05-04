@@ -237,7 +237,7 @@ const TrustNoteSection = () => (
         Who This Is For
       </p>
       <h2 className="text-2xl md:text-4xl font-serif font-bold leading-tight mb-6">
-        Founders, creators, and leaders who know they should be posting{" "}
+        Founders, businesses, and leaders who know they should be posting{" "}
         <span className="italic">but it hasn't stuck.</span>
       </h2>
       <p className="text-base md:text-lg text-muted-foreground leading-relaxed">

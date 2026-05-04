@@ -27,7 +27,7 @@ const HeroSection = () => (
           Storytelling, systems, and AI for people building <span className="italic text-accent-highlight">something that matters.</span>
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed animate-fade-up" style={{ animationDelay: "0.15s" }}>
-          I help entrepreneurs, creators, and impact-driven leaders turn their ideas, expertise, and work into visibility, trust, and practical systems.
+          I help founders, businesses, and impact-driven leaders turn their ideas, expertise, and work into visibility, trust, and practical systems.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: "0.3s" }}>
           <Button variant="hero" size="lg" asChild><Link to="/start-here">Start Here <ArrowRight className="ml-2" size={16} /></Link></Button>
@@ -246,7 +246,7 @@ const Index = () => {
     trackEvent("personal_brand_home_viewed");
     setSEO({
       title: "Rovonn Russell | Storytelling, Systems and AI",
-      description: "Rovonn Russell helps entrepreneurs, creators, and impact-driven leaders turn their ideas, expertise, and work into visibility, trust, and practical systems using storytelling, content, and AI.",
+      description: "Rovonn Russell helps founders, businesses, and impact-driven leaders turn their ideas, expertise, and work into visibility, trust, and practical systems using storytelling, content, and AI.",
       path: "/",
     });
     return resetSEO;

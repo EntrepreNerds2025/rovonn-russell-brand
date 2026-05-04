@@ -20,7 +20,7 @@ const topics = [
   {
     icon: Eye,
     title: "How to Turn Your Work Into Visibility",
-    desc: "For founders and creators. The frameworks, prompts, and systems that turn the work you're already doing into content people understand and act on.",
+    desc: "For founders and business owners. The frameworks, prompts, and systems that turn the work you're already doing into content people understand and act on.",
   },
   {
     icon: Layers,

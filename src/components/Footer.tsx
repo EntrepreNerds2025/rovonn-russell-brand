@@ -79,7 +79,7 @@ const Footer = () => (
       </div>
 
       <div className="border-t border-background/15 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs opacity-50">
-        <p>© {new Date().getFullYear()} Rovonn Russell. Toronto, Ontario.</p>
+        <p>© {new Date().getFullYear()} Rovonn Russell.</p>
         <div className="flex gap-5">
           <Link to="/contact" className="hover:opacity-100">Privacy</Link>
           <Link to="/contact" className="hover:opacity-100">Terms</Link>
