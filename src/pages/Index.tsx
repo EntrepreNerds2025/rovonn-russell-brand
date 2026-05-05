@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { setSEO, resetSEO } from "@/lib/seo";
 import { trackEvent } from "@/lib/analytics";
+import { getAllPosts, formatPostDate } from "@/lib/blog";
 import {
   ArrowRight,
   BookOpen,
@@ -10,8 +11,6 @@ import {
   Bot,
   Eye,
   Sparkles,
-  PlayCircle,
-  Youtube,
   FileText,
   Building2,
   UserRoundSearch,
@@ -34,7 +33,7 @@ const HeroSection = () => (
           <Button variant="hero-outline" size="lg" asChild><Link to="/resources">Explore Resources</Link></Button>
         </div>
         <p className="mt-6 text-sm text-muted-foreground animate-fade-up" style={{ animationDelay: "0.4s" }}>
-          Or <Link to="/youtube" className="inline-flex items-center gap-1.5 font-medium text-foreground hover:text-accent-deep transition-colors underline decoration-accent/40 underline-offset-4"><Youtube size={14} /> watch on YouTube</Link>
+          Or <Link to="/blog" className="inline-flex items-center gap-1.5 font-medium text-foreground hover:text-accent-deep transition-colors underline decoration-accent/40 underline-offset-4"><FileText size={14} /> read the blog</Link>
         </p>
       </div>
       <div className="lg:col-span-5 relative animate-fade-in" style={{ animationDelay: "0.2s" }}>
@@ -77,7 +76,7 @@ const PositioningSection = () => (
 const themeItems = [
   { icon: BookOpen, title: "Storytelling That Builds Trust", desc: "How to turn ideas, work, and impact into stories people understand, remember, and support." },
   { icon: Layers, title: "Visibility Systems", desc: "How to create content consistently without burning out or posting randomly." },
-  { icon: Bot, title: "Practical AI for Real Work", desc: "How to use AI for content, communication, planning, and team capacity without losing the human side. Home of the ADAPT framework I teach." },
+  { icon: Bot, title: "Practical AI for Real Work", desc: "How to tailor AI and systems to what your work actually needs. Judgment first, tools second. Home of the ADAPT framework I teach." },
   { icon: Eye, title: "Building in Public", desc: "Lessons from building Impact Loop, Nerds Creative, ADAPT, and my own personal brand." },
   { icon: Sparkles, title: "Knowledge-to-Asset Creation", desc: "How to turn expertise into lead magnets, toolkits, workshops, digital products, and resources." },
 ];
@@ -125,73 +124,48 @@ const StarterKitSection = () => {
   );
 };
 
-const featuredVideos = [
-  { title: "How nonprofits can use AI without losing their human voice", category: "AI for Impact", duration: "8 min" },
-  { title: "5 AI workflows for small teams", category: "AI for Business", duration: "12 min" },
-  { title: "Turn one event into 20 pieces of content", category: "Content Systems", duration: "10 min" },
-];
+const ArticlesSection = () => {
+  const posts = getAllPosts().slice(0, 3);
+  const hasPosts = posts.length > 0;
 
-const VideosSection = () => (
-  <section className="section-padding">
-    <div className="max-w-6xl mx-auto">
-      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
-        <div>
-          <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent-deep mb-4">On YouTube</p>
-          <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight">Watch the latest from Rovonn.</h2>
+  return (
+    <section className="section-padding bg-secondary">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+          <div>
+            <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent-deep mb-4">Latest Articles</p>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight">Field notes on storytelling, systems, and AI.</h2>
+          </div>
+          <Button variant="hero-outline" asChild><Link to="/blog">Read the Blog <ArrowRight className="ml-2" size={14} /></Link></Button>
         </div>
-        <Button variant="hero-outline" asChild><Link to="/youtube"><Youtube className="mr-2" size={14} /> Browse all videos</Link></Button>
-      </div>
-      <div className="grid md:grid-cols-3 gap-6">
-        {featuredVideos.map((v) => (
-          <Link key={v.title} to="/youtube" className="group block">
-            <div className="aspect-video rounded-md bg-secondary border border-border overflow-hidden relative mb-4">
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-transparent to-accent-deep/15" />
-              <div className="absolute inset-0 flex items-center justify-center"><div className="w-14 h-14 rounded-full bg-foreground/85 backdrop-blur flex items-center justify-center group-hover:scale-110 transition-transform"><PlayCircle className="text-background" size={26} /></div></div>
-              <div className="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-foreground/85 text-background text-[10px] font-medium tracking-wide">{v.duration}</div>
+        <div className="grid md:grid-cols-3 gap-6">
+          {hasPosts ? (
+            posts.map((a) => (
+              <Link key={a.slug} to={`/blog/${a.slug}`} className="group block bg-card border border-border rounded-md p-7 hover:border-accent/40 transition-colors">
+                <div className="flex items-center gap-3 mb-4">
+                  <FileText size={14} className="text-accent-deep" />
+                  <span className="text-xs font-semibold tracking-widest uppercase text-accent-deep">{a.category}</span>
+                  <span className="text-xs text-muted-foreground">·</span>
+                  <span className="text-xs text-muted-foreground">{formatPostDate(a.date)}</span>
+                </div>
+                <h3 className="font-serif text-xl font-semibold leading-snug mb-3 group-hover:text-accent-deep transition-colors">{a.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{a.excerpt}</p>
+                <p className="mt-5 text-sm font-semibold text-foreground inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">Read article <ArrowRight size={14} /></p>
+              </Link>
+            ))
+          ) : (
+            <div className="md:col-span-3 border border-border rounded-md p-12 text-center bg-card">
+              <p className="text-muted-foreground mb-6">First posts dropping soon. The Visibility Starter Kit is the fastest way to start now.</p>
+              <Button variant="default" asChild>
+                <Link to="/resources/visibility-starter-kit">Get the Starter Kit <ArrowRight className="ml-2" size={14} /></Link>
+              </Button>
             </div>
-            <p className="text-xs font-semibold tracking-widest uppercase text-accent-deep mb-2">{v.category}</p>
-            <h3 className="font-serif text-lg font-semibold leading-snug group-hover:text-accent-deep transition-colors">{v.title}</h3>
-          </Link>
-        ))}
-      </div>
-    </div>
-  </section>
-);
-
-const featuredArticles = [
-  { title: "What I Learned Building 15 AI Agents for a Storytelling Company", category: "Systems", date: "Apr 2026", excerpt: "Fifteen agents in, here is what actually held up, and the three architectural mistakes I had to unlearn.", href: "https://blog.rovonnrussell.com/blog/lessons-from-building-15-ai-agents" },
-  { title: "Most organizations don't have a content problem. They have a capture problem.", category: "Visibility", date: "Coming soon", excerpt: "Why the gap between work happening and stories getting told is almost never about creativity.", href: "https://blog.rovonnrussell.com" },
-  { title: "How to use AI to build visibility systems", category: "AI for Real Work", date: "Coming soon", excerpt: "Practical, repeatable, impactful workflows that turn ideas into consistent visibility.", href: "https://blog.rovonnrussell.com" },
-];
-
-const ArticlesSection = () => (
-  <section className="section-padding bg-secondary">
-    <div className="max-w-6xl mx-auto">
-      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
-        <div>
-          <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent-deep mb-4">Latest Articles</p>
-          <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight">Field notes on storytelling, systems, and AI.</h2>
+          )}
         </div>
-        <Button variant="hero-outline" asChild><a href="https://blog.rovonnrussell.com" target="_blank" rel="noopener noreferrer">Read the Blog <ArrowRight className="ml-2" size={14} /></a></Button>
       </div>
-      <div className="grid md:grid-cols-3 gap-6">
-        {featuredArticles.map((a) => (
-          <a key={a.title} href={a.href} target="_blank" rel="noopener noreferrer" className="group block bg-card border border-border rounded-md p-7 hover:border-accent/40 transition-colors">
-            <div className="flex items-center gap-3 mb-4">
-              <FileText size={14} className="text-accent-deep" />
-              <span className="text-xs font-semibold tracking-widest uppercase text-accent-deep">{a.category}</span>
-              <span className="text-xs text-muted-foreground">·</span>
-              <span className="text-xs text-muted-foreground">{a.date}</span>
-            </div>
-            <h3 className="font-serif text-xl font-semibold leading-snug mb-3 group-hover:text-accent-deep transition-colors">{a.title}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">{a.excerpt}</p>
-            <p className="mt-5 text-sm font-semibold text-foreground inline-flex items-center gap-1.5 group-hover:gap-2.5 transition-all">Read article <ArrowRight size={14} /></p>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 const workWithMeCards = [
   { icon: Building2, title: "For Organizations", desc: "Need storytelling, content visibility, ADAPT training, or campaign support for your organization?", cta: "Explore Impact Loop", href: "https://impactloop.ca", external: true },
@@ -231,10 +205,10 @@ const FinalCTA = () => (
     <div className="max-w-3xl mx-auto text-center">
       <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-6">Build Visibility</p>
       <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight mb-6">Build visibility around the work that <span className="italic text-accent">matters.</span></h2>
-      <p className="opacity-70 mb-10 leading-relaxed text-base md:text-lg">Start with the Visibility Starter Kit, watch on YouTube, or explore Impact Loop for your organization.</p>
+      <p className="opacity-70 mb-10 leading-relaxed text-base md:text-lg">Start with the Visibility Starter Kit, read the blog, or explore Impact Loop for your organization.</p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Button variant="dark-hero" size="lg" asChild><Link to="/resources/visibility-starter-kit">Get the Starter Kit</Link></Button>
-        <Button variant="dark-outline" size="lg" asChild><Link to="/youtube">Watch on YouTube</Link></Button>
+        <Button variant="dark-outline" size="lg" asChild><Link to="/blog">Read the Blog</Link></Button>
         <Button variant="dark-outline" size="lg" asChild><a href="https://impactloop.ca" target="_blank" rel="noopener noreferrer">Explore Impact Loop</a></Button>
       </div>
     </div>
@@ -258,7 +232,6 @@ const Index = () => {
       <PositioningSection />
       <ThemesSection />
       <StarterKitSection />
-      <VideosSection />
       <ArticlesSection />
       <WorkWithMeSection />
       <FinalCTA />

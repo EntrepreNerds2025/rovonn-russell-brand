@@ -36,7 +36,7 @@ const paths: Path[] = [
     actions: [
       { label: "Read the ADAPT framework", href: "/frameworks/adapt" },
       { label: "Get the Visibility Starter Kit", href: "/resources/visibility-starter-kit" },
-      { label: "Watch AI for Real Work videos", href: import.meta.env.VITE_YOUTUBE_URL || "https://youtube.com", external: true },
+      { label: "Read the blog", href: "/blog" },
     ],
   },
   {

@@ -16,6 +16,22 @@ The blog speaks to three audiences. Same voice, different emphasis depending on 
 
 The common thread across all three: they respect specificity, honesty, lived experience, and writers who don't pretend.
 
+## Where the voice comes from
+
+The voice carries the place and the people that shaped it. Don't sand that off. When something on the page sounds rooted, it's almost always because one of these is doing quiet work in the background.
+
+**Toronto.** The city is a real character in Rovonn's writing. North York. Scarborough. Etobicoke. Specific schools (Newtonbrook Secondary), specific community spaces (Pearson Convention Center, Black Creek Community Health Centre). When a post is set somewhere, name where. *"A room in North York"* lands differently than *"a community space."*
+
+**Black community and Caribbean roots.** Rovonn's work sits inside Black community organizing in the GTA — CAFCAN, Black Health Alliance, OPTK, youth-of-colour programs in trades and tech. This isn't decorative. It shapes what counts as impact (representation in genomic databases, trust between institutions and communities, who gets seen for trades work) and what counts as a real moment (a young person picking up a saw for the first time, a family stabilizing). For the blog: when Black community context is part of the story, write it in. Don't generalize *"underserved communities"* when you mean Black communities specifically.
+
+**Community-organizer instincts.** Years of working with nonprofit leaders, foundation officers, and youth program directors mean the voice defaults to: name the people doing the work, credit the partners, point at the conditions that made the win possible. That's not humility for its own sake — it's how community-led work actually gets described by people inside it. Carry this into the blog. *"Programs like OPTK are showing what's possible when..."* > *"I figured out how to..."*
+
+**Builder identity.** The other half is the studio operator. Impact Loop builds storytelling systems and AI agents for organizations. ADAPT cycles, ecosystem research, deliverability sentinels, content engines that ship. The voice has technical precision when it needs to: specific tools, specific architecture decisions, specific numbers. Don't dilute that into vague "AI helps you" language when the post is about a real build.
+
+**The combination is the brand.** A community-rooted Toronto operator who builds production systems and writes about both. When a post leans too far one direction (only community, only tech) it stops sounding like Rovonn. The strongest posts hold both — a saw in a kid's hands AND a Python function that pushed deterministic logic out of the LLM. The same eye looking at both rooms.
+
+When a topic doesn't naturally touch culture or place, don't force it in. But when it does, name it the way someone inside the community would name it.
+
 ## Voice signature: ten principles
 
 **1. Lead with the moment, not the thesis.** Open with a specific observation, a Tuesday, a conversation, a project that just shipped. The thesis lands AFTER the moment, never before. Rovonn's actual openers: *"Some frames from..."*, *"Watching these young men pick up saws..."*, *"Last night..."*. AI's typical opener: *"After shipping 15 production AI agents at Impact Loop, the single most important lesson is this:"*. Notice how the AI version tells you the punchline is coming. Rovonn's version makes you notice the room first.

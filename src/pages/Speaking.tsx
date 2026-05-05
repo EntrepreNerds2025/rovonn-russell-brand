@@ -10,7 +10,7 @@ const topics = [
   {
     icon: Bot,
     title: "How AI Can Help Teams Without Losing the Human Voice",
-    desc: "Practical AI adoption for organizations that want to move faster without sounding like everyone else. The ADAPT framework, in keynote form.",
+    desc: "How to tailor AI and systems to what your business actually needs. Diagnose first, build the right thing second. The ADAPT framework, in keynote form.",
   },
   {
     icon: BookOpen,

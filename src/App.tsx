@@ -15,6 +15,12 @@ import VisibilityStarterKit from "./pages/VisibilityStarterKit";
 import AdaptFramework from "./pages/AdaptFramework";
 import WorkWithMe from "./pages/WorkWithMe";
 import YouTubePage from "./pages/YouTubePage";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
+import BlogCategory from "./pages/BlogCategory";
+import BlogRedirect from "./components/BlogRedirect";
+import Portfolio from "./pages/Portfolio";
+import PortfolioCaseStudy from "./pages/PortfolioCaseStudy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -37,6 +43,13 @@ const App = () => (
           <Route path="/speaking" element={<Speaking />} />
           <Route path="/work-with-me" element={<WorkWithMe />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/category/:categorySlug" element={<BlogCategory />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/blogs" element={<BlogRedirect />} />
+          <Route path="/blogs/:slug" element={<BlogRedirect />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/portfolio/:slug" element={<PortfolioCaseStudy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

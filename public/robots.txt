@@ -1,14 +1,8 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
 User-agent: *
 Allow: /
+
+# Hidden portfolio — direct-link only, not for search indexing
+Disallow: /portfolio
+Disallow: /portfolio/
+
+Sitemap: https://rovonnrussell.com/sitemap.xml

@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom";
-import { Linkedin, Instagram, Youtube, Mail, ArrowUpRight } from "lucide-react";
+import { Linkedin, Instagram, Mail, ArrowUpRight } from "lucide-react";
 
 const IMPACT_LOOP_URL = import.meta.env.VITE_IMPACT_LOOP_URL || "https://impactloop.ca";
 const LINKEDIN_URL = import.meta.env.VITE_LINKEDIN_URL || "https://www.linkedin.com/in/rovonnrussell";
-const YOUTUBE_URL = import.meta.env.VITE_YOUTUBE_URL || "https://youtube.com";
 const INSTAGRAM_URL = import.meta.env.VITE_INSTAGRAM_URL || "https://instagram.com";
-const BLOG_URL = "https://blog.rovonnrussell.com";
 
 const Footer = () => (
   <footer className="bg-foreground text-background px-6 md:px-12 lg:px-20 py-16 md:py-20">
@@ -34,8 +32,7 @@ const Footer = () => (
           <h4 className="text-xs font-semibold tracking-[0.22em] uppercase mb-5 opacity-60">Navigate</h4>
           <div className="space-y-2.5">
             <Link to="/start-here" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Start Here</Link>
-            <a href={BLOG_URL} target="_blank" rel="noopener noreferrer" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Articles ↗</a>
-            <a href={YOUTUBE_URL} target="_blank" rel="noopener noreferrer" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">YouTube ↗</a>
+            <Link to="/blog" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Blog</Link>
             <Link to="/resources" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Resources</Link>
             <Link to="/speaking" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Speaking</Link>
             <Link to="/work-with-me" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Work With Me</Link>
@@ -59,10 +56,6 @@ const Footer = () => (
             <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
                className="w-10 h-10 rounded-md border border-background/20 flex items-center justify-center hover:border-accent hover:text-accent transition-colors">
               <Linkedin size={16} />
-            </a>
-            <a href={YOUTUBE_URL} target="_blank" rel="noopener noreferrer" aria-label="YouTube"
-               className="w-10 h-10 rounded-md border border-background/20 flex items-center justify-center hover:border-accent hover:text-accent transition-colors">
-              <Youtube size={16} />
             </a>
             <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" aria-label="Instagram"
                className="w-10 h-10 rounded-md border border-background/20 flex items-center justify-center hover:border-accent hover:text-accent transition-colors">

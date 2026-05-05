@@ -10,8 +10,7 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   { label: "Start Here", href: "/start-here" },
-  { label: "Articles", href: "https://blog.rovonnrussell.com", external: true },
-  { label: "YouTube", href: "/youtube" },
+  { label: "Blog", href: "/blog" },
   { label: "Resources", href: "/resources" },
   { label: "Speaking", href: "/speaking" },
   { label: "Work With Me", href: "/work-with-me" },

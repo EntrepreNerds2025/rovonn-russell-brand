@@ -22,7 +22,7 @@ const primaryPaths = [
     icon: Building2,
     label: "For Organizations",
     title: "Engage Impact Loop.",
-    desc: "Nonprofits, CSR teams, foundations, and impact-led companies that need storytelling, content systems, ADAPT training, or campaign work delivered.",
+    desc: "Nonprofits, CSR teams, foundations, and impact-led companies that need ADAPT cycles, content systems, storytelling, or campaign work delivered.",
     cta: "Visit Impact Loop",
     href: "https://impactloop.ca",
     external: true,

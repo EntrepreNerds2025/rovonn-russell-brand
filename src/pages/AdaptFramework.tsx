@@ -27,7 +27,7 @@ const HeroSection = () => (
         ADAPT.
       </h1>
       <p className="text-lg md:text-2xl text-muted-foreground max-w-3xl leading-relaxed font-serif italic">
-        A practical framework for AI adoption that doesn't strip the human side out of your work.
+        A practical framework for tailoring AI and systems to what your work actually needs. Diagnose first. Build the right thing second.
       </p>
     </div>
   </section>
@@ -43,15 +43,15 @@ const FramingSection = () => (
         Why This Exists
       </p>
       <h2 className="text-3xl md:text-4xl font-serif font-bold leading-tight mb-8">
-        Most teams adopt AI by reaching for tools.{" "}
+        Most teams pick the tool first.{" "}
         <span className="italic text-accent-highlight">ADAPT inverts that.</span>
       </h2>
       <div className="space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed">
         <p>
-          The teams that go further faster aren't the ones who tried the most tools. They're the ones who started with assessment, picked one place to apply AI deliberately, and built a system out of what worked.
+          The teams that compound aren't the ones who tried the most tools. They're the ones who started with a real assessment of what their work actually needed, then built one specific thing — a content engine, an AI agent, a clearer brand system, sometimes a hybrid — that fit that specific need.
         </p>
         <p>
-          ADAPT is the framework I teach for that journey. Five steps, in this order. Skip a step and you end up with toys instead of leverage.
+          ADAPT is the framework I teach for that work. Five steps, in this order. Skip Assess and Discover and you end up automating the wrong thing efficiently. Skip Transform and you stay in pilot purgatory forever. The order isn't ceremonial — it's the difference between a team that compounds and a team that experiments.
         </p>
       </div>
     </div>
@@ -74,33 +74,33 @@ const steps = [
     letter: "D",
     label: "Discover",
     icon: Compass,
-    title: "Find where AI actually fits.",
-    body: "Now look at your real workflow against what AI is genuinely good at: classification, summarization, drafting, translation, structured extraction, light judgment. Match the tool to the task you actually have, not the task you wish you had. Most of the AI use cases that work in production look unremarkable. That's a feature.",
-    practice: "Pick one workflow where AI could genuinely help. Just one. Resist the urge to find five. Concentration beats spread, especially this early.",
+    title: "Find what to build.",
+    body: "Now match the workflow against what's actually possible. Sometimes the answer is an AI agent that handles a repeatable decision. Sometimes it's a content system that captures what's already happening on your team. Sometimes it's a clearer brand or messaging layer that makes everything downstream easier. Sometimes it's a hybrid. The point isn't to pick a tool category — it's to pick the right thing to build for this specific business at this specific moment.",
+    practice: "Pick one outcome to build toward. Just one. Resist the urge to find five. Concentration beats spread, especially this early.",
   },
   {
     letter: "A",
     label: "Apply",
     icon: PlayCircle,
-    title: "Run a small, real pilot.",
-    body: "One workflow, one team member, one specific use. Not a department-wide rollout. Not a vendor evaluation. A pilot small enough that you can see whether it actually works in two weeks, not two quarters. Build cheaply. Use the simplest tool that could possibly work. The point isn't sophistication — it's signal.",
+    title: "Build the smallest version that could work.",
+    body: "One workflow, one team member, one specific use. Not a department-wide rollout. Not a vendor evaluation. The first build is small enough that you can see whether it actually works in two weeks, not two quarters. Build cheaply. Use the simplest tool that could possibly produce the outcome — sometimes that's an off-the-shelf AI tool, sometimes it's a Python script, sometimes it's a pen-and-paper process before any tech at all. The point isn't sophistication. It's signal.",
     practice: "Define what \"working\" looks like before you start. Time saved? Output quality? Reduced errors? If you don't define the success metric in advance, you'll find a way to claim success regardless.",
   },
   {
     letter: "P",
     label: "Produce",
     icon: Layers,
-    title: "Compare with-AI to without-AI.",
-    body: "Run the pilot long enough to compare outputs honestly. Not just \"did the AI generate something?\" — but is the output better than the manual version, faster, more consistent, or freeing up real time? Production is where most AI pilots quietly fail. The model produced something. Nobody used it. Or someone used it and then spent more time fixing it than they would have done from scratch. Catch that here.",
-    practice: "Track three metrics: time, quality, and team energy. Energy matters because a tool that technically saves time but burns out the operator is a net loss.",
+    title: "Compare the new way to the old way.",
+    body: "Run the build long enough to compare outputs honestly. Not just \"did the system produce something?\" — but is the output better than the manual version, faster, more consistent, or freeing up real time and energy? Production is where most pilots quietly fail. The system produced something. Nobody used it. Or someone used it and spent more time fixing the output than they would have done from scratch. Catch that here.",
+    practice: "Track three metrics: time, quality, and team energy. Energy matters because a system that technically saves time but burns out the operator is a net loss.",
   },
   {
     letter: "T",
     label: "Transform",
     icon: Repeat2,
-    title: "Turn what works into a system.",
-    body: "Anything that survives Produce gets converted into a system. Documented. Repeatable. Owned by someone. Templated. This is the step that compounds — every workflow you transform makes the next one easier, because you know what to look for. The teams that stay good at AI are the ones that keep transforming. Everyone else stays in pilot purgatory.",
-    practice: "Write down the workflow as a runbook. If a new team member couldn't replicate it from your notes, it's not a system yet — it's still tribal knowledge.",
+    title: "Turn what works into something the team owns.",
+    body: "Anything that survives Produce gets converted into a system the team can run without you. Documented. Repeatable. Owned by someone. Templated. This is the step that compounds — every workflow you transform makes the next one easier, because the team knows what to look for. The teams that stay good at this are the ones that keep transforming. Everyone else stays in pilot purgatory.",
+    practice: "Write down the workflow as a runbook. If a new team member couldn't replicate it from the notes, it's not a system yet — it's still tribal knowledge.",
   },
 ];
 
@@ -180,10 +180,10 @@ const OrderSection = () => (
       </h2>
       <div className="space-y-5 text-base md:text-lg opacity-80 leading-relaxed">
         <p>
-          The tools are exciting. The pilot is concrete. Apply feels like progress.
+          The tools are exciting. The build feels concrete. Apply looks like progress.
         </p>
         <p>
-          But the teams that skip Assess and Discover end up automating the wrong thing — efficiently. They get faster at work that didn't matter. The teams that skip Transform stay in pilot purgatory forever, perpetually evaluating tools, perpetually demoing, never owning anything.
+          But the teams that skip Assess and Discover end up building the wrong thing efficiently. They automate work that didn't matter, or they ship a system that solves a problem the business doesn't actually have. The teams that skip Transform stay in pilot purgatory forever — perpetually evaluating tools, perpetually demoing, never owning anything.
         </p>
         <p>
           The order isn't ceremonial. It's the difference between a team that compounds and a team that experiments.
@@ -293,11 +293,11 @@ const FinalSection = () => (
         The Point
       </p>
       <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight mb-8">
-        Don't chase AI.{" "}
-        <span className="italic text-accent-highlight">Adapt to it on your own terms.</span>
+        Don't chase tools.{" "}
+        <span className="italic text-accent-highlight">Build the right system for what your work actually needs.</span>
       </h2>
       <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-10">
-        Clarity before complexity. One workflow at a time. Built into a system you actually own.
+        Diagnosis before tools. One outcome at a time. Built into a system the team actually owns.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Button variant="hero" size="lg" asChild>
@@ -320,7 +320,7 @@ const AdaptFramework = () => {
   useEffect(() => {
     setSEO({
       title: "ADAPT Framework | Rovonn Russell",
-      description: "A practical framework for AI adoption that doesn't strip the human side out of your work. Assess. Discover. Apply. Produce. Transform.",
+      description: "A practical framework for tailoring AI and systems to what your work actually needs. Diagnose first, build the right thing second. Assess. Discover. Apply. Produce. Transform.",
       path: "/frameworks/adapt",
     });
     return resetSEO;

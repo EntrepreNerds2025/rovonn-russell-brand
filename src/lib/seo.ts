@@ -69,7 +69,7 @@ export function setSEO(config: SEOConfig) {
 export function resetSEO() {
   setSEO({
     title: "Rovonn Russell | Storytelling, Systems and AI",
-    description: "Rovonn Russell helps entrepreneurs, creators, and impact-driven leaders turn their ideas, expertise, and work into visibility, trust, and practical systems using storytelling, content, and AI.",
+    description: "Rovonn Russell helps founders, businesses, and impact-driven leaders tailor AI and systems to what their work actually needs. ADAPT framework, content systems, storytelling, and practical AI for real work.",
     path: "/",
   });
 }

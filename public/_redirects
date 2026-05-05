@@ -1,0 +1,9 @@
+# Redirects for rovonnrussell.com
+# Format: source destination status
+# This file is read by Netlify, Vercel, and Lovable's hosting layer.
+
+# Old subdirectory misspelling
+/blogs/*    /blog/:splat   301
+
+# Catch-all SPA routing (must be last)
+/*    /index.html   200
