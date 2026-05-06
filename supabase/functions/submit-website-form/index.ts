@@ -221,6 +221,11 @@ Deno.serve(async (req) => {
       });
     }
 
+    // 7. Fire-and-forget internal notification email via Resend
+    sendInternalNotification(formType, name, email, organization, body).catch((e) =>
+      console.error('Resend notification failed:', e)
+    );
+
     return new Response(
       JSON.stringify({ success: true, message: 'Submission received successfully.' }),
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
@@ -234,6 +239,79 @@ Deno.serve(async (req) => {
     );
   }
 });
+
+async function sendInternalNotification(
+  formType: FormType,
+  name: string,
+  email: string,
+  organization: string,
+  body: Record<string, unknown>
+) {
+  const apiKey = Deno.env.get('RESEND_API_KEY');
+  if (!apiKey) {
+    console.warn('RESEND_API_KEY not set; skipping notification email');
+    return;
+  }
+
+  const subjectMap: Record<FormType, string> = {
+    strategy_call: '🎯 New Strategy Call Request',
+    speaking_inquiry: '🎤 New Speaking Inquiry',
+    contact_form: '✉️ New Contact Form Submission',
+    tool_signup: '🤖 New AI Tool Signup',
+  };
+
+  const lines = [
+    `<p><strong>Form:</strong> ${formType}</p>`,
+    `<p><strong>Name:</strong> ${escapeHtml(name)}</p>`,
+    `<p><strong>Email:</strong> ${escapeHtml(email)}</p>`,
+  ];
+  if (organization) lines.push(`<p><strong>Organization:</strong> ${escapeHtml(organization)}</p>`);
+  if (body.message) lines.push(`<p><strong>Message:</strong><br>${escapeHtml(String(body.message))}</p>`);
+  if (body.event_name || body.event) lines.push(`<p><strong>Event:</strong> ${escapeHtml(String(body.event_name || body.event))}</p>`);
+  if (body.event_date) lines.push(`<p><strong>Event Date:</strong> ${escapeHtml(String(body.event_date))}</p>`);
+  if (body.interest || body.interest_type) lines.push(`<p><strong>Interest:</strong> ${escapeHtml(String(body.interest || body.interest_type))}</p>`);
+  if (body.tool_name) lines.push(`<p><strong>Tool:</strong> ${escapeHtml(String(body.tool_name))}</p>`);
+
+  const html = `
+    <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:24px;color:#1a1a1a;">
+      <h2 style="color:#b8860b;margin:0 0 16px;">${subjectMap[formType]}</h2>
+      <p style="color:#666;margin:0 0 16px;">A new lead just landed via rovonnrussell.com.</p>
+      <div style="background:#faf8f3;padding:16px;border-radius:8px;border-left:3px solid #b8860b;">
+        ${lines.join('')}
+      </div>
+      <p style="color:#999;font-size:12px;margin-top:24px;">Already saved to CRM. Reply directly to contact the lead.</p>
+    </div>
+  `;
+
+  const res = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify({
+      from: 'Rovonn Russell Website <onboarding@resend.dev>',
+      to: ['rovonn@impactloop.ca'],
+      reply_to: email,
+      subject: `${subjectMap[formType]} – ${name}`,
+      html,
+    }),
+  });
+
+  if (!res.ok) {
+    const text = await res.text();
+    console.error('Resend API error:', res.status, text);
+  }
+}
+
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
 
 function buildLeadNotes(formType: FormType, body: Record<string, unknown>): string {
   const lines: string[] = [`Source: rovonnrussell.com`, `Form: ${formType}`];

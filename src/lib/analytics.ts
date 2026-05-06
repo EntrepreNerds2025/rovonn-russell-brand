@@ -24,7 +24,15 @@ export type AnalyticsEvent =
   | "advisory_cta_clicked"
   | "speaking_form_submitted"
   | "resource_clicked"
-  | "navbar_cta_clicked";
+  | "navbar_cta_clicked"
+  | "blog_index_viewed"
+  | "blog_category_viewed"
+  | "blog_post_viewed"
+  | "blog_cta_click"
+  | "portfolio_index_viewed"
+  | "portfolio_card_click"
+  | "portfolio_case_study_viewed"
+  | `blog_scroll_${number}`;
 
 export function trackEvent(
   eventName: AnalyticsEvent,
