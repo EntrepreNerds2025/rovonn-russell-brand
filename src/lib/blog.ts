@@ -7,7 +7,16 @@
  * docs/VOICE_REFERENCE.md and enforced by docs/PRE_PUBLISH_CHECKLIST.md.
  */
 import yaml from "js-yaml";
-import readingTime from "reading-time";
+
+// Lightweight reading-time calculator (browser-safe).
+// The npm `reading-time` package depends on Node's stream/util `inherits`,
+// which breaks in browser bundles ("OF.inherits is not a function").
+function readingTime(text: string): { minutes: number; words: number; text: string } {
+  const words = (text.trim().match(/\S+/g) || []).length;
+  const minutes = words / 200; // ~200 wpm
+  const mins = Math.max(1, Math.ceil(minutes));
+  return { minutes, words, text: `${mins} min read` };
+}
 
 export type BlogCategory =
   | "Building in Public"
