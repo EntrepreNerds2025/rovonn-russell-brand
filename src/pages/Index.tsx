@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { setSEO, resetSEO } from "@/lib/seo";
 import { trackEvent } from "@/lib/analytics";
 import { getAllPosts, formatPostDate } from "@/lib/blog";
+import rovonnPortrait from "@/assets/rovonn-portrait.png";
 import {
   ArrowRight,
   BookOpen,
@@ -38,21 +39,13 @@ const HeroSection = () => (
       </div>
       <div className="lg:col-span-5 relative animate-fade-in" style={{ animationDelay: "0.2s" }}>
         <div className="relative aspect-[4/5] rounded-md overflow-hidden border border-border bg-cream">
-          <div className="absolute inset-0 bg-gradient-to-br from-accent/15 via-transparent to-accent-deep/10" />
-          <div className="absolute inset-0 p-6 flex flex-col justify-end gap-3">
-            <div className="bg-card border border-border rounded-md p-4 shadow-sm transform -rotate-2 ml-2">
-              <div className="flex items-center gap-2 mb-2"><Bot size={14} className="text-accent-deep" /><span className="text-[10px] font-semibold tracking-widest uppercase text-muted-foreground">AI for Real Work</span></div>
-              <div className="h-1.5 bg-foreground/80 rounded w-3/4 mb-1.5" /><div className="h-1.5 bg-foreground/30 rounded w-1/2" />
-            </div>
-            <div className="bg-foreground text-background border border-foreground rounded-md p-4 shadow-md">
-              <div className="flex items-center gap-2 mb-2"><Layers size={14} className="text-accent" /><span className="text-[10px] font-semibold tracking-widest uppercase opacity-70">Visibility System</span></div>
-              <div className="h-1.5 bg-background/80 rounded w-2/3 mb-1.5" /><div className="h-1.5 bg-background/40 rounded w-1/2" />
-            </div>
-            <div className="bg-card border border-border rounded-md p-4 shadow-sm transform rotate-1 mr-2">
-              <div className="flex items-center gap-2 mb-2"><BookOpen size={14} className="text-accent-deep" /><span className="text-[10px] font-semibold tracking-widest uppercase text-muted-foreground">Story Capture</span></div>
-              <div className="h-1.5 bg-foreground/80 rounded w-1/2 mb-1.5" /><div className="h-1.5 bg-foreground/30 rounded w-2/3" />
-            </div>
-          </div>
+          <div className="absolute inset-0 bg-gradient-to-br from-accent/25 via-cream to-accent-deep/15" />
+          <img
+            src={rovonnPortrait}
+            alt="Rovonn Russell, Impact Story Architect"
+            className="absolute inset-0 w-full h-full object-cover object-top"
+            loading="eager"
+          />
         </div>
         <div className="absolute -top-3 -right-3 w-24 h-24 bg-accent/30 rounded-md -z-10" />
       </div>
