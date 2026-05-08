@@ -9,6 +9,7 @@ import {
   Eye,
   Sparkles,
   Building2,
+  Film,
 } from "lucide-react";
 
 interface PathAction {
@@ -65,6 +66,17 @@ const paths: Path[] = [
   },
   {
     number: "04",
+    icon: Film,
+    intent: "I want my brand or company film directed.",
+    title: "Studio direction.",
+    desc: "For founders and companies who need a brand film, founder narrative, or campaign centerpiece directed end-to-end. Selective intake, modern production, AI used where it earns its keep. From $15,000.",
+    actions: [
+      { label: "See Studio details", href: "/studio" },
+      { label: "Tell Rovonn about your project", href: "/contact?topic=studio" },
+    ],
+  },
+  {
+    number: "05",
     icon: Building2,
     intent: "I represent an organization.",
     title: "For nonprofits, CSR teams, and impact-led companies.",
@@ -88,7 +100,7 @@ const HeroSection = () => (
         <span className="italic text-accent-highlight">where you actually are.</span>
       </h1>
       <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-        Whether you want to use AI better, become more visible, turn your expertise into assets, or bring this work to your organization, here's the best place to begin.
+        Whether you want to use AI better, become more visible, turn your expertise into assets, get a film directed, or bring this work to your organization, here's the best place to begin.
       </p>
     </div>
   </section>

@@ -14,6 +14,7 @@ import Resources from "./pages/Resources";
 import VisibilityStarterKit from "./pages/VisibilityStarterKit";
 import AdaptFramework from "./pages/AdaptFramework";
 import WorkWithMe from "./pages/WorkWithMe";
+import Studio from "./pages/Studio";
 import YouTubePage from "./pages/YouTubePage";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/youtube" element={<YouTubePage />} />
           <Route path="/speaking" element={<Speaking />} />
           <Route path="/work-with-me" element={<WorkWithMe />} />
+          <Route path="/studio" element={<Studio />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/category/:categorySlug" element={<BlogCategory />} />

@@ -8,6 +8,7 @@ import {
   Building2,
   UserRoundSearch,
   Mic,
+  Film,
   PhoneCall,
   MessageSquareText,
   HeartHandshake,
@@ -34,6 +35,15 @@ const primaryPaths = [
     desc: "Advisory, strategy sessions, and workshops for founders, businesses, and leaders who want help building visibility and AI-supported systems.",
     cta: "See engagement options",
     href: "#leaders",
+    external: false,
+  },
+  {
+    icon: Film,
+    label: "For Founders + Companies",
+    title: "Direct a film with Studio.",
+    desc: "Selective director-led production for founders and companies who need a brand film, founder narrative, or campaign centerpiece that holds up. From $15,000.",
+    cta: "See Studio details",
+    href: "/studio",
     external: false,
   },
   {
@@ -103,11 +113,11 @@ const HeroSection = () => (
         Work With Me
       </p>
       <h1 className="text-5xl md:text-7xl font-serif font-bold leading-[1.05] mb-8">
-        Three doors. Pick the one that{" "}
+        Four doors. Pick the one that{" "}
         <span className="italic text-accent-highlight">fits where you are.</span>
       </h1>
       <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-        Whether you're a founder building your own visibility, a leader bringing this to your team, or a conference looking for a speaker, here's the right way in.
+        Whether you're a founder building your own visibility, a leader bringing this to your team, a company that needs a film directed, or a conference looking for a speaker, here's the right way in.
       </p>
     </div>
   </section>
@@ -116,7 +126,7 @@ const HeroSection = () => (
 const PrimaryPathsSection = () => (
   <section className="section-padding bg-secondary py-16 md:py-20">
     <div className="max-w-6xl mx-auto">
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {primaryPaths.map((path) => {
           const Inner = (
             <>
