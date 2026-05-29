@@ -13,7 +13,7 @@ declare global {
   }
 }
 
-export type AnalyticsEvent =
+export type KnownAnalyticsEvent =
   | "personal_brand_home_viewed"
   | "starter_kit_form_started"
   | "starter_kit_form_submitted"
@@ -33,6 +33,8 @@ export type AnalyticsEvent =
   | "portfolio_card_click"
   | "portfolio_case_study_viewed"
   | `blog_scroll_${number}`;
+
+export type AnalyticsEvent = KnownAnalyticsEvent | (string & {});
 
 export function trackEvent(
   eventName: AnalyticsEvent,
