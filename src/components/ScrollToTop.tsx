@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+﻿import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 /**
@@ -9,7 +9,7 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    // Use "auto" not "smooth" — instant reset feels right on navigation;
+    // Use "auto" not "smooth" - instant reset feels right on navigation;
     // smooth on every click is jarring.
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   }, [pathname]);

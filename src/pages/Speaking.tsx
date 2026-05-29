@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+﻿import {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mic, Bot, Layers, Eye, Sparkles, BookOpen } from "lucide-react";
@@ -89,7 +89,7 @@ const TopicsSection = () => (
         ))}
       </div>
       <p className="text-sm text-muted-foreground mt-10 max-w-2xl italic font-serif">
-        All talks can be tailored to your audience. Custom topics welcome — Rovonn has spoken on adjacent themes including narrative architecture, founder storytelling, and AI ethics for mission-driven organizations.
+        All talks can be tailored to your audience. Custom topics welcome - Rovonn has spoken on adjacent themes including narrative architecture, founder storytelling, and AI ethics for mission-driven organizations.
       </p>
     </div>
   </section>

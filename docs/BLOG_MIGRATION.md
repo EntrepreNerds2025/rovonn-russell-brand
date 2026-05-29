@@ -1,4 +1,4 @@
-# Blog Migration — blog.rovonnrussell.com → rovonnrussell.com/blog
+﻿# Blog Migration - blog.rovonnrussell.com -> rovonnrussell.com/blog
 
 The blog moves from a subdomain to a subdirectory. This consolidates SEO into the main domain and simplifies the maintenance footprint to one site.
 
@@ -26,14 +26,14 @@ For every URL on `blog.rovonnrussell.com`, redirect to the matching subdirectory
 |---|---|---|
 | `blog.rovonnrussell.com` | `rovonnrussell.com/blog` | 301 |
 | `blog.rovonnrussell.com/blog` | `rovonnrussell.com/blog` | 301 |
-| `blog.rovonnrussell.com/blog/lessons-from-building-15-ai-agents` | `rovonnrussell.com/blog` | 301 (or 410 Gone) — this post is retired |
+| `blog.rovonnrussell.com/blog/lessons-from-building-15-ai-agents` | `rovonnrussell.com/blog` | 301 (or 410 Gone) - this post is retired |
 | `blog.rovonnrussell.com/blog/<any-other-slug>` | `rovonnrussell.com/blog/<slug>` | 301 |
 | `blog.rovonnrussell.com/<any-path>` | `rovonnrussell.com/<path>` | 301 (catch-all) |
 
 If the subdomain runs through Cloudflare, the Page Rule pattern is:
 ```
-blog.rovonnrussell.com/blog/*   →   https://rovonnrussell.com/blog/$1   (301)
-blog.rovonnrussell.com/*        →   https://rovonnrussell.com/$1        (301)
+blog.rovonnrussell.com/blog/*   ->   https://rovonnrussell.com/blog/$1   (301)
+blog.rovonnrussell.com/*        ->   https://rovonnrussell.com/$1        (301)
 ```
 
 ### 2. App-level redirects (already shipped)
@@ -44,9 +44,9 @@ blog.rovonnrussell.com/*        →   https://rovonnrussell.com/$1        (301)
 /*    /index.html   200
 ```
 
-This handles the misspelling `/blogs` → `/blog` at the hosting layer (Netlify, Vercel, and Lovable's hosting all read this file).
+This handles the misspelling `/blogs` -> `/blog` at the hosting layer (Netlify, Vercel, and Lovable's hosting all read this file).
 
-The React Router redirects in `src/App.tsx` (`/blogs` → `/blog`, `/blogs/:slug` → `/blog/:slug`) are a backup for client-side navigation.
+The React Router redirects in `src/App.tsx` (`/blogs` -> `/blog`, `/blogs/:slug` -> `/blog/:slug`) are a backup for client-side navigation.
 
 ### 3. Sitemap and robots updates
 
@@ -78,7 +78,7 @@ Worst case: some link equity is lost during transition. The voice doc, the edito
 Suggested sequence:
 
 1. **Today:** ship the new `/blog` infrastructure (this PR) with `published: false` on all posts. Site shows an empty-state message at `/blog`.
-2. **Day 1–2:** validate the sample post against the voice doc and the pre-publish checklist. User flips it to `published: true`.
+2. **Day 1â€“2:** validate the sample post against the voice doc and the pre-publish checklist. User flips it to `published: true`.
 3. **Day 3:** configure the 301 redirects from the subdomain.
 4. **Day 4:** submit the new sitemap and RSS feed. File the Change of Address with Google Search Console.
-5. **Day 5–7:** watch traffic. Old-URL hits should be redirecting cleanly.
+5. **Day 5â€“7:** watch traffic. Old-URL hits should be redirecting cleanly.

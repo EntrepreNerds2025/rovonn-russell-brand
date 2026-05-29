@@ -1,5 +1,5 @@
-/**
- * Truesight — two-lane budget visualization.
+﻿/**
+ * Truesight - two-lane budget visualization.
  * Shows the cost split between Opus (deep) and Sonnet (cron) lanes.
  */
 export const TruesightLaneDiagram = () => (
@@ -42,9 +42,9 @@ export const TruesightLaneDiagram = () => (
         <div className="border-t border-background/15 pt-4">
           <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent mb-2">Fires when</p>
           <ul className="text-sm opacity-80 space-y-1.5">
-            <li>• ICP score jumps to 9-10</li>
-            <li>• Yaaba prospect score above 70</li>
-            <li>• Manual high-stakes request</li>
+            <li>â€¢ ICP score jumps to 9-10</li>
+            <li>â€¢ Yaaba prospect score above 70</li>
+            <li>â€¢ Manual high-stakes request</li>
           </ul>
         </div>
       </div>
@@ -79,9 +79,9 @@ export const TruesightLaneDiagram = () => (
         <div className="border-t border-border pt-4">
           <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent-deep mb-2">Fires when</p>
           <ul className="text-sm text-muted-foreground space-y-1.5">
-            <li>• ICP score 7-8 (queued)</li>
-            <li>• Free public report request</li>
-            <li>• Tuesday batch (5-unit budget)</li>
+            <li>â€¢ ICP score 7-8 (queued)</li>
+            <li>â€¢ Free public report request</li>
+            <li>â€¢ Tuesday batch (5-unit budget)</li>
           </ul>
         </div>
       </div>

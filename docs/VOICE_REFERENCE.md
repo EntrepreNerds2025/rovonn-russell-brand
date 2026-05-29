@@ -1,8 +1,8 @@
-# Voice Reference
+﻿# Voice Reference
 
 The writing voice for rovonnrussell.com blog posts and long-form content.
 
-Calibrated from 21 real LinkedIn posts written by Rovonn (May 2026). The 15 AI Agents post on the old blog subdomain is NOT a voice anchor — it was AI-written and is referenced here only as an anti-example.
+Calibrated from 21 real LinkedIn posts written by Rovonn (May 2026). The 15 AI Agents post on the old blog subdomain is NOT a voice anchor - it was AI-written and is referenced here only as an anti-example.
 
 ## The reader
 
@@ -22,13 +22,13 @@ The voice carries the place and the people that shaped it. Don't sand that off. 
 
 **Toronto.** The city is a real character in Rovonn's writing. North York. Scarborough. Etobicoke. Specific schools (Newtonbrook Secondary), specific community spaces (Pearson Convention Center, Black Creek Community Health Centre). When a post is set somewhere, name where. *"A room in North York"* lands differently than *"a community space."*
 
-**Black community and Caribbean roots.** Rovonn's work sits inside Black community organizing in the GTA — CAFCAN, Black Health Alliance, OPTK, youth-of-colour programs in trades and tech. This isn't decorative. It shapes what counts as impact (representation in genomic databases, trust between institutions and communities, who gets seen for trades work) and what counts as a real moment (a young person picking up a saw for the first time, a family stabilizing). For the blog: when Black community context is part of the story, write it in. Don't generalize *"underserved communities"* when you mean Black communities specifically.
+**Black community and Caribbean roots.** Rovonn's work sits inside Black community organizing in the GTA - CAFCAN, Black Health Alliance, OPTK, youth-of-colour programs in trades and tech. This isn't decorative. It shapes what counts as impact (representation in genomic databases, trust between institutions and communities, who gets seen for trades work) and what counts as a real moment (a young person picking up a saw for the first time, a family stabilizing). For the blog: when Black community context is part of the story, write it in. Don't generalize *"underserved communities"* when you mean Black communities specifically.
 
-**Community-organizer instincts.** Years of working with nonprofit leaders, foundation officers, and youth program directors mean the voice defaults to: name the people doing the work, credit the partners, point at the conditions that made the win possible. That's not humility for its own sake — it's how community-led work actually gets described by people inside it. Carry this into the blog. *"Programs like OPTK are showing what's possible when..."* > *"I figured out how to..."*
+**Community-organizer instincts.** Years of working with nonprofit leaders, foundation officers, and youth program directors mean the voice defaults to: name the people doing the work, credit the partners, point at the conditions that made the win possible. That's not humility for its own sake - it's how community-led work actually gets described by people inside it. Carry this into the blog. *"Programs like OPTK are showing what's possible when..."* > *"I figured out how to..."*
 
 **Builder identity.** The other half is the studio operator. Impact Loop builds storytelling systems and AI agents for organizations. ADAPT cycles, ecosystem research, deliverability sentinels, content engines that ship. The voice has technical precision when it needs to: specific tools, specific architecture decisions, specific numbers. Don't dilute that into vague "AI helps you" language when the post is about a real build.
 
-**The combination is the brand.** A community-rooted Toronto operator who builds production systems and writes about both. When a post leans too far one direction (only community, only tech) it stops sounding like Rovonn. The strongest posts hold both — a saw in a kid's hands AND a Python function that pushed deterministic logic out of the LLM. The same eye looking at both rooms.
+**The combination is the brand.** A community-rooted Toronto operator who builds production systems and writes about both. When a post leans too far one direction (only community, only tech) it stops sounding like Rovonn. The strongest posts hold both - a saw in a kid's hands AND a Python function that pushed deterministic logic out of the LLM. The same eye looking at both rooms.
 
 When a topic doesn't naturally touch culture or place, don't force it in. But when it does, name it the way someone inside the community would name it.
 
@@ -36,13 +36,13 @@ When a topic doesn't naturally touch culture or place, don't force it in. But wh
 
 **1. Lead with the moment, not the thesis.** Open with a specific observation, a Tuesday, a conversation, a project that just shipped. The thesis lands AFTER the moment, never before. Rovonn's actual openers: *"Some frames from..."*, *"Watching these young men pick up saws..."*, *"Last night..."*. AI's typical opener: *"After shipping 15 production AI agents at Impact Loop, the single most important lesson is this:"*. Notice how the AI version tells you the punchline is coming. Rovonn's version makes you notice the room first.
 
-**2. Name everything specific.** Specific people, organizations, places, programs, partners. CAFCAN. Newtonbrook Secondary School. Phil Broome. Cheryl Prescod. Pearson Convention Center. Almost never abstract. The blog version of this: name your own work — Impact Loop projects, ADAPT clients (anonymized when needed), specific weeks, specific tools, specific moments.
+**2. Name everything specific.** Specific people, organizations, places, programs, partners. CAFCAN. Newtonbrook Secondary School. Phil Broome. Cheryl Prescod. Pearson Convention Center. Almost never abstract. The blog version of this: name your own work - Impact Loop projects, ADAPT clients (anonymized when needed), specific weeks, specific tools, specific moments.
 
-**3. Use the observation → reflection → bigger picture structure.** Three layers, in order. *I saw X happen. What stood out was Y. The bigger thing is Z.* Almost every reflective LinkedIn post follows this. It's how Rovonn actually thinks.
+**3. Use the observation -> reflection -> bigger picture structure.** Three layers, in order. *I saw X happen. What stood out was Y. The bigger thing is Z.* Almost every reflective LinkedIn post follows this. It's how Rovonn actually thinks.
 
-**4. Use the signature phrases.** These show up constantly in real posts and they're not filler — they're how he speaks: *"Big respect to..."*, *"Grateful to..."*, *"What stood out most was..."*, *"Walking away, I'm reminded that..."*, *"Looking forward to..."*, *"What I loved most was..."*. Use them. They're voice anchors.
+**4. Use the signature phrases.** These show up constantly in real posts and they're not filler - they're how he speaks: *"Big respect to..."*, *"Grateful to..."*, *"What stood out most was..."*, *"Walking away, I'm reminded that..."*, *"Looking forward to..."*, *"What I loved most was..."*. Use them. They're voice anchors.
 
-**5. Tricolons when they earn their place.** Three-part lists are a real rhythm in Rovonn's writing: *"Creating real pathways. Ensuring diverse talent is seen, supported, and hired. Building bridges between institutions and communities."* Use them when three is the right number, not because three sounds good. Don't impose three-part structures (3 mistakes, 5 ways) — that's an AI tell.
+**5. Tricolons when they earn their place.** Three-part lists are a real rhythm in Rovonn's writing: *"Creating real pathways. Ensuring diverse talent is seen, supported, and hired. Building bridges between institutions and communities."* Use them when three is the right number, not because three sounds good. Don't impose three-part structures (3 mistakes, 5 ways) - that's an AI tell.
 
 **6. Set up contrasts with "not X, but Y".** *"It's not just about a job. It's about ownership, independence, and building something with your own hands."* This pattern shows up often. It works because it forces precision and gives the reader the punch.
 
@@ -56,7 +56,7 @@ When a topic doesn't naturally touch culture or place, don't force it in. But wh
 
 ## Structural moves
 
-### Observation → reflection → bigger picture
+### Observation -> reflection -> bigger picture
 
 The dominant pattern. Use it as the post-level structure AND as paragraph-level structure.
 
@@ -86,7 +86,7 @@ Use it when you want to redirect the reader's frame. Sets up what most people th
 
 For LinkedIn this means tagging partners. For the blog, it means crediting the people, frameworks, or experiences the post draws from. Then a forward-looking line.
 
-## Anti-examples — what not to sound like
+## Anti-examples - what not to sound like
 
 These are sentences from the 15 AI Agents post (which was AI-written). Each one shows a tell.
 
@@ -100,10 +100,10 @@ These section headers are AI structural patterns. They make every post feel like
 The original post uses em dashes constantly. Rovonn's actual writing uses commas, periods, or colons instead. No em dashes in body copy.
 
 **The rule-of-three for everything ("three mistakes," "three agents I'd build first").**
-When everything in a post comes in threes, it's the AI imposing structure. Real writing varies — sometimes there's one, sometimes seven, sometimes two. Three is fine when it's the right number.
+When everything in a post comes in threes, it's the AI imposing structure. Real writing varies - sometimes there's one, sometimes seven, sometimes two. Three is fine when it's the right number.
 
 **"Push every decision you can into deterministic scripts" / "the difference between a demo and a production system."**
-Slightly stilted phrasing. Technically correct, just neat. Real writing has more rough edges. *"We pushed every decision the system could pattern-match into deterministic Python"* is more like Rovonn — specific, lower-register, less dressed up.
+Slightly stilted phrasing. Technically correct, just neat. Real writing has more rough edges. *"We pushed every decision the system could pattern-match into deterministic Python"* is more like Rovonn - specific, lower-register, less dressed up.
 
 ## Audience translation guide
 
@@ -119,14 +119,14 @@ You can also write posts that hold all three at once when the principle applies 
 
 ## Length and format
 
-Blog posts are 800–1,500 words. Same voice as LinkedIn, just sustained longer.
+Blog posts are 800â€“1,500 words. Same voice as LinkedIn, just sustained longer.
 
 **Structure:**
-- Opening: 1–3 paragraphs of observation. Set the scene.
-- Sections: 3–5 anchor headings with sentence-style headers ("The math forces this") not formulaic ones ("5 Ways to X").
+- Opening: 1â€“3 paragraphs of observation. Set the scene.
+- Sections: 3â€“5 anchor headings with sentence-style headers ("The math forces this") not formulaic ones ("5 Ways to X").
 - Body: mix short and long paragraphs. Bold inline emphasis when a sentence does real work.
 - Close: credit-giving and forward-looking. Not a CTA.
-- FAQ block at the end (4–8 questions) for on-page anchor linking and SEO.
+- FAQ block at the end (4â€“8 questions) for on-page anchor linking and SEO.
 
 **Frontmatter template:**
 

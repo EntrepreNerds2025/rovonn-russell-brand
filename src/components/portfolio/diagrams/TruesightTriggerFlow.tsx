@@ -1,5 +1,5 @@
-/**
- * Truesight — trigger to lane to runner flow.
+﻿/**
+ * Truesight - trigger to lane to runner flow.
  */
 export const TruesightTriggerFlow = () => (
   <div className="bg-card border border-border rounded-md p-6 md:p-10 my-10">
@@ -44,7 +44,7 @@ export const TruesightTriggerFlow = () => (
       <g>
         <rect x="650" y="40" width="180" height="70" rx="6" fill="hsl(180 30% 92%)" stroke="hsl(180 50% 45%)" strokeWidth="2"/>
         <text x="740" y="70" textAnchor="middle" fontSize="13" fontWeight="700" fill="hsl(var(--foreground))">Return existing</text>
-        <text x="740" y="90" textAnchor="middle" fontSize="11" fill="hsl(var(--muted-foreground))">Yes → short-circuit</text>
+        <text x="740" y="90" textAnchor="middle" fontSize="11" fill="hsl(var(--muted-foreground))">Yes to short-circuit</text>
         <text x="740" y="103" textAnchor="middle" fontSize="11" fill="hsl(var(--muted-foreground))">No API spend</text>
       </g>
 
@@ -86,7 +86,7 @@ export const TruesightTriggerFlow = () => (
     </svg>
 
     <p className="text-sm text-muted-foreground mt-6 leading-relaxed max-w-2xl">
-      Cooldown windows mean the same lead is never re-researched within the trigger's window. Lane assignment respects daily Pro slot budgets — if today's slots are full, Pro work falls back to cron lane automatically.
+      Cooldown windows mean the same lead is never re-researched within the trigger's window. Lane assignment respects daily Pro slot budgets - if today's slots are full, Pro work falls back to cron lane automatically.
     </p>
   </div>
 );

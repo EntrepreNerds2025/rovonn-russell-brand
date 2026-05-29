@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+﻿import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { setSEO, resetSEO } from "@/lib/seo";
 import { trackEvent } from "@/lib/analytics";
@@ -38,7 +38,7 @@ const PortfolioCaseStudy = () => {
   useEffect(() => {
     if (!study) return;
     setSEO({
-      title: `${study.title} — Case Study | Rovonn Russell`,
+      title: `${study.title} - Case Study | Rovonn Russell`,
       description: study.shortDescription,
       path: `/portfolio/${study.slug}`,
       noindex: true,

@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+﻿import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -38,7 +38,7 @@ const About = () => (
           </p>
           <p>If you want to know where to start, take The Edge.</p>
           <p className="text-foreground font-medium">Don't just adopt AI. ADAPT it.</p>
-          <p>— Rovonn</p>
+          <p>- Rovonn</p>
         </div>
         <div className="mt-12">
           <Button variant="hero" size="lg" asChild>

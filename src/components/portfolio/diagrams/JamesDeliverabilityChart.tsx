@@ -1,5 +1,5 @@
-/**
- * James — deliverability threshold chart.
+﻿/**
+ * James - deliverability threshold chart.
  * Visualizes the auto-warn / auto-pause thresholds as a horizontal axis.
  */
 export const JamesDeliverabilityChart = () => (
@@ -24,10 +24,10 @@ export const JamesDeliverabilityChart = () => (
         <rect x="425" y="70" width="135" height="40" rx="20" fill="hsl(0 70% 55%)" opacity="0" />
 
         <text x="155" y="135" textAnchor="middle" fontSize="11" fontWeight="600" fill="hsl(var(--foreground))">Healthy</text>
-        <text x="155" y="150" textAnchor="middle" fontSize="10" fill="hsl(var(--muted-foreground))">0% — 5%</text>
+        <text x="155" y="150" textAnchor="middle" fontSize="10" fill="hsl(var(--muted-foreground))">0% - 5%</text>
 
         <text x="357" y="135" textAnchor="middle" fontSize="11" fontWeight="600" fill="hsl(var(--foreground))">WARN</text>
-        <text x="357" y="150" textAnchor="middle" fontSize="10" fill="hsl(var(--muted-foreground))">5% — 10%</text>
+        <text x="357" y="150" textAnchor="middle" fontSize="10" fill="hsl(var(--muted-foreground))">5% - 10%</text>
 
         <text x="492" y="135" textAnchor="middle" fontSize="11" fontWeight="600" fill="hsl(var(--foreground))">PAUSE</text>
         <text x="492" y="150" textAnchor="middle" fontSize="10" fill="hsl(var(--muted-foreground))">{`>10%`}</text>
@@ -39,7 +39,7 @@ export const JamesDeliverabilityChart = () => (
       {/* Spam rate */}
       <g>
         <text x="20" y="200" fontSize="13" fontWeight="700" fill="hsl(var(--foreground))">Spam complaint rate</text>
-        <text x="20" y="218" fontSize="11" fill="hsl(var(--muted-foreground))">Tighter thresholds — spam complaints kill warmup faster</text>
+        <text x="20" y="218" fontSize="11" fill="hsl(var(--muted-foreground))">Tighter thresholds - spam complaints kill warmup faster</text>
 
         <rect x="20" y="240" width="540" height="40" rx="20" fill="hsl(var(--secondary))" />
         <rect x="20" y="240" width="324" height="40" rx="20" fill="hsl(180 60% 45%)" opacity="0.85" />
@@ -47,10 +47,10 @@ export const JamesDeliverabilityChart = () => (
         <rect x="452" y="240" width="108" height="40" rx="0" fill="hsl(0 70% 55%)" opacity="0.85" />
 
         <text x="182" y="305" textAnchor="middle" fontSize="11" fontWeight="600" fill="hsl(var(--foreground))">Healthy</text>
-        <text x="182" y="320" textAnchor="middle" fontSize="10" fill="hsl(var(--muted-foreground))">0% — 0.3%</text>
+        <text x="182" y="320" textAnchor="middle" fontSize="10" fill="hsl(var(--muted-foreground))">0% - 0.3%</text>
 
         <text x="398" y="305" textAnchor="middle" fontSize="11" fontWeight="600" fill="hsl(var(--foreground))">WARN</text>
-        <text x="398" y="320" textAnchor="middle" fontSize="10" fill="hsl(var(--muted-foreground))">0.3% — 0.5%</text>
+        <text x="398" y="320" textAnchor="middle" fontSize="10" fill="hsl(var(--muted-foreground))">0.3% - 0.5%</text>
 
         <text x="506" y="305" textAnchor="middle" fontSize="11" fontWeight="600" fill="hsl(var(--foreground))">PAUSE</text>
         <text x="506" y="320" textAnchor="middle" fontSize="10" fill="hsl(var(--muted-foreground))">{`>0.5%`}</text>
@@ -61,7 +61,7 @@ export const JamesDeliverabilityChart = () => (
     </svg>
 
     <p className="text-sm text-muted-foreground mt-6 leading-relaxed max-w-2xl">
-      The deliverability sentinel doesn't ask the LLM "is this account healthy?" It runs the math (bounce rate, spam rate, daily limit usage) deterministically — then uses the LLM only to write the human-readable Telegram message. Fast, cheap, debuggable.
+      The deliverability sentinel doesn't ask the LLM "is this account healthy?" It runs the math (bounce rate, spam rate, daily limit usage) deterministically - then uses the LLM only to write the human-readable Telegram message. Fast, cheap, debuggable.
     </p>
   </div>
 );

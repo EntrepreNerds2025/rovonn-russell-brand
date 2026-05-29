@@ -1,10 +1,10 @@
-/**
- * Auto-Quote — meeting-to-money pipeline flow.
+﻿/**
+ * Auto-Quote - meeting-to-money pipeline flow.
  */
 const steps = [
   { num: "01", title: "Meeting ends", body: "Google Meet auto-saves transcript to Drive.", time: "T+0min" },
   { num: "02", title: "Transcript polled", body: "process-meeting-transcripts checks every 15 min via pg_cron.", time: "T+15min" },
-  { num: "03", title: "Idempotency check", body: "Has a quote already been generated for this eventId? If yes — return existing, no LLM call.", time: "T+15min" },
+  { num: "03", title: "Idempotency check", body: "Has a quote already been generated for this eventId? If yes - return existing, no LLM call.", time: "T+15min" },
   { num: "04", title: "Structured extraction", body: "Claude extracts: scope, deliverables, pricing context, timeline, decision-makers, trigger phrases.", time: "T+18min" },
   { num: "05", title: "Quote built", body: "Deterministic code builds the quote from structured fields. Written to quotes table as draft.", time: "T+20min" },
   { num: "06", title: "Linked + ready", body: "Calendar event marks quote_generated=true with generated_quote_id. Bidirectional traceability.", time: "T+22min" },

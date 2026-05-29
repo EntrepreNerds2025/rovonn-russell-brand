@@ -1,4 +1,4 @@
-# Multi-Tenant SaaS Architecture for an Agency CRM
+﻿# Multi-Tenant SaaS Architecture for an Agency CRM
 
 **Built for:** EntrepreNerds Agency (entre-nerd-dash)
 **Role:** Architected and built end-to-end
@@ -16,7 +16,7 @@ The EntrepreNerds dashboard had to be different from the start. The same code ba
 - Contractors and team members with role-scoped access
 - Eventually, the platform itself as a multi-tenant SaaS for other agencies
 
-Doing that as one-tenant-and-then-figure-it-out is the move that paints you into a corner. The system needed to be tenant-aware in every layer — every database row, every edge function, every UI route — from day one.
+Doing that as one-tenant-and-then-figure-it-out is the move that paints you into a corner. The system needed to be tenant-aware in every layer - every database row, every edge function, every UI route - from day one.
 
 That's the architecture documented here. Provisioning, role scoping, tenant-aware edge functions, and Stripe Connect for payment routing.
 
@@ -24,11 +24,11 @@ That's the architecture documented here. Provisioning, role scoping, tenant-awar
 
 **provision-tenant.** Single edge function that bootstraps a new tenant: creates the tenant row, creates the default admin user, seeds the default agent_config (James thresholds, Yaaba slot schedule, Truesight cooldowns, Kwesi categorization rules), creates the default content folders, fires the welcome flow. End-to-end provisioning runs in under 30 seconds.
 
-**manage-tenant-user.** Role-scoped user management. Every user belongs to a tenant and has a role (owner, admin, advisor, contractor, client_portal). Role checks happen at the edge function level, not just in the UI — even if a client portal user reverse-engineered an admin endpoint, the function would reject them.
+**manage-tenant-user.** Role-scoped user management. Every user belongs to a tenant and has a role (owner, admin, advisor, contractor, client_portal). Role checks happen at the edge function level, not just in the UI - even if a client portal user reverse-engineered an admin endpoint, the function would reject them.
 
-**Row-Level Security (RLS) at the database layer.** Postgres RLS policies on every tenant-scoped table enforce that a user can only read/write rows where the tenant_id matches their session's tenant. RLS isn't a substitute for application-level checks — it's the second layer. Application code checks first, RLS catches anything that slipped through.
+**Row-Level Security (RLS) at the database layer.** Postgres RLS policies on every tenant-scoped table enforce that a user can only read/write rows where the tenant_id matches their session's tenant. RLS isn't a substitute for application-level checks - it's the second layer. Application code checks first, RLS catches anything that slipped through.
 
-**Tenant resolution in every edge function.** A shared utility (`_shared/yaaba-pipeline.ts` exposes `resolveTenant`) takes the request and returns the tenant_id from either the JWT, an explicit header, or the request body — depending on the auth pattern of the caller. Every tenant-scoped function calls resolveTenant first. If resolution fails, the function returns 401 before any work happens.
+**Tenant resolution in every edge function.** A shared utility (`_shared/yaaba-pipeline.ts` exposes `resolveTenant`) takes the request and returns the tenant_id from either the JWT, an explicit header, or the request body - depending on the auth pattern of the caller. Every tenant-scoped function calls resolveTenant first. If resolution fails, the function returns 401 before any work happens.
 
 **Function-level enable/disable per tenant.** A tenant can have specific functions disabled (compliance, plan tier, custom request). The shared utility `isFunctionEnabled` checks the tenant's feature flags before doing work. If a tenant doesn't have access to Yaaba sourcing, calling yaaba-spec-generator returns 403 with a clear error.
 
@@ -39,7 +39,7 @@ That's the architecture documented here. Provisioning, role scoping, tenant-awar
 - stripe-connect-webhook handles Stripe events (payment success, payout, dispute, etc.) and routes them to the right tenant
 - stripe-connect-disconnect cleanly tears down the Connect account when a tenant churns
 
-This is the architectural call that lets the platform support multiple agency tenants who each take payments directly through their own Stripe accounts, with the platform taking an explicit fee — instead of routing all payments through one Stripe account and reconciling manually.
+This is the architectural call that lets the platform support multiple agency tenants who each take payments directly through their own Stripe accounts, with the platform taking an explicit fee - instead of routing all payments through one Stripe account and reconciling manually.
 
 **Tenant-scoped agent runs.** Every agent function (James, Yaaba, Truesight, Kwesi, Denise, Amara, Zara, Soren) reads its config from agent_config WHERE tenant_id = current_tenant. This means James's archive thresholds for tenant A can be 0.65 and for tenant B can be 0.85, and the same code runs both correctly.
 
@@ -55,7 +55,7 @@ This is the architectural call that lets the platform support multiple agency te
 
 **Stripe Connect from the start.** Refactoring single-tenant Stripe to Stripe Connect is a multi-month migration. Building it Connect-first costs one extra week of setup. Build it right early.
 
-**Provisioning as a single function, not a workflow.** New tenant onboarding is a single edge function call. Everything that needs to happen happens. Failure is atomic — if any step fails, the function rolls back and the tenant doesn't exist in a partial state.
+**Provisioning as a single function, not a workflow.** New tenant onboarding is a single edge function call. Everything that needs to happen happens. Failure is atomic - if any step fails, the function rolls back and the tenant doesn't exist in a partial state.
 
 ## Result
 

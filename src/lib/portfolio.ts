@@ -1,9 +1,9 @@
-/**
+﻿/**
  * Portfolio data layer.
  * Holds the structured data for all six Tier-1 portfolio case studies.
  * The pages at /portfolio and /portfolio/:slug render from this single source.
  *
- * These pages are HIDDEN — not in nav, not in sitemap, noindex meta tag.
+ * These pages are HIDDEN - not in nav, not in sitemap, noindex meta tag.
  * Shareable via direct URL only (e.g. for Upwork portfolio links).
  */
 
@@ -215,7 +215,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Role-scoped access control",
     ],
     problem:
-      "Most agency CRMs are single-tenant. The agency uses one. If they want to give a client read access, the workaround is shared logins or screen-shares. Each of those breaks at the second client. The EntrepreNerds dashboard had to serve internal operations, client portals, contractor access, and eventually multi-agency SaaS distribution — all from the same code base.",
+      "Most agency CRMs are single-tenant. The agency uses one. If they want to give a client read access, the workaround is shared logins or screen-shares. Each of those breaks at the second client. The EntrepreNerds dashboard had to serve internal operations, client portals, contractor access, and eventually multi-agency SaaS distribution - all from the same code base.",
     metrics: [
       { label: "Provisioning time", value: "<30s", context: "new tenant, end-to-end" },
       { label: "Security layers", value: "2", context: "function-level + RLS at database" },

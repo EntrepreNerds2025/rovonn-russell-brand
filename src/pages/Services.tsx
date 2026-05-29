@@ -1,10 +1,10 @@
-import { CheckCircle, ArrowRight } from "lucide-react";
+﻿import { CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const categories = [
   {
-    title: "Impact Story Architecture Strategy",
+    title: "AI Advisorure Strategy",
     items: ["Narrative Design", "Messaging Clarity", "Story Frameworks", "Impact Story Diagnostic"],
   },
   {
@@ -32,7 +32,7 @@ const Services = () => (
         <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent-highlight mb-6">Services</p>
         <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">How we work together.</h1>
         <p className="text-lg text-muted-foreground max-w-2xl mb-16 leading-relaxed">
-          From strategy to execution — every engagement is designed to help your organization communicate impact with clarity and authority.
+          From strategy to execution - every engagement is designed to help your organization communicate impact with clarity and authority.
         </p>
         <div className="space-y-8">
           {categories.map((cat, i) => (

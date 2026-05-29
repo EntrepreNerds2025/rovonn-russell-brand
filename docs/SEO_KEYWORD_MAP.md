@@ -1,4 +1,4 @@
-# SEO Keyword Map — rovonnrussell.com/blog
+﻿# SEO Keyword Map - rovonnrussell.com/blog
 
 The keyword strategy across the five blog categories. Each cluster has primary keywords (target rank), secondary keywords (support and internal linking), and search-intent notes.
 
@@ -16,7 +16,7 @@ This isn't a keyword-stuffing playbook. The goal is to write posts that genuinel
 
 ---
 
-## Category 1 — Building in Public
+## Category 1 - Building in Public
 
 Search intent: founders looking for honest accounts of running a small agency, shipping production AI, building multi-brand systems. They want truth, not playbooks.
 
@@ -39,7 +39,7 @@ Search intent: founders looking for honest accounts of running a small agency, s
 - Across to: Storytelling category posts on writing publicly
 - Out to: Work With Me page when a post mentions consulting
 
-## Category 2 — Storytelling
+## Category 2 - Storytelling
 
 Search intent: founders and SMB operators who know they should write but can't find the angle. Impact-led leaders who need stronger case studies. They want craft guidance with examples.
 
@@ -62,9 +62,9 @@ Search intent: founders and SMB operators who know they should write but can't f
 - Across to: Building in Public posts when they show storytelling in action
 - Out to: ADAPT framework page when craft connects to a structured methodology
 
-## Category 3 — Systems & Agents
+## Category 3 - Systems & Agents
 
-Search intent: SMB owners and founders evaluating whether AI is worth it for their workflow. They want practical, ROI-aware writing — not hype, not technical-evangelism. Highest commercial intent.
+Search intent: SMB owners and founders evaluating whether AI is worth it for their workflow. They want practical, ROI-aware writing - not hype, not technical-evangelism. Highest commercial intent.
 
 **Primary keywords:**
 - AI agents for small business
@@ -85,7 +85,7 @@ Search intent: SMB owners and founders evaluating whether AI is worth it for the
 - Across to: Building in Public posts that show the agents shipping at Impact Loop
 - Out to: ADAPT framework page when the system-thinking connects
 
-## Category 4 — Community / Culture
+## Category 4 - Community / Culture
 
 Search intent: impact-led leaders, foundation officers, and grant-funded program directors looking for how community-led storytelling actually works. Black community organizers, equity-focused orgs, Toronto-based nonprofits.
 
@@ -108,7 +108,7 @@ Search intent: impact-led leaders, foundation officers, and grant-funded program
 - Across to: ADAPT in Practice posts focused on impact-led leaders
 - Out to: Impact Loop site when a post mentions specific service offerings for orgs
 
-## Category 5 — ADAPT in Practice
+## Category 5 - ADAPT in Practice
 
 Search intent: founders and impact-led leaders evaluating brand-strategy methodologies. They want to see the framework applied, not pitched. Mid-funnel commercial intent.
 
@@ -127,7 +127,7 @@ Search intent: founders and impact-led leaders evaluating brand-strategy methodo
 - knowledge transfer for brands
 
 **Internal-link cluster:**
-- Up to: ADAPT framework page (frameworks/adapt) — every post in this category links here
+- Up to: ADAPT framework page (frameworks/adapt) - every post in this category links here
 - Across to: Storytelling category posts when craft is the focus
 - Out to: Work With Me page
 
@@ -144,7 +144,7 @@ Maps every editorial-calendar post to its primary keyword target.
 | 3 | The week the content engine actually started running | Building in Public | content engine for founders |
 | 4 | What I'd change about Impact Loop if I started it tomorrow | Building in Public | building an AI agency |
 | 5 | The diagnostic I almost didn't ship | Building in Public | nonprofit communications audit |
-| 6 | Year one of writing publicly — the post-mortem | Building in Public | building in public for founders |
+| 6 | Year one of writing publicly - the post-mortem | Building in Public | building in public for founders |
 | 7 | Five angles for finding stories in your work | Storytelling | how to find content angles |
 | 8 | Why "show your work" beats "share your wins" | Storytelling | show your work writing |
 | 9 | Story capture as a weekly habit | Storytelling | story capture for founders |
@@ -170,9 +170,9 @@ Maps every editorial-calendar post to its primary keyword target.
 
 - Primary keyword in title, H1, first 100 words, at least one H2.
 - Secondary keywords used naturally where the topic touches them. Never forced.
-- Meta description ≤ 160 chars, reads like a sentence.
-- SEO title ≤ 60 chars, front-loads the primary keyword.
-- FAQ block at the bottom (4–8 plain-language questions with direct answers).
+- Meta description â‰¤ 160 chars, reads like a sentence.
+- SEO title â‰¤ 60 chars, front-loads the primary keyword.
+- FAQ block at the bottom (4â€“8 plain-language questions with direct answers).
 - Internal links: at least 2 to sibling/pillar pages.
 - Outbound links: at least 1 to a credible source when claims need backing.
 - Image alt text describes the image specifically.

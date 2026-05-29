@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+﻿import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -28,7 +28,7 @@ const HeroSection = () => (
 const EmptyState = () => (
   <div className="border border-border rounded-md p-12 text-center bg-card">
     <p className="text-muted-foreground mb-6">
-      No posts published yet. The first ones are queued — check back soon.
+      No posts published yet. The first ones are queued - check back soon.
     </p>
     <Button asChild variant="default">
       <Link to="/resources/visibility-starter-kit">

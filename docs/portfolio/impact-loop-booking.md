@@ -1,4 +1,4 @@
-# Impact Loop — Custom Booking + Pre-Call Diagnostic Funnel
+﻿# Impact Loop - Custom Booking + Pre-Call Diagnostic Funnel
 
 **Built for:** Impact Loop (impactloop.ca)
 **Role:** Architected and built end-to-end
@@ -30,11 +30,11 @@ That's the Impact Loop booking + pre-call system. Six edge functions plus a cust
 
 The slot re-validation step is the part that prevents the classic Calendly race condition where two prospects book the same slot in quick succession. Re-checking the calendar at write time, not just at read time, catches it.
 
-**reschedule-booking and cancel-booking.** Both maintain the same calendar/CRM/email triplet — when a meeting moves, the calendar event updates, the booking row updates, the prospect gets a confirmation, and the CRM entry stays synced.
+**reschedule-booking and cancel-booking.** Both maintain the same calendar/CRM/email triplet - when a meeting moves, the calendar event updates, the booking row updates, the prospect gets a confirmation, and the CRM entry stays synced.
 
 **submit-pre-call-answers.** The pre-call diagnostic form. The prospect answers structured questions about their challenge type, current state, deadline driving the conversation, decision-makers in the room, and budget context. Answers are written to pre_call_answers and trigger the next two functions.
 
-**pre-call-brief.** Reads the diagnostic answers and generates a structured internal brief for the founder. The challenge_type field maps to a curated set of talking points — five challenge types covered (film/video for funder trust, content system not one-off, ESG/impact communication, internal storytelling capacity, default fallback) — each with three actionable talking points. Output goes to the founder's email 1 hour before the call.
+**pre-call-brief.** Reads the diagnostic answers and generates a structured internal brief for the founder. The challenge_type field maps to a curated set of talking points - five challenge types covered (film/video for funder trust, content system not one-off, ESG/impact communication, internal storytelling capacity, default fallback) - each with three actionable talking points. Output goes to the founder's email 1 hour before the call.
 
 **pre-call-email.** Sends the prospect a pre-call email confirming what to expect, the agenda, what to bring (if anything), and a soft reminder that the founder is preparing specifically for their conversation.
 
@@ -42,11 +42,11 @@ The slot re-validation step is the part that prevents the classic Calendly race 
 
 **Two-sided briefing.** Calendly briefs nobody. Impact Loop's flow briefs both sides. The prospect knows what to expect and arrives ready. The founder gets a one-page strategic brief with talking points specific to this prospect. The conversation starts at the level of strategy, not the level of intros.
 
-**Custom timezone handling.** Most calendar tools handle timezones at the booking layer and then forget about them. Impact Loop's `_shared/time.ts` carries timezone context through every layer — slot generation, busy-interval comparison, booking write, calendar event creation, email rendering. The business runs on America/Toronto; the prospect could be anywhere. The math is consistent.
+**Custom timezone handling.** Most calendar tools handle timezones at the booking layer and then forget about them. Impact Loop's `_shared/time.ts` carries timezone context through every layer - slot generation, busy-interval comparison, booking write, calendar event creation, email rendering. The business runs on America/Toronto; the prospect could be anywhere. The math is consistent.
 
 **Slot re-validation at write time.** The Calendly race condition (two people book the same slot within seconds) is mitigated by re-checking calendar busy intervals at the moment of writing the booking, not just at the moment the slot was offered. Costs a Google API call per booking; saves the embarrassment of double-booking.
 
-**Challenge-type talking points are curated, not generated.** The pre-call brief uses an LLM to personalize the framing, but the actual talking points are a curated dictionary keyed by challenge_type. This is a deliberate choice — talking points for nonprofit film work shouldn't be reinvented every time. The LLM adds context; the strategy is structured.
+**Challenge-type talking points are curated, not generated.** The pre-call brief uses an LLM to personalize the framing, but the actual talking points are a curated dictionary keyed by challenge_type. This is a deliberate choice - talking points for nonprofit film work shouldn't be reinvented every time. The LLM adds context; the strategy is structured.
 
 **CRM integration on every action.** Booking, rescheduling, and cancelling all sync to the CRM. No "the meeting happened but I forgot to log it" gaps.
 

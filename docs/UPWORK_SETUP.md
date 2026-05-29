@@ -1,4 +1,4 @@
-# Upwork Setup — Rovonn Russell
+﻿# Upwork Setup - Rovonn Russell
 
 Ready-to-paste profile copy for the three specialized profiles plus the main profile, three fixed-price service offers (Project Catalog), portfolio recommendations, video intro script, and the Connects strategy. Calibrated to the post-Option-A brand: ADAPT framework as AI/systems tailoring, audience = founders, businesses, impact-led leaders.
 
@@ -16,11 +16,11 @@ AI Agent Builder & Brand Strategist | ADAPT Framework
 ```
 That's 53 chars. Communicates both legs of the work in one line.
 
-**Hourly rate:** `$125/hr` — this is the visible rate on the main profile. Lower triggers a different buyer pool (cheap-first), higher locks you out of mid-market gigs in the first 60 days.
+**Hourly rate:** `$125/hr` - this is the visible rate on the main profile. Lower triggers a different buyer pool (cheap-first), higher locks you out of mid-market gigs in the first 60 days.
 
 **Profile category (primary):** `AI & Machine Learning`
 
-**Location:** `Toronto, ON, Canada` — Upwork's algorithm shows local results higher when buyers filter by region. Toronto is a strong tech market, don't hide it.
+**Location:** `Toronto, ON, Canada` - Upwork's algorithm shows local results higher when buyers filter by region. Toronto is a strong tech market, don't hide it.
 
 **Languages:** English (Native or bilingual)
 
@@ -28,7 +28,7 @@ That's 53 chars. Communicates both legs of the work in one line.
 
 ## Profile overview (long-form, paste as one block)
 
-5000-char limit. The version below is ~3800 chars — leaves room to tune.
+5000-char limit. The version below is ~3800 chars - leaves room to tune.
 
 ```
 I help founders, businesses, and impact-led leaders tailor AI and systems to what their work actually needs. Sixteen production AI agents shipped, three brands run, and a framework called ADAPT that I've used with clients across the nonprofit and SMB space.
@@ -56,7 +56,7 @@ I write everything down. You get a runbook, the source code (when applicable), a
 
 Where I sit in the market:
 
-Most freelancers in this space are either pure tech (can build but can't think strategically about what to build) or pure brand (good ideas but can't ship the system). I do both. That's not because I'm twice as good — it's because the same skill (figure out what the business actually needs, then build the right thing) applies in both columns.
+Most freelancers in this space are either pure tech (can build but can't think strategically about what to build) or pure brand (good ideas but can't ship the system). I do both. That's not because I'm twice as good - it's because the same skill (figure out what the business actually needs, then build the right thing) applies in both columns.
 
 I work with:
 - Founders shipping production AI for the first time
@@ -71,12 +71,12 @@ What I don't do:
 
 Based in Toronto. Available for short-term builds (1-2 weeks), retainer engagements (monthly), and one-off advisory calls.
 
-If you're trying to figure out whether AI is the right tool for your specific problem, I'd rather talk for 30 minutes free than guess at a proposal. Send a Job Post or Direct Message — describe what you're trying to do and what's getting in the way, and I'll come back with a clear "yes, here's how" or "no, here's what you actually need instead."
+If you're trying to figure out whether AI is the right tool for your specific problem, I'd rather talk for 30 minutes free than guess at a proposal. Send a Job Post or Direct Message - describe what you're trying to do and what's getting in the way, and I'll come back with a clear "yes, here's how" or "no, here's what you actually need instead."
 ```
 
 ---
 
-## Specialized profile 1 — AI Agent Builder
+## Specialized profile 1 - AI Agent Builder
 
 **Title:**
 ```
@@ -126,7 +126,7 @@ Available for fixed-price builds ($1,500 to $8,000 depending on scope), retainer
 
 ---
 
-## Specialized profile 2 — Brand & Content Strategist
+## Specialized profile 2 - Brand & Content Strategist
 
 **Title:**
 ```
@@ -180,7 +180,7 @@ Available for short engagements first if you're not sure I'm the right fit. The 
 
 ---
 
-## Specialized profile 3 — Ghostwriter for Founders
+## Specialized profile 3 - Ghostwriter for Founders
 
 **Title:**
 ```
@@ -246,7 +246,7 @@ Project Catalog gigs sit on your profile and let buyers purchase directly withou
 
 ### Offer 1: AI Inbox Triager Setup
 
-**Title:** AI Inbox Triager — I'll Build the Agent That Saves You 5+ Hours a Week
+**Title:** AI Inbox Triager - I'll Build the Agent That Saves You 5+ Hours a Week
 
 **Price:** $1,800 (single tier)
 
@@ -254,14 +254,14 @@ Project Catalog gigs sit on your profile and let buyers purchase directly withou
 
 **Description:**
 ```
-You're spending hours every week reading and routing emails that don't need your attention. I'll build an AI agent that reads every incoming email, classifies it (urgent / scheduling / sales inquiry / spam / FYI), and routes it to the right place — Slack channel, CRM, calendar, or your inbox folder of choice.
+You're spending hours every week reading and routing emails that don't need your attention. I'll build an AI agent that reads every incoming email, classifies it (urgent / scheduling / sales inquiry / spam / FYI), and routes it to the right place - Slack channel, CRM, calendar, or your inbox folder of choice.
 
 What you get:
 - Discovery call (30 min) to understand your inbox and routing rules
 - Custom-built agent integrated with your email (Gmail or Outlook), routing destinations, and any CRM
 - 70-80% deterministic classification (won't break) + LLM for the harder 20-30%
 - Full logging so every classification is traceable
-- Two weeks of tuning after launch — I watch the logs with you, adjust the rules
+- Two weeks of tuning after launch - I watch the logs with you, adjust the rules
 - A runbook so your team can maintain it after I hand off
 
 Timeline: 5-7 business days from kickoff to live.
@@ -283,7 +283,7 @@ Free 30-minute scoping call before you order. Send a message describing your cur
 
 ### Offer 2: Content System Setup (ADAPT Lite)
 
-**Title:** Content System Setup — I'll Build Your Founder Content Engine in 4 Weeks
+**Title:** Content System Setup - I'll Build Your Founder Content Engine in 4 Weeks
 
 **Price:** $3,500 (single tier)
 
@@ -295,13 +295,13 @@ You're a founder, you know you should be posting consistently, but every Monday 
 
 This is ADAPT (Assess, Discover, Apply, Produce, Transform) compressed into a 4-week engagement.
 
-Week 1 — Assess: I read your existing content, your competitors, and your audience. We have a 60-min strategic call where I tell you what's working, what's burying your message, and which 1-2 angles are worth doubling down on.
+Week 1 - Assess: I read your existing content, your competitors, and your audience. We have a 60-min strategic call where I tell you what's working, what's burying your message, and which 1-2 angles are worth doubling down on.
 
-Week 2 — Discover: I build your editorial calendar. 12 specific post ideas mapped to search intent and audience pain points. Each one tied to a real moment in your work, not a vibes-based content plan.
+Week 2 - Discover: I build your editorial calendar. 12 specific post ideas mapped to search intent and audience pain points. Each one tied to a real moment in your work, not a vibes-based content plan.
 
-Week 3 — Apply: We co-draft the first 3 posts. I bring drafts in your voice (after reading your existing writing, not a generic template). You review, we tune, we ship.
+Week 3 - Apply: We co-draft the first 3 posts. I bring drafts in your voice (after reading your existing writing, not a generic template). You review, we tune, we ship.
 
-Week 4 — Produce + Transform: We set up your weekly capture habit (10 min/week, no app required), the pre-publish checklist, and a runbook so you can run the system after I'm gone.
+Week 4 - Produce + Transform: We set up your weekly capture habit (10 min/week, no app required), the pre-publish checklist, and a runbook so you can run the system after I'm gone.
 
 What you get:
 - Full editorial calendar (12 posts mapped, ready to draft)
@@ -317,7 +317,7 @@ Ideal for:
 - Service businesses tired of agency-style "thought leadership" that doesn't sound like them
 
 Not a fit if:
-- You want pure ghostwriting (different offer — see my other listing)
+- You want pure ghostwriting (different offer - see my other listing)
 - You want a $500 Notion template
 - You're not willing to spend 60-90 min/week maintaining the system after handoff
 
@@ -326,9 +326,9 @@ Free 30-min scoping call before you order.
 
 ### Offer 3: Custom AI Agent Build
 
-**Title:** Custom AI Agent — I'll Architect & Ship Your Production Workflow Automation
+**Title:** Custom AI Agent - I'll Architect & Ship Your Production Workflow Automation
 
-**Price:** $5,500 (starter tier — describe project for accurate quote)
+**Price:** $5,500 (starter tier - describe project for accurate quote)
 
 **Category:** AI & Machine Learning > AI Agent Development
 
@@ -356,9 +356,9 @@ Stack I work in:
 OpenAI, Anthropic Claude, Python, n8n, Make.com, Supabase, Postgres, Vercel edge functions, basic React/Next.js when a UI is needed.
 
 Pricing:
-- $5,500 starting — single-workflow agent, off-the-shelf integrations
-- $7,500-$12,000 — multi-step agent or custom integrations needed
-- $15,000+ — multi-agent system or production system requiring SLA
+- $5,500 starting - single-workflow agent, off-the-shelf integrations
+- $7,500-$12,000 - multi-step agent or custom integrations needed
+- $15,000+ - multi-agent system or production system requiring SLA
 
 Most builds land in the $5,500-$8,000 range. I'd rather scope tight than oversell.
 
@@ -398,22 +398,22 @@ Upwork rewards profiles with 4-6 portfolio samples that demonstrate range. Build
 
 ## Video introduction script (60-90 seconds)
 
-Upwork lets you upload a profile video. Most freelancers don't bother — that's the opportunity. A short, real video next to a polished profile is one of the strongest signals to a buyer that you're not a portfolio mill.
+Upwork lets you upload a profile video. Most freelancers don't bother - that's the opportunity. A short, real video next to a polished profile is one of the strongest signals to a buyer that you're not a portfolio mill.
 
 ```
 Hi, I'm Rovonn. I help founders, businesses, and impact-led leaders tailor AI and systems to what their work actually needs.
 
-I've shipped sixteen production AI agents over the last 18 months. They run quietly in inbox triage, lead enrichment, content workflows, and reply classification for clients across the SMB and nonprofit space. The thing that makes them reliable isn't a clever prompt — it's deterministic-first architecture that pushes complexity to the edges and keeps the core boring.
+I've shipped sixteen production AI agents over the last 18 months. They run quietly in inbox triage, lead enrichment, content workflows, and reply classification for clients across the SMB and nonprofit space. The thing that makes them reliable isn't a clever prompt - it's deterministic-first architecture that pushes complexity to the edges and keeps the core boring.
 
 I also run two adjacent practices: a content system practice using a framework called ADAPT, and a ghostwriting practice for founders who don't want their writing to sound like ChatGPT wrote it.
 
 Three things I'd want you to know before hiring me:
 
-One — I assess before I quote. The first 30 minutes are free, no commitment. Sometimes the answer is don't build anything yet, write the manual workflow first.
+One - I assess before I quote. The first 30 minutes are free, no commitment. Sometimes the answer is don't build anything yet, write the manual workflow first.
 
-Two — I ship in weeks, not quarters. The smallest version that could possibly work is the goal.
+Two - I ship in weeks, not quarters. The smallest version that could possibly work is the goal.
 
-Three — every project ends with a runbook. You can run the work after I'm gone, or hire me for the next iteration. Your call.
+Three - every project ends with a runbook. You can run the work after I'm gone, or hire me for the next iteration. Your call.
 
 If you're trying to figure out whether AI or a content system is the right move for what you're building, send me a message. I'd rather talk for 30 minutes free than guess at a proposal.
 ```
@@ -427,7 +427,7 @@ Record on a phone, decent lighting, no fancy editing. Authenticity > polish on U
 Upwork's Connects (the bidding currency) are limited. Spend them surgically.
 
 **Filter every job by:**
-- Payment method verified ✓ (skip unverified clients — they default at 4x the rate)
+- Payment method verified âœ“ (skip unverified clients - they default at 4x the rate)
 - 5-star rating, 5+ jobs posted, $5K+ total spent
 - Hire rate > 50%
 - Posted within last 24 hours (older jobs are usually filled or stalled)
@@ -468,7 +468,7 @@ This template wins because it's specific (you read the post), confident (you've 
 
 ## Off-platform exit strategy
 
-Upwork takes 10-20% of every transaction depending on lifetime billing. After you've worked with a client for 6-12 months and earned the relationship, it's standard practice to invoice them directly off-platform on the next engagement. Read Upwork's TOS — there's a "Conversion Fee" if you do this within the first two years of working together. Plan for it.
+Upwork takes 10-20% of every transaction depending on lifetime billing. After you've worked with a client for 6-12 months and earned the relationship, it's standard practice to invoice them directly off-platform on the next engagement. Read Upwork's TOS - there's a "Conversion Fee" if you do this within the first two years of working together. Plan for it.
 
 Long-term: use Upwork as a lead source for the first 2-3 clients in each service line, get the case studies and testimonials, then route future buyers off-platform through your own site (rovonnrussell.com/work-with-me).
 
@@ -479,7 +479,7 @@ Long-term: use Upwork as a lead source for the first 2-3 clients in each service
 - [ ] Profile photo uploaded, professional headshot
 - [ ] Main profile title, overview, hourly rate set
 - [ ] Three specialized profiles created with their own titles, overviews, rates
-- [ ] 4-6 portfolio samples uploaded (start with what you can — add more as you ship work)
+- [ ] 4-6 portfolio samples uploaded (start with what you can - add more as you ship work)
 - [ ] Three Project Catalog offers published
 - [ ] Video introduction uploaded
 - [ ] Skills tags added to each profile (10 max each, no duplicates between profiles)

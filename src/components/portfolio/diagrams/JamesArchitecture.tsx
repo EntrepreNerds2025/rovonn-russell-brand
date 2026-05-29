@@ -1,5 +1,5 @@
-/**
- * James — full system architecture diagram.
+﻿/**
+ * James - full system architecture diagram.
  * Shows all 11 functions, their groupings, and the data flow.
  */
 export const JamesArchitecture = () => (
@@ -20,7 +20,7 @@ export const JamesArchitecture = () => (
 
       {/* Layer 1 - Input */}
       <g>
-        <text x="20" y="50" className="text-[12px] font-semibold uppercase tracking-widest" fill="hsl(var(--accent-deep))">Layer 1 · Discovery</text>
+        <text x="20" y="50" className="text-[12px] font-semibold uppercase tracking-widest" fill="hsl(var(--accent-deep))">Layer 1 Â· Discovery</text>
         <rect x="40" y="70" width="200" height="80" rx="6" fill="hsl(var(--card))" stroke="hsl(var(--accent))" strokeWidth="2"/>
         <text x="140" y="100" textAnchor="middle" fontSize="14" fontWeight="700" fill="hsl(var(--foreground))">james-lead-finder</text>
         <text x="140" y="120" textAnchor="middle" fontSize="11" fill="hsl(var(--muted-foreground))">Brave Search + scraper</text>
@@ -29,7 +29,7 @@ export const JamesArchitecture = () => (
 
       {/* Layer 2 - Scoring */}
       <g>
-        <text x="20" y="200" className="text-[12px] font-semibold uppercase tracking-widest" fill="hsl(var(--accent-deep))">Layer 2 · Qualification</text>
+        <text x="20" y="200" className="text-[12px] font-semibold uppercase tracking-widest" fill="hsl(var(--accent-deep))">Layer 2 Â· Qualification</text>
         <rect x="40" y="220" width="200" height="80" rx="6" fill="hsl(var(--card))" stroke="hsl(var(--accent))" strokeWidth="2"/>
         <text x="140" y="250" textAnchor="middle" fontSize="14" fontWeight="700" fill="hsl(var(--foreground))">james-score-lead</text>
         <text x="140" y="270" textAnchor="middle" fontSize="11" fill="hsl(var(--muted-foreground))">ICP rubric 0-10</text>
@@ -39,14 +39,14 @@ export const JamesArchitecture = () => (
       {/* Layer 3 - Research callout */}
       <g>
         <rect x="290" y="220" width="180" height="80" rx="6" fill="hsl(var(--accent) / 0.15)" stroke="hsl(var(--accent-deep))" strokeWidth="2" strokeDasharray="4,4"/>
-        <text x="380" y="250" textAnchor="middle" fontSize="13" fontWeight="700" fill="hsl(var(--accent-deep))">→ Truesight</text>
-        <text x="380" y="270" textAnchor="middle" fontSize="11" fill="hsl(var(--muted-foreground))">Score ≥ 9: deep lane</text>
+        <text x="380" y="250" textAnchor="middle" fontSize="13" fontWeight="700" fill="hsl(var(--accent-deep))">to Truesight</text>
+        <text x="380" y="270" textAnchor="middle" fontSize="11" fill="hsl(var(--muted-foreground))">Score â‰¥ 9: deep lane</text>
         <text x="380" y="285" textAnchor="middle" fontSize="11" fill="hsl(var(--muted-foreground))">Score 7-8: queue lane</text>
       </g>
 
       {/* Layer 3 - Outreach */}
       <g>
-        <text x="20" y="350" className="text-[12px] font-semibold uppercase tracking-widest" fill="hsl(var(--accent-deep))">Layer 3 · Outreach</text>
+        <text x="20" y="350" className="text-[12px] font-semibold uppercase tracking-widest" fill="hsl(var(--accent-deep))">Layer 3 Â· Outreach</text>
         <rect x="40" y="370" width="200" height="80" rx="6" fill="hsl(var(--card))" stroke="hsl(var(--accent))" strokeWidth="2"/>
         <text x="140" y="400" textAnchor="middle" fontSize="14" fontWeight="700" fill="hsl(var(--foreground))">james-warmup-builder</text>
         <text x="140" y="420" textAnchor="middle" fontSize="11" fill="hsl(var(--muted-foreground))">3-step Day 0/3/7</text>
@@ -60,7 +60,7 @@ export const JamesArchitecture = () => (
 
       {/* Layer 4 - Health */}
       <g>
-        <text x="500" y="50" className="text-[12px] font-semibold uppercase tracking-widest" fill="hsl(var(--accent-deep))">Layer 4 · Health Sentinel</text>
+        <text x="500" y="50" className="text-[12px] font-semibold uppercase tracking-widest" fill="hsl(var(--accent-deep))">Layer 4 Â· Health Sentinel</text>
         <rect x="500" y="70" width="200" height="80" rx="6" fill="hsl(var(--foreground))" stroke="hsl(var(--accent))" strokeWidth="2"/>
         <text x="600" y="100" textAnchor="middle" fontSize="14" fontWeight="700" fill="hsl(var(--background))">james-deliverability</text>
         <text x="600" y="120" textAnchor="middle" fontSize="11" fill="hsl(var(--background) / 0.8)">Every 2 hours</text>
@@ -73,7 +73,7 @@ export const JamesArchitecture = () => (
 
       {/* Layer 4 - Autopilot */}
       <g>
-        <text x="500" y="280" className="text-[12px] font-semibold uppercase tracking-widest" fill="hsl(var(--accent-deep))">Always-On · Autopilot</text>
+        <text x="500" y="280" className="text-[12px] font-semibold uppercase tracking-widest" fill="hsl(var(--accent-deep))">Always-On Â· Autopilot</text>
         <rect x="500" y="300" width="200" height="80" rx="6" fill="hsl(var(--foreground))" stroke="hsl(var(--accent))" strokeWidth="2"/>
         <text x="600" y="330" textAnchor="middle" fontSize="14" fontWeight="700" fill="hsl(var(--background))">james-autopilot</text>
         <text x="600" y="350" textAnchor="middle" fontSize="11" fill="hsl(var(--background) / 0.8)">Every 10 minutes</text>
@@ -83,11 +83,11 @@ export const JamesArchitecture = () => (
       {/* Confidence gates */}
       <g>
         <rect x="730" y="290" width="150" height="50" rx="6" fill="hsl(var(--card))" stroke="hsl(var(--border))"/>
-        <text x="805" y="312" textAnchor="middle" fontSize="11" fontWeight="600" fill="hsl(var(--foreground))">Archive ≥ 0.65</text>
+        <text x="805" y="312" textAnchor="middle" fontSize="11" fontWeight="600" fill="hsl(var(--foreground))">Archive â‰¥ 0.65</text>
         <text x="805" y="328" textAnchor="middle" fontSize="10" fill="hsl(var(--muted-foreground))">notification class</text>
 
         <rect x="730" y="350" width="150" height="50" rx="6" fill="hsl(var(--card))" stroke="hsl(var(--border))"/>
-        <text x="805" y="372" textAnchor="middle" fontSize="11" fontWeight="600" fill="hsl(var(--foreground))">Draft ≥ 0.90</text>
+        <text x="805" y="372" textAnchor="middle" fontSize="11" fontWeight="600" fill="hsl(var(--foreground))">Draft â‰¥ 0.90</text>
         <text x="805" y="388" textAnchor="middle" fontSize="10" fill="hsl(var(--muted-foreground))">client reply</text>
       </g>
 

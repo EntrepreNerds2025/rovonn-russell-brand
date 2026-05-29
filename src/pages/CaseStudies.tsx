@@ -36,7 +36,7 @@ const CaseStudiesPage = () => (
         <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent-highlight mb-6">Case Studies</p>
         <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">Stories of transformation.</h1>
         <p className="text-lg text-muted-foreground max-w-2xl mb-16 leading-relaxed">
-          Deep storytelling breakdowns showing how Impact Story Architecture transforms organizational communication.
+          Deep storytelling breakdowns showing how AI Advisorure transforms organizational communication.
         </p>
         <div className="space-y-10">
           {studies.map((s) => (

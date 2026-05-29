@@ -1,4 +1,4 @@
-# Truesight — Multi-Lane Research Pipeline
+﻿# Truesight - Multi-Lane Research Pipeline
 
 **Built for:** EntrepreNerds Agency (entre-nerd-dash)
 **Role:** Architected and built end-to-end
@@ -12,7 +12,7 @@ Most CRMs treat lead intelligence as a one-time enrichment: fetch firmographics,
 
 Real research costs money. Perplexity calls cost dollars per query. Firecrawl scrapes cost credits. Claude Opus calls run high. If every lead in the CRM triggered a deep research pass, the API bill would eat the agency's margin.
 
-The fix wasn't a cheaper research tool. The fix was a multi-lane pipeline that decides automatically which leads earn deep research and which get a fast, cheap pass — so the budget goes where it actually pays back.
+The fix wasn't a cheaper research tool. The fix was a multi-lane pipeline that decides automatically which leads earn deep research and which get a fast, cheap pass - so the budget goes where it actually pays back.
 
 That pipeline is Truesight. Twelve coordinated edge functions, two cost lanes, five report types, and a trigger system that fires research only when a lead's signal earns it.
 
@@ -20,16 +20,16 @@ That pipeline is Truesight. Twelve coordinated edge functions, two cost lanes, f
 
 **Two lanes, two budgets.**
 ```
-pro_opus     → claude-opus-4-6     → 6,000 tokens, 15+ sources, 2,500-word reports
-cron_sonnet  → claude-sonnet-4-6   → 1,800 tokens,  5+ sources,   800-word reports
+pro_opus     -> claude-opus-4-6     -> 6,000 tokens, 15+ sources, 2,500-word reports
+cron_sonnet  -> claude-sonnet-4-6   -> 1,800 tokens,  5+ sources,   800-word reports
 ```
 
-Pro lane runs deep research for leads with ICP score 9–10 or matched-trigger reports. Cron lane handles the mid-tier (score 7–8) and routine refreshes. The lane assignment is automatic, set by the trigger that fired the research, not by the researcher.
+Pro lane runs deep research for leads with ICP score 9â€“10 or matched-trigger reports. Cron lane handles the mid-tier (score 7â€“8) and routine refreshes. The lane assignment is automatic, set by the trigger that fired the research, not by the researcher.
 
-**truesight-trigger.** Dispatcher that all upstream agents call. Looks up the trigger config (depth, priority, lane_hint, cooldown). Checks cooldown — if a report already exists for this subject within the trigger's cooldown window, returns the existing report instead of re-researching. Picks the lane based on lane_hint and today's Pro slot count. Inserts a truesight_reports row with trigger attribution. For on-demand triggers, fires truesight-runner immediately. For batch-preferred, leaves it for the Tuesday runner to pick up.
+**truesight-trigger.** Dispatcher that all upstream agents call. Looks up the trigger config (depth, priority, lane_hint, cooldown). Checks cooldown - if a report already exists for this subject within the trigger's cooldown window, returns the existing report instead of re-researching. Picks the lane based on lane_hint and today's Pro slot count. Inserts a truesight_reports row with trigger attribution. For on-demand triggers, fires truesight-runner immediately. For batch-preferred, leaves it for the Tuesday runner to pick up.
 
 **truesight-runner.** Two execution modes:
-- BATCH (Tuesday 3pm Pro Routine slot): pulls N reports from the queue with weighted budget — DEEP reports cost 2 weight units, STANDARD costs 1, BRIEF costs 0.5. Total batch budget is 5 weight units.
+- BATCH (Tuesday 3pm Pro Routine slot): pulls N reports from the queue with weighted budget - DEEP reports cost 2 weight units, STANDARD costs 1, BRIEF costs 0.5. Total batch budget is 5 weight units.
 - ON-DEMAND (called by james-score-lead, edwina-inbox-sweep, yaaba-radar with a report_id): processes one row with the assigned lane.
 
 The depth config is structured:
@@ -41,7 +41,7 @@ The depth config is structured:
 }
 ```
 
-**truesight-research.** The actual research engine. Runs Brave Search + Perplexity + Firecrawl in parallel where possible. Resolves auth context for tenant scoping. Loads the niche-specific template (every report type has its own template — niche reports look different from competitor reports). Returns parsed structured JSON, never free-text.
+**truesight-research.** The actual research engine. Runs Brave Search + Perplexity + Firecrawl in parallel where possible. Resolves auth context for tenant scoping. Loads the niche-specific template (every report type has its own template - niche reports look different from competitor reports). Returns parsed structured JSON, never free-text.
 
 **Five report types:**
 - nerds_creative_growth_report
@@ -52,7 +52,7 @@ The depth config is structured:
 
 Each type has its own JSON schema and its own prompt template. The schema-first approach means downstream consumers (james-warmup-builder, the dashboard, exports to PDF) always know what they're getting.
 
-**truesight-free-report.** A public-facing free-tier version exposed via the website. Visitors can request a basic intelligence report, which goes into truesight-queue-add and runs on cron_sonnet for cost-control. Doubles as a lead magnet — every free report request creates a lead in the CRM with first-touch context already populated.
+**truesight-free-report.** A public-facing free-tier version exposed via the website. Visitors can request a basic intelligence report, which goes into truesight-queue-add and runs on cron_sonnet for cost-control. Doubles as a lead magnet - every free report request creates a lead in the CRM with first-touch context already populated.
 
 **truesight-pdf.** Renders structured reports as branded PDFs for client delivery.
 
@@ -62,9 +62,9 @@ Each type has its own JSON schema and its own prompt template. The schema-first 
 
 ## What makes the architecture work
 
-**Cooldown-driven cost control.** Re-researching the same company every week is waste. Truesight's trigger system enforces cooldowns per trigger type — icp_score_trigger has a 30-day cooldown, replied_to_outreach_trigger has 14 days, etc. The same lead can be researched twice if a different trigger fires, but never within the same cooldown window.
+**Cooldown-driven cost control.** Re-researching the same company every week is waste. Truesight's trigger system enforces cooldowns per trigger type - icp_score_trigger has a 30-day cooldown, replied_to_outreach_trigger has 14 days, etc. The same lead can be researched twice if a different trigger fires, but never within the same cooldown window.
 
-**Schema-first reports.** Every report type has a JSON schema in truesight_report_spec, versioned by tenant. Schema upgrades go live for new reports without breaking old ones. Downstream consumers parse the schema, not free text — no LLM-output-fragility cascading into the warmup builder or the PDF renderer.
+**Schema-first reports.** Every report type has a JSON schema in truesight_report_spec, versioned by tenant. Schema upgrades go live for new reports without breaking old ones. Downstream consumers parse the schema, not free text - no LLM-output-fragility cascading into the warmup builder or the PDF renderer.
 
 **Lane separation by attribution.** The trigger that fired the research carries through to the report row. A report attributed to icp_jump_to_9 routes to Opus automatically. A report from a free public form routes to Sonnet automatically. No manual budget decisions per call.
 

@@ -1,4 +1,4 @@
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+﻿import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -59,7 +59,7 @@ interface DiagnosticReport {
   recommendations: string[];
 }
 
-const SYSTEM_PROMPT = `You are an expert Impact Story Architect analyzing how effectively an organization communicates its social impact. You evaluate storytelling clarity, proof of impact, and visibility.
+const SYSTEM_PROMPT = `You are an expert AI Advisor analyzing how effectively an organization communicates its social impact. You evaluate storytelling clarity, proof of impact, and visibility.
 
 You MUST respond by calling the "generate_diagnostic_report" function. Do not respond with plain text.
 
@@ -324,7 +324,7 @@ ${orgName ? `Organization name: ${orgName}` : ''}`;
             originated_from_entity_id: entityId,
             brand_entry_point: 'rovonnrussell_website',
             relationship_origin: 'diagnostic_tool',
-            influence_path: 'website → diagnostic tool → low scores',
+            influence_path: 'website -> diagnostic tool -> low scores',
             notes: `Diagnostic scores: Impact ${scores.impact_story_score}, Clarity ${scores.story_clarity_score}, Visibility ${scores.visibility_score}. Challenge: ${responses.biggest_challenge}. Goal: ${responses.desired_outcome}.`,
           });
 

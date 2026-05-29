@@ -1,6 +1,6 @@
----
+﻿---
 name: rr-blog-writer
-description: Write a blog post for rovonnrussell.com/blog in Rovonn's calibrated voice. Use whenever the user wants to draft, create, or write a blog post for the personal brand site (rovonnrussell.com). Triggers on phrases like "write a blog post for the personal brand", "draft post #N from the calendar", "write a blog post about [topic]", "draft something for rovonnrussell.com/blog", "write a Building in Public post", "write a Storytelling post", "write a Systems & Agents post", "write a Community/Culture post", "write an ADAPT in Practice post". This is the canonical skill for the personal brand blog — supersedes rr-essay, rr-personal-story, and rr-framework-breakdown for any post going to rovonnrussell.com/blog (the subdirectory blog, not the old subdomain).
+description: Write a blog post for rovonnrussell.com/blog in Rovonn's calibrated voice. Use whenever the user wants to draft, create, or write a blog post for the personal brand site (rovonnrussell.com). Triggers on phrases like "write a blog post for the personal brand", "draft post #N from the calendar", "write a blog post about [topic]", "draft something for rovonnrussell.com/blog", "write a Building in Public post", "write a Storytelling post", "write a Systems & Agents post", "write a Community/Culture post", "write an ADAPT in Practice post". This is the canonical skill for the personal brand blog - supersedes rr-essay, rr-personal-story, and rr-framework-breakdown for any post going to rovonnrussell.com/blog (the subdirectory blog, not the old subdomain).
 ---
 
 # rr-blog-writer
@@ -42,15 +42,15 @@ These are the four sources of truth. The voice doc supersedes anything you remem
 
 ## Workflow
 
-### Step 1 — Confirm the post
+### Step 1 - Confirm the post
 
 Ask the user one of:
-- "Which post from the editorial calendar — by number or topic?"
+- "Which post from the editorial calendar - by number or topic?"
 - "Or do you have a fresh topic? If so, what's the moment that prompted it?"
 
 If the user supplies a calendar number, read that row. If a fresh topic, pull the closest category from the calendar and use the matching SEO cluster.
 
-### Step 2 — Find the moment
+### Step 2 - Find the moment
 
 Before writing, surface the moment. Ask:
 - "What's the specific observation that opens this post? A Tuesday, a conversation, a project that just shipped, a thing a founder said?"
@@ -62,19 +62,19 @@ If the user can't name a real moment, do not draft generically. Either:
 
 A post without a real opening moment will fail the voice gates. Don't ship one.
 
-### Step 3 — Draft
+### Step 3 - Draft
 
 Follow the structure from `VOICE_REFERENCE.md`:
 
-- **Opening (1–3 paragraphs):** observation. Set the scene. Name specifics. Don't reveal the thesis yet.
-- **Sections (3–5 H2 anchor headings):** sentence-style headers, never formulaic ("5 Ways to X").
+- **Opening (1â€“3 paragraphs):** observation. Set the scene. Name specifics. Don't reveal the thesis yet.
+- **Sections (3â€“5 H2 anchor headings):** sentence-style headers, never formulaic ("5 Ways to X").
 - **Body:** mix short and long paragraphs. Use signature phrases naturally ("What stood out most was...", "Walking away, I'm reminded that...", "Big respect to..."). Use "not X, but Y" contrasts where they earn their place. Use tricolons where three is the right number, not because three sounds good.
 - **Close:** credit-giving and forward-looking. Names the people / partners / experiences the post draws from. Final sentence points at what's next.
-- **FAQ block:** 4–8 plain-language questions someone would Google, with direct answers in voice. Used for SEO and AI search.
+- **FAQ block:** 4â€“8 plain-language questions someone would Google, with direct answers in voice. Used for SEO and AI search.
 
-Word count: 800–1,500. Hard cap. If it wants to go longer, it should be split into two posts.
+Word count: 800â€“1,500. Hard cap. If it wants to go longer, it should be split into two posts.
 
-### Step 4 — Frontmatter
+### Step 4 - Frontmatter
 
 Use this template exactly:
 
@@ -86,7 +86,7 @@ date: "2026-MM-DD"
 author: "rovonn-russell"
 category: "Building in Public | Storytelling | Systems & Agents | Community/Culture | ADAPT in Practice"
 tags: ["tag1", "tag2", "tag3"]
-excerpt: "One-sentence summary in voice — what the post is actually about."
+excerpt: "One-sentence summary in voice - what the post is actually about."
 seoTitle: "[Under 60 chars, primary keyword front-loaded]"
 metaDescription: "[Under 160 chars, reads like a sentence]"
 heroImage: "/blog/[slug]/hero.jpg"
@@ -102,7 +102,7 @@ published: false
 
 Always start with `published: false`. The user flips it to true after the checklist passes.
 
-### Step 5 — Self-check against the checklist
+### Step 5 - Self-check against the checklist
 
 Before handing the draft over, run through `PRE_PUBLISH_CHECKLIST.md` mentally and report which gates the draft passes and which need work. Be honest. The checklist exists so AI-flavored content doesn't ship under Rovonn's name. If the draft fails three or more gates, redraft instead of handing it over.
 
@@ -120,7 +120,7 @@ Specifically check Section 2 (Forbidden patterns) line by line:
 
 Any single forbidden-pattern hit = automatic fail = redraft that section.
 
-### Step 6 — Save the draft
+### Step 6 - Save the draft
 
 Write the MDX file to:
 ```
@@ -143,13 +143,13 @@ When these are in the room of the post, name them the way someone inside the com
 
 | Section | Length |
 |---|---|
-| Opening | 1–3 paragraphs |
-| Body sections | 3–5 sections, each 150–350 words |
-| Close | 1–2 paragraphs, credit + forward-looking |
-| FAQ | 4–8 questions |
-| Total | 800–1,500 words |
+| Opening | 1â€“3 paragraphs |
+| Body sections | 3â€“5 sections, each 150â€“350 words |
+| Close | 1â€“2 paragraphs, credit + forward-looking |
+| FAQ | 4â€“8 questions |
+| Total | 800â€“1,500 words |
 
-## Anti-patterns — never do these
+## Anti-patterns - never do these
 
 - Open with the thesis. (Open with the moment.)
 - Em dashes anywhere in body copy.
@@ -167,7 +167,7 @@ When these are in the room of the post, name them the way someone inside the com
 
 The voice exemplars at the bottom of `VOICE_REFERENCE.md` are the tuning fork. Re-read them before drafting. The 4 paragraphs there are from Rovonn's actual LinkedIn posts and represent the voice in its purest form.
 
-The sample blog post at `docs/SAMPLE_POST_DRAFT.md` ("Why I run three brands instead of one") is also a reference — but treat it as a draft for review, not a finished exemplar. The user is meant to mark it up and feed corrections back into the voice doc.
+The sample blog post at `docs/SAMPLE_POST_DRAFT.md` ("Why I run three brands instead of one") is also a reference - but treat it as a draft for review, not a finished exemplar. The user is meant to mark it up and feed corrections back into the voice doc.
 
 ## After the draft
 

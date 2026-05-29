@@ -1,4 +1,4 @@
-import { Bot, BarChart3, Search, ArrowRight } from "lucide-react";
+﻿import { Bot, BarChart3, Search, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -56,7 +56,7 @@ const AITools = () => {
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent-highlight mb-6">AI Tools</p>
             <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">Interactive storytelling tools.</h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              AI-powered tools designed to help you assess, plan, and improve your organization's storytelling — then connect with Rovonn for deeper strategy.
+              AI-powered tools designed to help you assess, plan, and improve your organization's storytelling - then connect with Rovonn for deeper strategy.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -70,7 +70,7 @@ const AITools = () => {
                     {tool.cta} <ArrowRight className="ml-2" size={14} />
                   </Button>
                 ) : submitted[tool.toolName] ? (
-                  <p className="text-sm text-accent-highlight font-semibold">✓ You're signed up!</p>
+                  <p className="text-sm text-accent-highlight font-semibold">âœ“ You're signed up!</p>
                 ) : (
                   <div className="space-y-3">
                     <input

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+﻿import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { setSEO, resetSEO } from "@/lib/seo";
@@ -23,7 +23,7 @@ const caseStudies: CaseStudy[] = [
     slug: "virtual-proposal-writer",
     icon: Sparkles,
     title: "The Virtual Proposal Writer",
-    subtitle: "Design Studio · 4 people · Vancouver",
+    subtitle: "Design Studio Â· 4 people Â· Vancouver",
     outcome: "6-hour proposals down to 90 minutes. The course she'd been parking for 2 years launched.",
     before:
       "She runs a 4-person interior design studio. Custom-tailored client proposals were how she won business. Each one took 6 hours. Across her monthly proposal volume, she was burning 24 hours a month on writing alone. The online course she'd been meaning to record for two years was parked because there was no time.",
@@ -40,7 +40,7 @@ const caseStudies: CaseStudy[] = [
     slug: "virtual-inbox-manager",
     icon: Clock,
     title: "The Virtual Inbox Manager",
-    subtitle: "Coaching practice · 1 person · Boston",
+    subtitle: "Coaching practice Â· 1 person Â· Boston",
     outcome: "90 minutes a day of email triage cut to 10 minutes. Mornings back.",
     before:
       "A solo coach with a growing waitlist. Mornings were eaten by 90 minutes of email triage: new inquiries, existing client check-ins, podcast pitches, vendor questions, and the never-ending miscellany. By the time he got to his actual coaching work, he was already worn down.",
@@ -57,7 +57,7 @@ const caseStudies: CaseStudy[] = [
     slug: "virtual-project-manager",
     icon: TrendingUp,
     title: "The Virtual Project Manager",
-    subtitle: "Creative agency · 6 people · Toronto",
+    subtitle: "Creative agency Â· 6 people Â· Toronto",
     outcome: "3 stalled client projects unblocked in 30 days. Founder stopped being the bottleneck on every status update.",
     before:
       "A 6-person creative agency where the founder personally wrote every client status update, tracked every milestone across 12 active projects, and was the bottleneck on every internal handoff. Three projects had been stalled for weeks because she hadn't had time to chase the next step.",
@@ -176,7 +176,7 @@ const BuiltWithAdapt = () => {
   useEffect(() => {
     trackEvent("built_with_adapt_page_viewed");
     setSEO({
-      title: "Built with ADAPT — Virtual Employees for Founders | Rovonn Russell",
+      title: "Built with ADAPT - Virtual Employees for Founders | Rovonn Russell",
       description: "Case studies of Virtual Employees I've installed in founders' businesses. Virtual Proposal Writer, Virtual Inbox Manager, Virtual Project Manager, and more. Built with ADAPT.",
       path: "/built-with-adapt",
     });

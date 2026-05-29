@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+﻿import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { setSEO, resetSEO } from "@/lib/seo";
@@ -18,7 +18,7 @@ const CATEGORY_BLURBS: Record<string, string> = {
   "Community/Culture":
     "Toronto, Black community organizing, youth programs, and the conditions that make community-led work actually work.",
   "ADAPT in Practice":
-    "The framework applied to real cycles. Each post shows a phase in motion. The deliverable varies — sometimes a content engine, sometimes an agent, sometimes brand work, often a hybrid. The point is the tailoring, not the output.",
+    "The framework applied to real cycles. Each post shows a phase in motion. The deliverable varies - sometimes a content engine, sometimes an agent, sometimes brand work, often a hybrid. The point is the tailoring, not the output.",
 };
 
 const BlogCategory = () => {

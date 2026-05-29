@@ -1,11 +1,11 @@
-import { FileText, ArrowRight } from "lucide-react";
+﻿import { FileText, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const articles = [
-  { title: "What Is Impact Story Architecture?", category: "Framework", date: "Mar 2026", desc: "An introduction to the discipline of designing storytelling systems for mission-driven organizations." },
-  { title: "Why Your Impact Report Isn't Working", category: "Storytelling Strategy", date: "Feb 2026", desc: "The gap between doing great work and communicating it — and how to close it." },
+  { title: "What Is AI Advisorure?", category: "Framework", date: "Mar 2026", desc: "An introduction to the discipline of designing storytelling systems for mission-driven organizations." },
+  { title: "Why Your Impact Report Isn't Working", category: "Storytelling Strategy", date: "Feb 2026", desc: "The gap between doing great work and communicating it - and how to close it." },
   { title: "Trust Is Built Through Story, Not Data", category: "Authority Building", date: "Feb 2026", desc: "How narrative creates the trust that statistics alone never can." },
-  { title: "The 5-Part Framework for Impact Communication", category: "Framework", date: "Jan 2026", desc: "Clarity, Narrative, Proof, Visibility, Opportunity — broken down." },
+  { title: "The 5-Part Framework for Impact Communication", category: "Framework", date: "Jan 2026", desc: "Clarity, Narrative, Proof, Visibility, Opportunity - broken down." },
   { title: "Storytelling in the Age of AI", category: "Impact Communication", date: "Jan 2026", desc: "Why human-centered storytelling matters more, not less, as AI reshapes content." },
   { title: "Campaign Storytelling That Actually Converts", category: "Campaign Storytelling", date: "Dec 2025", desc: "How to design story-driven campaigns that move people to action." },
 ];

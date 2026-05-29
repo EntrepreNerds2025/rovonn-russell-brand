@@ -1,4 +1,4 @@
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+﻿import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -193,7 +193,7 @@ Deno.serve(async (req) => {
         originated_from_entity_id: entityId,
         brand_entry_point: 'rovonnrussell_website',
         relationship_origin: 'website_form',
-        influence_path: 'website → form submission',
+        influence_path: 'website -> form submission',
         notes: buildLeadNotes(formType, body),
       });
     }
@@ -254,10 +254,10 @@ async function sendInternalNotification(
   }
 
   const subjectMap: Record<FormType, string> = {
-    strategy_call: '🎯 New Strategy Call Request',
-    speaking_inquiry: '🎤 New Speaking Inquiry',
-    contact_form: '✉️ New Contact Form Submission',
-    tool_signup: '🤖 New AI Tool Signup',
+    strategy_call: 'ðŸŽ¯ New Strategy Call Request',
+    speaking_inquiry: 'ðŸŽ¤ New Speaking Inquiry',
+    contact_form: 'âœ‰ï¸ New Contact Form Submission',
+    tool_signup: 'ðŸ¤– New AI Tool Signup',
   };
 
   const lines = [
@@ -293,7 +293,7 @@ async function sendInternalNotification(
       from: 'Rovonn Russell Website <onboarding@resend.dev>',
       to: ['rovonn@impactloop.ca'],
       reply_to: email,
-      subject: `${subjectMap[formType]} – ${name}`,
+      subject: `${subjectMap[formType]} â€“ ${name}`,
       html,
     }),
   });

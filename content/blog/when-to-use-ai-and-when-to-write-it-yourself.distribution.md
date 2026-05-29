@@ -1,4 +1,4 @@
-# Distribution pack: When to use AI and when to write it yourself
+﻿# Distribution pack: When to use AI and when to write it yourself
 
 Source: rovonnrussell.com/blog/when-to-use-ai-and-when-to-write-it-yourself
 Date: 2026-05-04
@@ -116,7 +116,7 @@ Two years ago AI content was a novelty. That window has closed. Readers in 2026 
 
 Use AI where AI is the right tool. Write yourself where your voice is the point.
 
-Full post on the blog →
+Full post on the blog ->
 rovonnrussell.com/blog/when-to-use-ai-and-when-to-write-it-yourself
 
 Rovonn

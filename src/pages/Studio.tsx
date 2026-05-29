@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { setSEO, resetSEO } from "@/lib/seo";
@@ -15,9 +15,9 @@ import {
 const STUDIO_INTAKE_URL =
   import.meta.env.VITE_STUDIO_INTAKE_URL || "/contact?topic=studio";
 
-/* ──────────────────────────────────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    HERO
-   ────────────────────────────────────────────────────────── */
+   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 const HeroSection = () => (
   <section className="section-padding pt-32 md:pt-40 pb-16 md:pb-20">
     <div className="max-w-4xl mx-auto">
@@ -35,9 +35,9 @@ const HeroSection = () => (
   </section>
 );
 
-/* ──────────────────────────────────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    FRAMING
-   ────────────────────────────────────────────────────────── */
+   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 const FramingSection = () => (
   <section className="section-padding bg-secondary py-16 md:py-20">
     <div className="max-w-3xl mx-auto">
@@ -59,7 +59,7 @@ const FramingSection = () => (
         </p>
         <p>
           Studio is for founders, executives, and companies that need a piece
-          of work that holds up — a brand film, a founder narrative, a campaign
+          of work that holds up - a brand film, a founder narrative, a campaign
           centerpiece, a story that gets used everywhere. Selective intake.
           High-touch direction. Modern production with AI used where it earns
           its keep, never where it cheapens the work.
@@ -69,14 +69,14 @@ const FramingSection = () => (
   </section>
 );
 
-/* ──────────────────────────────────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    WHAT YOU GET
-   ────────────────────────────────────────────────────────── */
+   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 const includes = [
   {
     icon: ScrollText,
     label: "Story strategy",
-    body: "Before any cameras. We figure out what story this project is actually telling — and what it shouldn't try to tell. The work that holds up is the work that knows what it isn't.",
+    body: "Before any cameras. We figure out what story this project is actually telling - and what it shouldn't try to tell. The work that holds up is the work that knows what it isn't.",
   },
   {
     icon: Camera,
@@ -86,7 +86,7 @@ const includes = [
   {
     icon: Wand2,
     label: "AI-augmented post",
-    body: "AI used where it actually saves time without flattening the craft — generative b-roll, color and grade workflows, scale that used to need a 10-person team. AI is a tool here, not the headline.",
+    body: "AI used where it actually saves time without flattening the craft - generative b-roll, color and grade workflows, scale that used to need a 10-person team. AI is a tool here, not the headline.",
   },
   {
     icon: Sparkles,
@@ -130,14 +130,14 @@ const WhatYouGetSection = () => (
   </section>
 );
 
-/* ──────────────────────────────────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    PROCESS
-   ────────────────────────────────────────────────────────── */
+   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 const steps = [
   {
     number: "01",
     label: "Intake",
-    body: "You tell me about the project — who it's for, what story you want to tell, what the deadline looks like. I qualify in or out within 48 hours. No pitch deck, no sales sequence.",
+    body: "You tell me about the project - who it's for, what story you want to tell, what the deadline looks like. I qualify in or out within 48 hours. No pitch deck, no sales sequence.",
   },
   {
     number: "02",
@@ -195,9 +195,9 @@ const ProcessSection = () => (
   </section>
 );
 
-/* ──────────────────────────────────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    AI TRANSPARENCY + INTAKE NOTE
-   ────────────────────────────────────────────────────────── */
+   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 const TransparencySection = () => (
   <section className="section-padding py-16 md:py-20">
     <div className="max-w-4xl mx-auto">
@@ -220,7 +220,7 @@ const TransparencySection = () => (
             What AI doesn't do here: write the story. Choose the angle. Decide
             what the work means. The direction is human. The taste is human.
             The judgment about what to keep and what to cut is human. AI is
-            used where it earns its keep — never where it cheapens the work.
+            used where it earns its keep - never where it cheapens the work.
           </p>
         </div>
       </div>
@@ -228,9 +228,9 @@ const TransparencySection = () => (
   </section>
 );
 
-/* ──────────────────────────────────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    FINAL CTA
-   ────────────────────────────────────────────────────────── */
+   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 const FinalCTA = () => (
   <section className="section-padding bg-foreground text-background py-20 md:py-28">
     <div className="max-w-3xl mx-auto text-center">
@@ -267,13 +267,13 @@ const FinalCTA = () => (
   </section>
 );
 
-/* ──────────────────────────────────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    PAGE
-   ────────────────────────────────────────────────────────── */
+   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 const Studio = () => {
   useEffect(() => {
     setSEO({
-      title: "Studio — Cinematic Production for Founders and Companies | Rovonn Russell",
+      title: "Studio - Cinematic Production for Founders and Companies | Rovonn Russell",
       description:
         "Selective intake, director-led production for founders and companies. Brand films, founder narratives, campaign visuals. From $15,000.",
       path: "/studio",

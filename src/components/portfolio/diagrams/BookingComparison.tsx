@@ -1,5 +1,5 @@
-/**
- * Impact Loop Booking — comparison vs Calendly + manual prep.
+﻿/**
+ * Impact Loop Booking - comparison vs Calendly + manual prep.
  */
 const calendlyFlow = [
   { label: "Prospect picks slot", actor: "Prospect", auto: true },

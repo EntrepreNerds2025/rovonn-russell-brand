@@ -1,4 +1,4 @@
-# Auto-Quote from Google Meet Transcript
+﻿# Auto-Quote from Google Meet Transcript
 
 **Built for:** EntrepreNerds Agency (entre-nerd-dash)
 **Role:** Architected and built end-to-end
@@ -10,9 +10,9 @@
 
 The longest delay between a sales call and a closed deal is almost always the proposal. The conversation is fresh, the client is leaning in, and then the salesperson goes back to their desk and spends two hours writing up a quote based on what they remember from the meeting. By the time the proposal arrives, the urgency has cooled.
 
-Most agencies solve this with templates. Templates are fine for repeat work and miserable for custom builds. The right scope, the right pricing, and the right deliverables for *this* client live in the conversation that just happened — not in a template library.
+Most agencies solve this with templates. Templates are fine for repeat work and miserable for custom builds. The right scope, the right pricing, and the right deliverables for *this* client live in the conversation that just happened - not in a template library.
 
-The fix wasn't a faster proposal writer. The fix was a pipeline that takes the meeting transcript itself and produces a structured quote, draft contract, and SOW within minutes — so the salesperson reviews and ships rather than starts from scratch.
+The fix wasn't a faster proposal writer. The fix was a pipeline that takes the meeting transcript itself and produces a structured quote, draft contract, and SOW within minutes - so the salesperson reviews and ships rather than starts from scratch.
 
 That pipeline is auto-quote-from-transcript and its sibling functions (generate-quote-from-transcript, generate-invoice-from-transcript, generate-production-plan-from-text, generate-sow-ai, generate-contract-ai).
 
@@ -37,7 +37,7 @@ Output is structured JSON, parsed and written into the quotes table with status=
 
 **generate-sow-ai.** Takes the structured quote and produces a long-form SOW (Statement of Work) with milestones, deliverables, acceptance criteria, and exclusions.
 
-**generate-contract-ai.** Drafts a contract clause set based on the SOW: payment terms, IP assignment, change orders, termination conditions. The output is a starting point — not legal advice — flagged clearly for human legal review.
+**generate-contract-ai.** Drafts a contract clause set based on the SOW: payment terms, IP assignment, change orders, termination conditions. The output is a starting point - not legal advice - flagged clearly for human legal review.
 
 **generate-signed-contract-pdf and generate-signed-sow-pdf.** Render the final approved versions as branded PDFs ready for signature.
 
@@ -45,19 +45,19 @@ Output is structured JSON, parsed and written into the quotes table with status=
 
 ## What makes the architecture work
 
-**Idempotency at the edge.** Auto-quote checks `quote_generated` before calling the LLM. The function is safe to retry — repeated invocations with the same eventId will return the same quote ID, never duplicate it. This is the kind of detail that sounds boring and saves you from a $400 surprise on your API bill the day a webhook misfires.
+**Idempotency at the edge.** Auto-quote checks `quote_generated` before calling the LLM. The function is safe to retry - repeated invocations with the same eventId will return the same quote ID, never duplicate it. This is the kind of detail that sounds boring and saves you from a $400 surprise on your API bill the day a webhook misfires.
 
 **Structured extraction, not free-text generation.** The LLM doesn't write the quote. The LLM extracts structured fields. The quote itself is built from the extracted fields by deterministic code. This means the output schema is stable regardless of how the model phrased its response, and downstream PDF rendering / database writes never depend on prompt-fragile text.
 
 **Linked back to the calendar event.** `generated_quote_id` lives on the calendar event row. The salesperson can open the meeting and see the quote was already drafted. The quote can be opened and link back to the meeting. Bidirectional traceability without extra queries.
 
-**Background processing, not real-time.** The transcript usually isn't ready for 5-10 minutes after the meeting ends. process-meeting-transcripts polls every 15 minutes, so quotes appear in draft within 15-25 minutes of the call ending — usually before the salesperson has finished decompressing.
+**Background processing, not real-time.** The transcript usually isn't ready for 5-10 minutes after the meeting ends. process-meeting-transcripts polls every 15 minutes, so quotes appear in draft within 15-25 minutes of the call ending - usually before the salesperson has finished decompressing.
 
 **Human review before send.** Every quote, SOW, and contract drops in as a draft. Nothing is auto-sent. The salesperson reviews, edits, and approves. The pipeline saves the prep time, not the judgment.
 
 ## Result
 
-A meeting-to-quote turnaround that goes from 2 hours of post-call writing to 3 minutes of review. Quotes are scoped to what was actually discussed, not what's in the template library. The bottleneck moves from "writing the quote" to "deciding whether to send it" — which is the bottleneck that actually matters.
+A meeting-to-quote turnaround that goes from 2 hours of post-call writing to 3 minutes of review. Quotes are scoped to what was actually discussed, not what's in the template library. The bottleneck moves from "writing the quote" to "deciding whether to send it" - which is the bottleneck that actually matters.
 
 The pattern (idempotency at the edge, structured extraction, deterministic rendering, calendar-event linking, draft-then-review) applies to any conversation-to-document workflow: discovery calls to project briefs, client check-ins to status reports, sales calls to proposals.
 

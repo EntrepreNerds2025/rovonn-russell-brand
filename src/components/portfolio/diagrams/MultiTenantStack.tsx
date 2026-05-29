@@ -1,8 +1,8 @@
-/**
- * Multi-tenant — defense-in-depth security stack diagram.
+﻿/**
+ * Multi-tenant - defense-in-depth security stack diagram.
  */
 const layers = [
-  { label: "UI route guards", body: "Client-side: route components check role + tenant before render. First defense, easily bypassed by determined attackers — never sole.", color: "hsl(var(--accent))" },
+  { label: "UI route guards", body: "Client-side: route components check role + tenant before render. First defense, easily bypassed by determined attackers - never sole.", color: "hsl(var(--accent))" },
   { label: "Edge function role checks", body: "Every tenant-scoped function calls resolveTenant + role guard at the top. 401 returned before any work happens.", color: "hsl(var(--accent-deep))" },
   { label: "Postgres Row-Level Security", body: "RLS policies on every tenant-scoped table. Even if app-level checks are bypassed, the database refuses cross-tenant reads.", color: "hsl(28 60% 30%)" },
   { label: "Audit trail", body: "agent_feed, action_queue, autopilot_actions, all tenant-scoped. Every action is queryable, attributable, reversible.", color: "hsl(30 30% 20%)" },

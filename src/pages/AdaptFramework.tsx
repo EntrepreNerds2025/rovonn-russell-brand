@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { setSEO, resetSEO } from "@/lib/seo";
@@ -14,9 +14,9 @@ import {
   BookOpen,
 } from "lucide-react";
 
-/* ──────────────────────────────────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    HERO
-   ────────────────────────────────────────────────────────── */
+   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 const HeroSection = () => (
   <section className="section-padding pt-32 md:pt-40 pb-16 md:pb-20">
     <div className="max-w-4xl mx-auto">
@@ -33,9 +33,9 @@ const HeroSection = () => (
   </section>
 );
 
-/* ──────────────────────────────────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    FRAMING
-   ────────────────────────────────────────────────────────── */
+   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 const FramingSection = () => (
   <section className="section-padding bg-secondary py-16 md:py-20">
     <div className="max-w-3xl mx-auto">
@@ -48,34 +48,34 @@ const FramingSection = () => (
       </h2>
       <div className="space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed">
         <p>
-          The teams that compound aren't the ones who tried the most tools. They're the ones who started with a real assessment of what their work actually needed, then built one specific thing — a content engine, an AI agent, a clearer brand system, sometimes a hybrid — that fit that specific need.
+          The teams that compound aren't the ones who tried the most tools. They're the ones who started with a real assessment of what their work actually needed, then built one specific thing - a content engine, an AI agent, a clearer brand system, sometimes a hybrid - that fit that specific need.
         </p>
         <p>
-          ADAPT is the framework I teach for that work. Five steps, in this order. Skip Assess and Discover and you end up automating the wrong thing efficiently. Skip Transform and you stay in pilot purgatory forever. The order isn't ceremonial — it's the difference between a team that compounds and a team that experiments.
+          ADAPT is the framework I teach for that work. Five steps, in this order. Skip Assess and Discover and you end up automating the wrong thing efficiently. Skip Transform and you stay in pilot purgatory forever. The order isn't ceremonial - it's the difference between a team that compounds and a team that experiments.
         </p>
       </div>
     </div>
   </section>
 );
 
-/* ──────────────────────────────────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    THE 5 STEPS
-   ────────────────────────────────────────────────────────── */
+   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 const steps = [
   {
     letter: "A",
     label: "Assess",
     icon: Eye,
     title: "Start with where you actually are.",
-    body: "Before any tool. Before any pilot. Look honestly at how the work currently moves through your team — what's painful, what's manual, where the bottleneck really is. Most AI projects fail at this step because they skip it. The team that knows its actual workflow will build something useful. The team that imagines a workflow will build something abstract.",
-    practice: "Map one process end-to-end. Where does time go? Where does quality drop? Where does capacity break? That's where AI is going to matter — not where it sounds exciting.",
+    body: "Before any tool. Before any pilot. Look honestly at how the work currently moves through your team - what's painful, what's manual, where the bottleneck really is. Most AI projects fail at this step because they skip it. The team that knows its actual workflow will build something useful. The team that imagines a workflow will build something abstract.",
+    practice: "Map one process end-to-end. Where does time go? Where does quality drop? Where does capacity break? That's where AI is going to matter - not where it sounds exciting.",
   },
   {
     letter: "D",
     label: "Discover",
     icon: Compass,
     title: "Find what to build.",
-    body: "Now match the workflow against what's actually possible. Sometimes the answer is an AI agent that handles a repeatable decision. Sometimes it's a content system that captures what's already happening on your team. Sometimes it's a clearer brand or messaging layer that makes everything downstream easier. Sometimes it's a hybrid. The point isn't to pick a tool category — it's to pick the right thing to build for this specific business at this specific moment.",
+    body: "Now match the workflow against what's actually possible. Sometimes the answer is an AI agent that handles a repeatable decision. Sometimes it's a content system that captures what's already happening on your team. Sometimes it's a clearer brand or messaging layer that makes everything downstream easier. Sometimes it's a hybrid. The point isn't to pick a tool category - it's to pick the right thing to build for this specific business at this specific moment.",
     practice: "Pick one outcome to build toward. Just one. Resist the urge to find five. Concentration beats spread, especially this early.",
   },
   {
@@ -83,7 +83,7 @@ const steps = [
     label: "Apply",
     icon: PlayCircle,
     title: "Build the smallest version that could work.",
-    body: "One workflow, one team member, one specific use. Not a department-wide rollout. Not a vendor evaluation. The first build is small enough that you can see whether it actually works in two weeks, not two quarters. Build cheaply. Use the simplest tool that could possibly produce the outcome — sometimes that's an off-the-shelf AI tool, sometimes it's a Python script, sometimes it's a pen-and-paper process before any tech at all. The point isn't sophistication. It's signal.",
+    body: "One workflow, one team member, one specific use. Not a department-wide rollout. Not a vendor evaluation. The first build is small enough that you can see whether it actually works in two weeks, not two quarters. Build cheaply. Use the simplest tool that could possibly produce the outcome - sometimes that's an off-the-shelf AI tool, sometimes it's a Python script, sometimes it's a pen-and-paper process before any tech at all. The point isn't sophistication. It's signal.",
     practice: "Define what \"working\" looks like before you start. Time saved? Output quality? Reduced errors? If you don't define the success metric in advance, you'll find a way to claim success regardless.",
   },
   {
@@ -91,7 +91,7 @@ const steps = [
     label: "Produce",
     icon: Layers,
     title: "Compare the new way to the old way.",
-    body: "Run the build long enough to compare outputs honestly. Not just \"did the system produce something?\" — but is the output better than the manual version, faster, more consistent, or freeing up real time and energy? Production is where most pilots quietly fail. The system produced something. Nobody used it. Or someone used it and spent more time fixing the output than they would have done from scratch. Catch that here.",
+    body: "Run the build long enough to compare outputs honestly. Not just \"did the system produce something?\" - but is the output better than the manual version, faster, more consistent, or freeing up real time and energy? Production is where most pilots quietly fail. The system produced something. Nobody used it. Or someone used it and spent more time fixing the output than they would have done from scratch. Catch that here.",
     practice: "Track three metrics: time, quality, and team energy. Energy matters because a system that technically saves time but burns out the operator is a net loss.",
   },
   {
@@ -99,8 +99,8 @@ const steps = [
     label: "Transform",
     icon: Repeat2,
     title: "Turn what works into something the team owns.",
-    body: "Anything that survives Produce gets converted into a system the team can run without you. Documented. Repeatable. Owned by someone. Templated. This is the step that compounds — every workflow you transform makes the next one easier, because the team knows what to look for. The teams that stay good at this are the ones that keep transforming. Everyone else stays in pilot purgatory.",
-    practice: "Write down the workflow as a runbook. If a new team member couldn't replicate it from the notes, it's not a system yet — it's still tribal knowledge.",
+    body: "Anything that survives Produce gets converted into a system the team can run without you. Documented. Repeatable. Owned by someone. Templated. This is the step that compounds - every workflow you transform makes the next one easier, because the team knows what to look for. The teams that stay good at this are the ones that keep transforming. Everyone else stays in pilot purgatory.",
+    practice: "Write down the workflow as a runbook. If a new team member couldn't replicate it from the notes, it's not a system yet - it's still tribal knowledge.",
   },
 ];
 
@@ -165,9 +165,9 @@ const StepsSection = () => (
   </section>
 );
 
-/* ──────────────────────────────────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    ORDER MATTERS
-   ────────────────────────────────────────────────────────── */
+   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 const OrderSection = () => (
   <section className="section-padding bg-foreground text-background py-20 md:py-28">
     <div className="max-w-3xl mx-auto">
@@ -183,7 +183,7 @@ const OrderSection = () => (
           The tools are exciting. The build feels concrete. Apply looks like progress.
         </p>
         <p>
-          But the teams that skip Assess and Discover end up building the wrong thing efficiently. They automate work that didn't matter, or they ship a system that solves a problem the business doesn't actually have. The teams that skip Transform stay in pilot purgatory forever — perpetually evaluating tools, perpetually demoing, never owning anything.
+          But the teams that skip Assess and Discover end up building the wrong thing efficiently. They automate work that didn't matter, or they ship a system that solves a problem the business doesn't actually have. The teams that skip Transform stay in pilot purgatory forever - perpetually evaluating tools, perpetually demoing, never owning anything.
         </p>
         <p>
           The order isn't ceremonial. It's the difference between a team that compounds and a team that experiments.
@@ -193,9 +193,9 @@ const OrderSection = () => (
   </section>
 );
 
-/* ──────────────────────────────────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    WHO IT'S FOR / NEXT STEPS
-   ────────────────────────────────────────────────────────── */
+   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 const nextStepCards = [
   {
     icon: BookOpen,
@@ -283,9 +283,9 @@ const NextStepsSection = () => (
   </section>
 );
 
-/* ──────────────────────────────────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    FINAL LINE
-   ────────────────────────────────────────────────────────── */
+   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 const FinalSection = () => (
   <section className="section-padding bg-secondary py-20 md:py-24">
     <div className="max-w-3xl mx-auto text-center">
@@ -313,9 +313,9 @@ const FinalSection = () => (
   </section>
 );
 
-/* ──────────────────────────────────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    MAIN
-   ────────────────────────────────────────────────────────── */
+   â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 const AdaptFramework = () => {
   useEffect(() => {
     setSEO({

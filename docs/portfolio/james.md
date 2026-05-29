@@ -1,4 +1,4 @@
-# James — Cold Email Engine with Deliverability Sentinel
+﻿# James - Cold Email Engine with Deliverability Sentinel
 
 **Built for:** EntrepreNerds Agency (entre-nerd-dash)
 **Role:** Architected and built end-to-end
@@ -10,21 +10,21 @@
 
 EntrepreNerds was running cold email outreach the way most small agencies do: a sequence in Instantly, manually-built lead lists, a deliverability fingers-crossed prayer every Monday morning, and no real signal on which replies needed attention. The math didn't work. Bounce rates would creep up unnoticed. Lists would go stale. Good leads would get buried in noise.
 
-The fix wasn't a better email tool. The fix was an agent that handled the full lifecycle — finding leads, scoring them, generating warmup sequences, monitoring deliverability, and triaging replies — with humans only stepping in for high-stakes decisions.
+The fix wasn't a better email tool. The fix was an agent that handled the full lifecycle - finding leads, scoring them, generating warmup sequences, monitoring deliverability, and triaging replies - with humans only stepping in for high-stakes decisions.
 
 That agent is James. Eleven coordinated edge functions running on Supabase, each owning one job in the cold-email pipeline.
 
 ## Architecture
 
-**james-lead-finder.** Free-tier lead enrichment using Brave Search (2,000 queries/month free) plus homepage scraping. Takes a plain-English brief, finds candidate companies, extracts publicly-listed emails, drops results into a review queue. Lower-quality than Apollo but $0/month — graduate to paid only when volume justifies it. The architectural call here was to design for the cheapest plausible path first, not to pre-scale the budget.
+**james-lead-finder.** Free-tier lead enrichment using Brave Search (2,000 queries/month free) plus homepage scraping. Takes a plain-English brief, finds candidate companies, extracts publicly-listed emails, drops results into a review queue. Lower-quality than Apollo but $0/month - graduate to paid only when volume justifies it. The architectural call here was to design for the cheapest plausible path first, not to pre-scale the budget.
 
-**james-score-lead.** Claude-based ICP scorer that writes a 0–10 score plus a one-sentence justification (max 160 chars) directly to the leads table. The rubric is structured: 9–10 fires Truesight research immediately, 7–8 queues research for the next batch, below 7 stays in the CRM but doesn't trigger downstream work.
+**james-score-lead.** Claude-based ICP scorer that writes a 0â€“10 score plus a one-sentence justification (max 160 chars) directly to the leads table. The rubric is structured: 9â€“10 fires Truesight research immediately, 7â€“8 queues research for the next batch, below 7 stays in the CRM but doesn't trigger downstream work.
 
-**james-warmup-builder.** Reads approved Truesight intelligence reports, drafts a 3-step warmup sequence (Day 0, Day 3, Day 7) referencing one specific signal from each company's report, and creates a single Instantly campaign with all qualified leads loaded. Voice rules are enforced in the system prompt: warm, partnership-oriented, never salesy, 80–130 words per email, CASL-compliant footer placeholder.
+**james-warmup-builder.** Reads approved Truesight intelligence reports, drafts a 3-step warmup sequence (Day 0, Day 3, Day 7) referencing one specific signal from each company's report, and creates a single Instantly campaign with all qualified leads loaded. Voice rules are enforced in the system prompt: warm, partnership-oriented, never salesy, 80â€“130 words per email, CASL-compliant footer placeholder.
 
 **james-deliverability.** Runs every 2 hours via pg_cron. Pulls Instantly analytics for every sending account. Hard thresholds: bounce_rate above 5% triggers a warning, above 10% auto-pauses the warmup. Spam complaints above 0.3% warn, above 0.5% pause. Daily limit usage above 90% triggers a domain rotation suggestion. Every snapshot logs to inbox_health_log. Telegram fires a plain-English health report on any state change.
 
-**james-autopilot.** Every 10 minutes, scans recent inbox conversations and auto-actions high-confidence items: archives notifications above 0.65 confidence, drafts client replies above 0.90, queues lead follow-ups for Yaaba. Every action is reversible from a one-click undo button. Aggressive defaults but safe — nothing is permanently deleted.
+**james-autopilot.** Every 10 minutes, scans recent inbox conversations and auto-actions high-confidence items: archives notifications above 0.65 confidence, drafts client replies above 0.90, queues lead follow-ups for Yaaba. Every action is reversible from a one-click undo button. Aggressive defaults but safe - nothing is permanently deleted.
 
 **Plus:** james-draft-warmup, james-tts (text-to-speech briefs), james-standup (daily Slack summary), james-client-followup-brief, james-delete-conversation, james-worker (background job runner).
 
@@ -36,7 +36,7 @@ That agent is James. Eleven coordinated edge functions running on Supabase, each
 
 **Reversibility everywhere.** Every action James takes is logged and reversible. Archives go to a recoverable bucket. Drafts are staged, never auto-sent. The autopilot never crosses an irreversible threshold without explicit human approval.
 
-**Lane separation.** Lead scoring (cron, Sonnet) is separate from intelligence research (Opus, fired on score ≥ 9). Cheap reasoning runs cheap. Expensive reasoning only fires when the score earns it.
+**Lane separation.** Lead scoring (cron, Sonnet) is separate from intelligence research (Opus, fired on score â‰¥ 9). Cheap reasoning runs cheap. Expensive reasoning only fires when the score earns it.
 
 ## Result
 

@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+﻿import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
 import { ArrowUpRight, PlayCircle, Youtube as YoutubeIcon } from "lucide-react";
 import { setSEO, resetSEO } from "@/lib/seo";
@@ -164,7 +164,7 @@ const FinalCTA = () => (
         <span className="italic text-accent">most weeks.</span>
       </h2>
       <p className="opacity-70 leading-relaxed mb-10 text-base md:text-lg max-w-2xl mx-auto">
-        Subscribe so you don't miss the next one. The whole archive lives here too — pick the playlist that fits where you are.
+        Subscribe so you don't miss the next one. The whole archive lives here too - pick the playlist that fits where you are.
       </p>
       <Button variant="dark-hero" size="lg" asChild>
         <a href={YOUTUBE_URL} target="_blank" rel="noopener noreferrer">

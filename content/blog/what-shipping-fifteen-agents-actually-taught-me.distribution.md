@@ -1,4 +1,4 @@
-# Distribution pack: What shipping fifteen agents actually taught me
+﻿# Distribution pack: What shipping fifteen agents actually taught me
 
 Source: rovonnrussell.com/blog/what-shipping-fifteen-agents-actually-taught-me
 Date: 2026-05-11
@@ -67,11 +67,11 @@ Use the LLM only for steps that genuinely need reasoning over open-ended text.
 
 4/ For the inbox triager that meant:
 
-→ Python preprocessor pulled metadata. Classified 70% of cases without an LLM call.
+-> Python preprocessor pulled metadata. Classified 70% of cases without an LLM call.
 
-→ LLM call with tight schema for the harder 30%.
+-> LLM call with tight schema for the harder 30%.
 
-→ Python step ran routing logic. No LLM. Pure if-else.
+-> Python step ran routing logic. No LLM. Pure if-else.
 
 5/ The 70% deterministic path doesn't fail. The 30% LLM path fails sometimes, but when it does the failure is contained.
 
@@ -120,7 +120,7 @@ The point was every decision the system could pattern-match was already determin
 
 The teams I see hating their agents are almost always running the opposite setup. One mega-prompt doing six things at once. They blame the model. The model is fine. The architecture is wrong.
 
-Full post on the blog →
+Full post on the blog ->
 rovonnrussell.com/blog/what-shipping-fifteen-agents-actually-taught-me
 
 Rovonn

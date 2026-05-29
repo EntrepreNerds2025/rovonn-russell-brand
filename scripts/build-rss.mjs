@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Build-time RSS feed generator.
  *
  * Reads /content/blog/*.md, parses frontmatter, and writes /public/rss.xml.
@@ -75,7 +75,7 @@ const main = () => {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rovonn Russell — Blog</title>
+    <title>Rovonn Russell - Blog</title>
     <link>${SITE_URL}/blog</link>
     <atom:link href="${SITE_URL}/rss.xml" rel="self" type="application/rss+xml" />
     <description>Writing for founders, businesses, and impact-led leaders on storytelling, practical AI, and the ADAPT framework.</description>

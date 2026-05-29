@@ -1,5 +1,5 @@
-/**
- * Yaaba — 100-point weighted prospect scoring model.
+﻿/**
+ * Yaaba - 100-point weighted prospect scoring model.
  */
 const factors = [
   { label: "Budget capacity", points: 25, criteria: "employee band 10-250, multi-location, paid programs, org complexity" },

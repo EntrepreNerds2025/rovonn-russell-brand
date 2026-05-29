@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -85,7 +85,7 @@ const Contact = () => {
           <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
             {isStudio
               ? "Selective intake, five to eight projects per year. I'll respond within 48 hours with whether your project is a fit, and if so, what the next step looks like. No pitch sequence, no follow-up funnel."
-              : "Whether you're interested in strategy, speaking, consulting, or storytelling production — this is where it begins."}
+              : "Whether you're interested in strategy, speaking, consulting, or storytelling production - this is where it begins."}
           </p>
 
           <form onSubmit={handleSubmit} className="bg-card border border-border rounded p-8 md:p-10">
@@ -198,7 +198,7 @@ const Contact = () => {
 
                 <div>
                   <label className="text-xs font-semibold tracking-wider uppercase text-muted-foreground mb-1 block">
-                    Brief — what story are you trying to tell?
+                    Brief - what story are you trying to tell?
                   </label>
                   <textarea
                     className="w-full border border-border bg-background rounded px-4 py-3 text-sm h-28 resize-none focus:outline-none focus:ring-2 focus:ring-accent/30"

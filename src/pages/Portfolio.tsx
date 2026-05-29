@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+﻿import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { setSEO, resetSEO } from "@/lib/seo";
@@ -28,7 +28,7 @@ const HeroSection = () => (
         <span className="italic text-accent-highlight">built end-to-end.</span>
       </h1>
       <p className="text-lg md:text-2xl text-muted-foreground max-w-3xl leading-relaxed font-serif italic">
-        Six case studies from across Impact Loop, EntrepreNerds, and the personal brand. Each one grounded in real production code — not concepts.
+        Six case studies from across Impact Loop, EntrepreNerds, and the personal brand. Each one grounded in real production code - not concepts.
       </p>
     </div>
   </section>
