@@ -21,8 +21,6 @@ const ANTHROPIC_API_KEY = Deno.env.get("ANTHROPIC_API_KEY")!;
 const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY")!;
 const FIRECRAWL_API_KEY = Deno.env.get("FIRECRAWL_API_KEY") ?? "";
 const ROVONN_EMAIL = Deno.env.get("ROVONN_EMAIL") ?? "rovonn@rovonnrussell.com";
-const PLAYBOOK_PDF_URL = Deno.env.get("PLAYBOOK_PDF_URL") ?? "https://rovonnrussell.com/resources/the-adapt-playbook.pdf";
-const CALENDLY_URL = Deno.env.get("CALENDLY_URL") ?? "https://calendly.com/rovonnrussell";
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
 const anthropic = new Anthropic({ apiKey: ANTHROPIC_API_KEY });
@@ -166,10 +164,7 @@ Deno.serve(async (req) => {
     const ackHtml = `
       <p>Hey ${body.first_name},</p>
       <p>I got your Edge request. I'll read up on your business and write back within 24 hours with the specific AI workflow I'd install first.</p>
-      <p>In the meantime, here's <strong>The ADAPT Playbook</strong>. It's a 25-page read covering the framework, the five outcomes, and ten Virtual Employees you can install. The one I'm probably going to recommend for you is in there.</p>
-      <p><a href="${PLAYBOOK_PDF_URL}">Open the Playbook</a></p>
       <p>Talk soon,<br>Rovonn</p>
-      <p style="color:#666;font-size:13px">P.S. If you want to skip the email and book a 20-minute call now, here's my calendar: <a href="${CALENDLY_URL}">${CALENDLY_URL}</a></p>
     `;
     await sendEmail({
       to: body.email,
