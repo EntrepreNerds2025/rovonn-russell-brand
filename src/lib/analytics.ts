@@ -14,6 +14,7 @@ declare global {
 }
 
 export type AnalyticsEvent =
+  | string & {}
   | "personal_brand_home_viewed"
   | "starter_kit_form_started"
   | "starter_kit_form_submitted"
