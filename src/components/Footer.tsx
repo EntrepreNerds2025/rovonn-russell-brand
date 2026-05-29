@@ -33,11 +33,11 @@ const Footer = () => (
           <div className="space-y-2.5">
             <Link to="/start-here" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Start Here</Link>
             <Link to="/the-edge" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">The Edge</Link>
-            <Link to="/built-with-adapt" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Built with ADAPT</Link>
+            <Link to="/book" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Book a Call</Link>
+            <Link to="/speaking" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Speaking</Link>
             <Link to="/blog" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Blog</Link>
             <Link to="/resources" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Resources</Link>
             <Link to="/work-with-me" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Work With Me</Link>
-            <Link to="/speaking" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Speaking</Link>
           </div>
         </div>
 
@@ -46,7 +46,6 @@ const Footer = () => (
           <h4 className="text-xs font-semibold tracking-[0.22em] uppercase mb-5 opacity-60">Featured</h4>
           <div className="space-y-2.5">
             <Link to="/adapt" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">The ADAPT Framework</Link>
-            <Link to="/resources/adapt-playbook" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">The ADAPT Playbook</Link>
             <Link to="/resources/prompt-codes" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">The Prompt Codes</Link>
             <Link to="/contact" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Contact</Link>
           </div>

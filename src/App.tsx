@@ -24,8 +24,9 @@ import Portfolio from "./pages/Portfolio";
 import PortfolioCaseStudy from "./pages/PortfolioCaseStudy";
 import TheEdge from "./pages/TheEdge";
 import PromptCodes from "./pages/PromptCodes";
-import AdaptPlaybook from "./pages/AdaptPlaybook";
-import BuiltWithAdapt from "./pages/BuiltWithAdapt";
+import Bookings from "./pages/Bookings";
+import BookingConfirmed from "./pages/BookingConfirmed";
+import CancelBooking from "./pages/CancelBooking";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -42,10 +43,12 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/start-here" element={<StartHere />} />
           <Route path="/the-edge" element={<TheEdge />} />
-          <Route path="/built-with-adapt" element={<BuiltWithAdapt />} />
+          <Route path="/book" element={<Bookings />} />
+          <Route path="/bookings" element={<Bookings />} />
+          <Route path="/booking-confirmed" element={<BookingConfirmed />} />
+          <Route path="/cancel-booking" element={<CancelBooking />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/resources/prompt-codes" element={<PromptCodes />} />
-          <Route path="/resources/adapt-playbook" element={<AdaptPlaybook />} />
           <Route path="/resources/visibility-starter-kit" element={<VisibilityStarterKit />} />
           <Route path="/frameworks/adapt" element={<AdaptFramework />} />
           <Route path="/adapt" element={<AdaptFramework />} />

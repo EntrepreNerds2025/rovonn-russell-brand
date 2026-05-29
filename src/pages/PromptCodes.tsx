@@ -149,11 +149,11 @@ const NextSection = () => (
           <p className="text-sm text-muted-foreground leading-relaxed mb-6">A 90-second form. Five questions about your business. Within 24 hours, I write back personally with a custom blueprint on the first AI workflow I'd install in your business this week.</p>
           <p className="text-sm font-semibold text-foreground inline-flex items-center gap-1.5 group-hover:gap-2.5 group-hover:text-accent-deep transition-all">Get Your Edge <ArrowRight size={14} /></p>
         </Link>
-        <Link to="/resources/adapt-playbook" className="group block bg-card border border-border rounded-md p-8 hover:border-accent/40 transition-colors">
+        <Link to="/adapt" className="group block bg-card border border-border rounded-md p-8 hover:border-accent/40 transition-colors">
           <p className="text-xs font-semibold tracking-[0.2em] uppercase text-accent-deep mb-3">For founders ready for the framework</p>
-          <h3 className="font-serif text-2xl font-semibold leading-snug mb-4">The ADAPT Playbook.</h3>
-          <p className="text-sm text-muted-foreground leading-relaxed mb-6">A 25-page guide. The framework, the five outcomes, ten specific workflows, and the first 30 days. Free download.</p>
-          <p className="text-sm font-semibold text-foreground inline-flex items-center gap-1.5 group-hover:gap-2.5 group-hover:text-accent-deep transition-all">Download the Playbook <ArrowRight size={14} /></p>
+          <h3 className="font-serif text-2xl font-semibold leading-snug mb-4">The ADAPT Framework.</h3>
+          <p className="text-sm text-muted-foreground leading-relaxed mb-6">The five-step diagnostic that helps you find where AI actually belongs in your business before you install anything else.</p>
+          <p className="text-sm font-semibold text-foreground inline-flex items-center gap-1.5 group-hover:gap-2.5 group-hover:text-accent-deep transition-all">Read the Framework <ArrowRight size={14} /></p>
         </Link>
       </div>
     </div>

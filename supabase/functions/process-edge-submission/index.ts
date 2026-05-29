@@ -10,7 +10,7 @@
 //   SUPABASE_SERVICE_ROLE_KEY Service role key (NOT anon key)
 //   ROVONN_EMAIL         Rovonn's inbox for briefings
 //   PLAYBOOK_PDF_URL     Public URL of The ADAPT Playbook PDF
-//   CALENDLY_URL         Calendly booking link
+//   BOOKING_URL          Personal brand bookings page (defaults to /book on the live site)
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
 import Anthropic from "https://esm.sh/@anthropic-ai/sdk@0.30.0";
@@ -22,7 +22,7 @@ const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY")!;
 const FIRECRAWL_API_KEY = Deno.env.get("FIRECRAWL_API_KEY") ?? "";
 const ROVONN_EMAIL = Deno.env.get("ROVONN_EMAIL") ?? "rovonn@rovonnrussell.com";
 const PLAYBOOK_PDF_URL = Deno.env.get("PLAYBOOK_PDF_URL") ?? "https://rovonnrussell.com/resources/the-adapt-playbook.pdf";
-const CALENDLY_URL = Deno.env.get("CALENDLY_URL") ?? "https://calendly.com/rovonnrussell";
+const BOOKING_URL = Deno.env.get("BOOKING_URL") ?? "https://rovonnrussell.com/book?type=edge-followup";
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
 const anthropic = new Anthropic({ apiKey: ANTHROPIC_API_KEY });
@@ -169,7 +169,7 @@ Deno.serve(async (req) => {
       <p>In the meantime, here's <strong>The ADAPT Playbook</strong>. It's a 25-page read covering the framework, the five outcomes, and ten Virtual Employees you can install. The one I'm probably going to recommend for you is in there.</p>
       <p><a href="${PLAYBOOK_PDF_URL}">Open the Playbook</a></p>
       <p>Talk soon,<br>Rovonn</p>
-      <p style="color:#666;font-size:13px">P.S. If you want to skip the email and book a 20-minute call now, here's my calendar: <a href="${CALENDLY_URL}">${CALENDLY_URL}</a></p>
+      <p style="color:#666;font-size:13px">P.S. If you want to skip the email and book a 20-minute call now, you can grab a time directly: <a href="${BOOKING_URL}">${BOOKING_URL}</a></p>
     `;
     await sendEmail({
       to: body.email,

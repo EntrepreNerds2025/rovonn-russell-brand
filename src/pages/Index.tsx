@@ -31,7 +31,7 @@ const HeroSection = () => (
         </p>
         <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: "0.3s" }}>
           <Button variant="hero" size="lg" asChild><Link to="/the-edge">Get Your Edge <ArrowRight className="ml-2" size={16} /></Link></Button>
-          <Button variant="hero-outline" size="lg" asChild><Link to="/resources/prompt-codes">Free: 30 Prompt Codes</Link></Button>
+          <Button variant="hero-outline" size="lg" asChild><Link to="/speaking">Speaking + workshops</Link></Button>
         </div>
         <p className="mt-6 text-sm text-muted-foreground animate-fade-up" style={{ animationDelay: "0.4s" }}>
           Or <Link to="/blog" className="inline-flex items-center gap-1.5 font-medium text-foreground hover:text-accent-deep transition-colors underline decoration-accent/40 underline-offset-4"><FileText size={14} /> read the blog</Link>
@@ -94,25 +94,25 @@ const ThemesSection = () => (
   </section>
 );
 
-const PlaybookSection = () => {
-  const includes = ["The five outcomes founders actually want from AI", "The full ADAPT framework, broken down", "Ten specific workflows to install (Virtual Employees included)", "The first 30 days, week by week", "A self-assessment scorecard"];
+const SpeakingSection = () => {
+  const topics = ["Don't just adopt AI. ADAPT it. (the keynote)", "The Five Things Founders Actually Want From AI", "Voice as Moat: protecting your craft in the AI era", "Building AI That Fits (founder workshop)", "The Founder Economy in 2026"];
   return (
     <section className="section-padding bg-foreground text-background">
       <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div>
-          <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-5">The Cornerstone Resource</p>
-          <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight mb-6">The ADAPT <span className="italic text-accent">Playbook.</span></h2>
-          <p className="text-base md:text-lg opacity-75 leading-relaxed mb-8">A 25-page guide for founders and small business owners who want to ADAPT AI to the business they actually run. The framework, the five outcomes, ten specific workflows, and the first 30 days.</p>
+          <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-5">Bring me to your stage</p>
+          <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight mb-6">Speaking, workshops, <span className="italic text-accent">and live training.</span></h2>
+          <p className="text-base md:text-lg opacity-75 leading-relaxed mb-8">Keynotes, hands-on workshops, founder community talks, virtual sessions, and on-site training. For events that want their founders and small business operators to leave with something they can install on Monday.</p>
           <div className="flex flex-col sm:flex-row gap-3">
-            <Button variant="dark-hero" size="lg" asChild><Link to="/resources/adapt-playbook">Download the Playbook <ArrowRight className="ml-2" size={16} /></Link></Button>
-            <Button variant="dark-outline" size="lg" asChild><Link to="/the-edge">Or get your Edge</Link></Button>
+            <Button variant="dark-hero" size="lg" asChild><Link to="/speaking">See speaking options <ArrowRight className="ml-2" size={16} /></Link></Button>
+            <Button variant="dark-outline" size="lg" asChild><Link to="/the-edge">Get Your Edge first</Link></Button>
           </div>
-          <p className="text-xs opacity-50 mt-4">Free. No spam. Unsubscribe anytime.</p>
+          <p className="text-xs opacity-50 mt-4">In-person across North America. Virtual anywhere.</p>
         </div>
         <div className="border border-background/15 bg-background/5 rounded-md p-7 md:p-8">
-          <p className="text-xs font-semibold tracking-[0.25em] uppercase text-accent mb-5">What's Inside</p>
+          <p className="text-xs font-semibold tracking-[0.25em] uppercase text-accent mb-5">Topics I speak on</p>
           <ul className="space-y-3.5">
-            {includes.map((item) => (<li key={item} className="flex items-start gap-3 text-sm md:text-base opacity-90"><span className="mt-1 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-accent" /><span>{item}</span></li>))}
+            {topics.map((item) => (<li key={item} className="flex items-start gap-3 text-sm md:text-base opacity-90"><span className="mt-1 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-accent" /><span>{item}</span></li>))}
           </ul>
         </div>
       </div>
@@ -204,8 +204,8 @@ const FinalCTA = () => (
       <p className="opacity-70 mb-10 leading-relaxed text-base md:text-lg">The Edge is a 90-second form. I write back personally within 24 hours with the first AI workflow I'd install in your business.</p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Button variant="dark-hero" size="lg" asChild><Link to="/the-edge">Get Your Edge</Link></Button>
-        <Button variant="dark-outline" size="lg" asChild><Link to="/resources/adapt-playbook">Browse the Playbook First</Link></Button>
-        <Button variant="dark-outline" size="lg" asChild><Link to="/blog">Read the Blog</Link></Button>
+        <Button variant="dark-outline" size="lg" asChild><Link to="/book">Book a call</Link></Button>
+        <Button variant="dark-outline" size="lg" asChild><Link to="/speaking">Speaking + workshops</Link></Button>
       </div>
     </div>
   </section>
@@ -227,7 +227,7 @@ const Index = () => {
       <HeroSection />
       <PositioningSection />
       <ThemesSection />
-      <PlaybookSection />
+      <SpeakingSection />
       <ArticlesSection />
       <WorkWithMeSection />
       <FinalCTA />

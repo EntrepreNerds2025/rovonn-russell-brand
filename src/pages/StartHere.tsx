@@ -47,7 +47,7 @@ const paths: Path[] = [
     desc: "Assess, Discover, Apply, Produce, Transform. The five-step diagnostic that figures out where AI actually fits in your specific business before you install anything.",
     actions: [
       { label: "Read the ADAPT framework", href: "/adapt" },
-      { label: "Download The ADAPT Playbook", href: "/resources/adapt-playbook" },
+      { label: "Take The Edge", href: "/the-edge" },
     ],
   },
   {
@@ -58,7 +58,7 @@ const paths: Path[] = [
     desc: "Free 30-page PDF. 30 prompt codes that work in ChatGPT, Claude, and any modern AI tool. Two minutes to set up, hours back every week after.",
     actions: [
       { label: "Get the Prompt Codes", href: "/resources/prompt-codes" },
-      { label: "See what we've built", href: "/built-with-adapt" },
+      { label: "Read the blog", href: "/blog" },
     ],
   },
   {

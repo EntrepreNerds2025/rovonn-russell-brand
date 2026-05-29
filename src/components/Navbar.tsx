@@ -11,7 +11,7 @@ interface NavLink {
 const navLinks: NavLink[] = [
   { label: "Start Here", href: "/start-here" },
   { label: "ADAPT", href: "/adapt" },
-  { label: "Built with ADAPT", href: "/built-with-adapt" },
+  { label: "Speaking", href: "/speaking" },
   { label: "Resources", href: "/resources" },
   { label: "Blog", href: "/blog" },
   { label: "Work With Me", href: "/work-with-me" },

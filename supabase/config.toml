@@ -11,3 +11,18 @@ verify_jwt = false
 
 [functions.subscribe-to-list]
 verify_jwt = false
+
+[functions.get-availability]
+verify_jwt = false
+
+[functions.create-booking-lead]
+verify_jwt = false
+
+[functions.create-booking]
+verify_jwt = false
+
+[functions.cancel-booking]
+verify_jwt = false
+
+[functions.booking-scheduler-sweep]
+verify_jwt = false
