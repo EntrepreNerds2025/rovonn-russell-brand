@@ -10,7 +10,7 @@
 //   SUPABASE_SERVICE_ROLE_KEY Service role key (NOT anon key)
 //   ROVONN_EMAIL         Rovonn's inbox for briefings
 //   EDGE_NOTIFICATION_EMAIL Gmail inbox for immediate Edge submission notifications
-//   PLAYBOOK_PDF_URL     Public URL of The ADAPT Playbook PDF
+//   PROMPT_CODES_PDF_URL Public URL of The Founder's Prompt Codes PDF
 //   BOOKING_URL          Personal brand bookings page (defaults to /book on the live site)
 //   IMPACT_OS_EDGE_WEBHOOK_URL Optional Impact OS Blueprint Lab webhook URL
 //   IMPACT_OS_EDGE_WEBHOOK_TOKEN Optional token sent as x-impact-os-token
@@ -24,7 +24,7 @@ const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY")!;
 const FIRECRAWL_API_KEY = Deno.env.get("FIRECRAWL_API_KEY") ?? "";
 const ROVONN_EMAIL = Deno.env.get("ROVONN_EMAIL") ?? "rovonn@rovonnrussell.com";
 const EDGE_NOTIFICATION_EMAIL = Deno.env.get("EDGE_NOTIFICATION_EMAIL") ?? "rovonnrussell@gmail.com";
-const PLAYBOOK_PDF_URL = Deno.env.get("PLAYBOOK_PDF_URL") ?? "https://rovonnrussell.com/resources/the-adapt-playbook.pdf";
+const PROMPT_CODES_PDF_URL = Deno.env.get("PROMPT_CODES_PDF_URL") ?? "https://rovonnrussell.com/resources/the-founders-prompt-codes.pdf";
 const BOOKING_URL = Deno.env.get("BOOKING_URL") ?? "https://rovonnrussell.com/book?type=edge-followup";
 const IMPACT_OS_EDGE_WEBHOOK_URL = Deno.env.get("IMPACT_OS_EDGE_WEBHOOK_URL") ?? "";
 const IMPACT_OS_EDGE_WEBHOOK_TOKEN = Deno.env.get("IMPACT_OS_EDGE_WEBHOOK_TOKEN") ?? "";
@@ -197,8 +197,8 @@ Deno.serve(async (req) => {
     const ackHtml = `
       <p>Hey ${body.first_name},</p>
       <p>I got your Edge request. I'll read up on your business and write back within 24 hours with the specific AI workflow I'd install first.</p>
-      <p>In the meantime, here's <strong>The ADAPT Playbook</strong>. It's a 25-page read covering the framework, the five outcomes, and ten Virtual Employees you can install. The one I'm probably going to recommend for you is in there.</p>
-      <p><a href="${PLAYBOOK_PDF_URL}">Open the Playbook</a></p>
+      <p>In the meantime, here are <strong>The Founder's Prompt Codes</strong>. A short collection of prompts you can drop into ChatGPT or Claude today to start getting better outputs from AI.</p>
+      <p><a href="${PROMPT_CODES_PDF_URL}">Open the Prompt Codes</a></p>
       <p>Talk soon,<br>Rovonn</p>
       <p style="color:#666;font-size:13px">P.S. If you want to skip the email and book a 20-minute call now, you can grab a time directly: <a href="${BOOKING_URL}">${BOOKING_URL}</a></p>
     `;
