@@ -9,8 +9,11 @@
 //   SUPABASE_URL         Supabase project URL
 //   SUPABASE_SERVICE_ROLE_KEY Service role key (NOT anon key)
 //   ROVONN_EMAIL         Rovonn's inbox for briefings
+//   EDGE_NOTIFICATION_EMAIL Gmail inbox for immediate Edge submission notifications
 //   PLAYBOOK_PDF_URL     Public URL of The ADAPT Playbook PDF
 //   BOOKING_URL          Personal brand bookings page (defaults to /book on the live site)
+//   IMPACT_OS_EDGE_WEBHOOK_URL Optional Impact OS Blueprint Lab webhook URL
+//   IMPACT_OS_EDGE_WEBHOOK_TOKEN Optional token sent as x-impact-os-token
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
 import Anthropic from "https://esm.sh/@anthropic-ai/sdk@0.30.0";
@@ -21,8 +24,11 @@ const ANTHROPIC_API_KEY = Deno.env.get("ANTHROPIC_API_KEY")!;
 const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY")!;
 const FIRECRAWL_API_KEY = Deno.env.get("FIRECRAWL_API_KEY") ?? "";
 const ROVONN_EMAIL = Deno.env.get("ROVONN_EMAIL") ?? "rovonn@rovonnrussell.com";
+const EDGE_NOTIFICATION_EMAIL = Deno.env.get("EDGE_NOTIFICATION_EMAIL") ?? "rovonnrussell@gmail.com";
 const PLAYBOOK_PDF_URL = Deno.env.get("PLAYBOOK_PDF_URL") ?? "https://rovonnrussell.com/resources/the-adapt-playbook.pdf";
 const BOOKING_URL = Deno.env.get("BOOKING_URL") ?? "https://rovonnrussell.com/book?type=edge-followup";
+const IMPACT_OS_EDGE_WEBHOOK_URL = Deno.env.get("IMPACT_OS_EDGE_WEBHOOK_URL") ?? "";
+const IMPACT_OS_EDGE_WEBHOOK_TOKEN = Deno.env.get("IMPACT_OS_EDGE_WEBHOOK_TOKEN") ?? "";
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
 const anthropic = new Anthropic({ apiKey: ANTHROPIC_API_KEY });
@@ -86,6 +92,26 @@ async function scrapeBusinessUrl(url: string): Promise<string> {
   } catch (err) {
     console.error("Firecrawl error:", err);
     return "";
+  }
+}
+
+async function notifyImpactOs(payload: Record<string, unknown>) {
+  if (!IMPACT_OS_EDGE_WEBHOOK_URL) return;
+  try {
+    const headers: Record<string, string> = { "Content-Type": "application/json" };
+    if (IMPACT_OS_EDGE_WEBHOOK_TOKEN) {
+      headers["x-impact-os-token"] = IMPACT_OS_EDGE_WEBHOOK_TOKEN;
+    }
+    const res = await fetch(IMPACT_OS_EDGE_WEBHOOK_URL, {
+      method: "POST",
+      headers,
+      body: JSON.stringify(payload),
+    });
+    if (!res.ok) {
+      console.error("Impact OS webhook failed:", res.status, await res.text());
+    }
+  } catch (err) {
+    console.error("Impact OS webhook error:", err);
   }
 }
 
@@ -182,6 +208,27 @@ Deno.serve(async (req) => {
       .update({ acknowledgment_sent_at: new Date().toISOString() })
       .eq("id", submissionId);
 
+    // Immediate notification so Rovonn sees the lead even before the full briefing finishes.
+    await sendEmail({
+      to: EDGE_NOTIFICATION_EMAIL,
+      from: "The Edge <theedge@rovonnrussell.com>",
+      subject: `[The Edge] New submission from ${body.first_name}`,
+      html: `
+        <p>New Edge submission received.</p>
+        <p>
+          <strong>Name:</strong> ${body.first_name}<br>
+          <strong>Email:</strong> <a href="mailto:${body.email}">${body.email}</a><br>
+          <strong>Business:</strong> ${body.business_description}<br>
+          <strong>Time eater:</strong> ${body.time_eater}<br>
+          <strong>Stalled project:</strong> ${body.stalled_project}<br>
+          <strong>AI status:</strong> ${body.ai_status}<br>
+          <strong>Website:</strong> ${body.business_url || "Not provided"}
+        </p>
+        <p>Impact OS Blueprint Lab activation will run if the webhook is configured and reachable.</p>
+      `,
+      replyTo: body.email,
+    });
+
     // 2. Scrape business URL
     const scrapedContent = body.business_url ? await scrapeBusinessUrl(body.business_url) : "";
 
@@ -242,6 +289,19 @@ Generate The Edge briefing now.`;
         briefing_content: briefingText,
       })
       .eq("id", submissionId);
+
+    await notifyImpactOs({
+      submission_id: submissionId,
+      first_name: body.first_name,
+      email: body.email,
+      business_description: body.business_description,
+      time_eater: body.time_eater,
+      stalled_project: body.stalled_project,
+      ai_status: body.ai_status,
+      business_url: body.business_url ?? null,
+      briefing_content: briefingText,
+      source: "the_edge",
+    });
 
     return jsonResponse({ success: true, id: submissionId });
   } catch (err) {

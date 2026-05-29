@@ -13,7 +13,26 @@ declare global {
   }
 }
 
-export type AnalyticsEvent = string;
+export type AnalyticsEvent =
+  | "personal_brand_home_viewed"
+  | "starter_kit_form_started"
+  | "starter_kit_form_submitted"
+  | "starter_kit_downloaded"
+  | "youtube_video_clicked"
+  | "youtube_subscribe_clicked"
+  | "impact_loop_cta_clicked"
+  | "advisory_cta_clicked"
+  | "speaking_form_submitted"
+  | "resource_clicked"
+  | "navbar_cta_clicked"
+  | "blog_index_viewed"
+  | "blog_category_viewed"
+  | "blog_post_viewed"
+  | "blog_cta_click"
+  | "portfolio_index_viewed"
+  | "portfolio_card_click"
+  | "portfolio_case_study_viewed"
+  | `blog_scroll_${number}`;
 
 export function trackEvent(
   eventName: AnalyticsEvent,

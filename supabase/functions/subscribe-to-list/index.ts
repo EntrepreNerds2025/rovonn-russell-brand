@@ -1,6 +1,6 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
 
-type ListKey = "prompt_codes";
+type ListKey = "prompt_codes" | "playbook";
 
 type SubscribeBody = {
   list: ListKey;
@@ -18,12 +18,18 @@ const corsHeaders = {
   "Access-Control-Allow-Methods": "POST, OPTIONS",
 };
 
-const listConfig: Record<ListKey, { table: string; title: string; pdfUrl: string; subject: string }> = {
+const listConfig: Record<ListKey, { table: string; title: string; pdfEnv: string; subject: string }> = {
   prompt_codes: {
     table: "prompt_codes_subscribers",
     title: "The Founder's Prompt Codes",
-    pdfUrl: "https://rovonnrussell.com/resources/the-founders-prompt-codes.pdf",
+    pdfEnv: "PROMPT_CODES_PDF_URL",
     subject: "Your Founder's Prompt Codes",
+  },
+  playbook: {
+    table: "playbook_subscribers",
+    title: "The ADAPT Playbook",
+    pdfEnv: "PLAYBOOK_PDF_URL",
+    subject: "Your ADAPT Playbook",
   },
 };
 
@@ -113,6 +119,7 @@ Deno.serve(async (req) => {
     }
 
     const supabase = createClient(requireEnv("SUPABASE_URL"), requireEnv("SUPABASE_SERVICE_ROLE_KEY"));
+    const pdfUrl = requireEnv(config.pdfEnv);
     const resendKey = requireEnv("RESEND_API_KEY");
 
     const record = {
@@ -136,7 +143,7 @@ Deno.serve(async (req) => {
       name,
       subject: config.subject,
       title: config.title,
-      pdfUrl: config.pdfUrl,
+      pdfUrl,
     });
 
     const { error: updateError } = await supabase
