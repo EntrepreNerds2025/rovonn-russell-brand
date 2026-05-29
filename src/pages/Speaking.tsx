@@ -9,28 +9,28 @@ import { setSEO, resetSEO } from "@/lib/seo";
 const topics = [
   {
     icon: Bot,
-    title: "How AI Can Help Teams Without Losing the Human Voice",
-    desc: "How to tailor AI and systems to what your business actually needs. Diagnose first, build the right thing second. The ADAPT framework, in keynote form.",
-  },
-  {
-    icon: BookOpen,
-    title: "Storytelling and Systems for Impact-Driven Organizations",
-    desc: "Why most nonprofits and mission-driven businesses don't have a content problem — they have a capture problem. And how to build a system around what's already happening.",
-  },
-  {
-    icon: Eye,
-    title: "How to Turn Your Work Into Visibility",
-    desc: "For founders and business owners. The frameworks, prompts, and systems that turn the work you're already doing into content people understand and act on.",
-  },
-  {
-    icon: Layers,
-    title: "Building Content Systems With AI",
-    desc: "The architecture behind a one-person (or small-team) content engine. Tools, workflows, and the principle that the LLM should be the dumbest part of the system.",
+    title: "Don't Just Adopt AI. ADAPT It.",
+    desc: "The keynote version of the framework. Why most founders are losing the AI fight, and what changes when they ADAPT instead of adopt. 30 to 60 minutes.",
   },
   {
     icon: Sparkles,
-    title: "From Knowledge to Assets: Turning Expertise Into Resources",
-    desc: "How to convert what you already know into lead magnets, courses, toolkits, and digital products that compound while you sleep.",
+    title: "The Five Things Founders Actually Want From AI",
+    desc: "The economic case for AI in the SMB economy. Save time, protect margin, achieve the level of success they've been chasing, stop struggling, unlock the work that wasn't possible before. 30 to 60 minutes.",
+  },
+  {
+    icon: Eye,
+    title: "Voice as Moat",
+    desc: "Why your craft and brand matter MORE in the AI era, not less. For creator-economy events, conferences, and founder summits. 30 to 45 minutes.",
+  },
+  {
+    icon: Layers,
+    title: "Building AI That Fits",
+    desc: "Workshop format. We walk a room of founders through the ADAPT framework on their own businesses and identify the first Virtual Employee to install. 90 minutes to half-day.",
+  },
+  {
+    icon: BookOpen,
+    title: "The Founder Economy in 2026",
+    desc: "Industry talk. What's actually happening to small businesses right now, what's working with AI, what's hype, and where the next 24 months are headed. 30 to 60 minutes.",
   },
 ];
 
@@ -50,11 +50,11 @@ const HeroSection = () => (
         Speaking
       </p>
       <h1 className="text-5xl md:text-7xl font-serif font-bold leading-[1.05] mb-8">
-        Bring Rovonn in to talk about{" "}
-        <span className="italic text-accent-highlight">storytelling, systems, and AI.</span>
+        Bring Rovonn in to talk about how founders and small businesses{" "}
+        <span className="italic text-accent-highlight">ADAPT AI to actually grow.</span>
       </h1>
       <p className="text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed">
-        Keynotes and workshops for conferences, leadership summits, and teams ready to rethink how they communicate impact and adopt AI without losing the human side of their work.
+        Keynotes, workshops, and on-site training for conferences, founder summits, leadership offsites, and teams ready to install AI that fits their actual business. In-person across North America. Remote anywhere.
       </p>
     </div>
   </section>
@@ -261,7 +261,7 @@ const Speaking = () => {
   useEffect(() => {
     setSEO({
       title: "Speaking | Rovonn Russell",
-      description: "Bring Rovonn in to talk about storytelling, systems, and AI. Keynotes and workshops for conferences, leadership summits, and teams ready to rethink how they communicate impact.",
+      description: "Bring Rovonn in to talk about how founders and small businesses ADAPT AI to actually grow. Keynotes, workshops, and on-site training for conferences, founder summits, and leadership offsites.",
       path: "/speaking",
     });
     return resetSEO;

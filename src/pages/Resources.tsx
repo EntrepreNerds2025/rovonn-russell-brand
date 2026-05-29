@@ -7,11 +7,11 @@ import {
   ArrowUpRight,
   Bot,
   Layers,
-  Compass,
-  Heart,
-  Briefcase,
+  Target,
+  MessageSquareQuote,
+  TrendingUp,
   BookOpen,
-  CalendarCheck,
+  Sparkles,
   Lock,
 } from "lucide-react";
 
@@ -28,65 +28,65 @@ interface Resource {
 
 const resources: Resource[] = [
   {
-    icon: Bot,
-    tag: "Free PDF · 25 pages",
-    title: "Visibility Starter Kit",
-    desc: "10 AI prompts, 5 content angles, an event-to-content checklist, a weekly content system, a story capture worksheet, a platform breakdown, and a visual capture supplement. The cornerstone resource.",
-    cta: "Get the Kit",
-    href: "/resources/visibility-starter-kit",
-    status: "available",
-  },
-  {
-    icon: Compass,
-    tag: "Free guide · ADAPT framework",
-    title: "ADAPT Starter Guide",
-    desc: "Audit your own workflow with the ADAPT framework. Find the one place AI belongs in your work, build a small system around it, and run a real pilot.",
-    cta: "Read the Framework",
-    href: "/frameworks/adapt",
-    status: "available",
-  },
-  {
-    icon: CalendarCheck,
-    tag: "Coming Soon · 1-page printable",
-    title: "Event-to-Content Toolkit",
-    desc: "An expanded version of the checklist inside the Starter Kit. Standalone PDF you can print, pin near your desk, and tick through before, during, and after every event.",
-    cta: "Notify Me",
-    href: "#",
-    status: "coming_soon",
-  },
-  {
     icon: Layers,
-    tag: "Coming Soon · System pack",
-    title: "AI Content System Kit",
-    desc: "The full AI-supported content workflow. Custom GPTs, Claude project templates, automation recipes, and the system map for running a one-person content engine end to end.",
-    cta: "Notify Me",
-    href: "#",
+    tag: "Free PDF · 25 pages · cornerstone",
+    title: "The ADAPT Playbook",
+    desc: "The full framework, the five outcomes most founders want from AI, ten specific Virtual Employees you can install, and the first 30 days. For founders and small business owners who want to ADAPT AI to the business they actually run.",
+    cta: "Download the Playbook",
+    href: "/resources/adapt-playbook",
     status: "coming_soon",
   },
   {
-    icon: Heart,
-    tag: "Coming Soon · For nonprofits",
-    title: "Nonprofit AI Prompt Pack",
-    desc: "AI prompts tailored for nonprofit communications, fundraising letters, donor stories, grant narratives, and impact reports. Same direct, practical tone as the Starter Kit.",
-    cta: "Notify Me",
-    href: "#",
-    status: "coming_soon",
+    icon: Bot,
+    tag: "Free PDF · 30 prompt codes",
+    title: "The Founder's Prompt Codes",
+    desc: "30 commands that work in ChatGPT, Claude, and any modern AI tool. Founder-tailored. Two minutes to set up, hours back every week after. Includes setup instructions for both ChatGPT Custom Instructions and Claude Projects.",
+    cta: "Get the Codes",
+    href: "/resources/prompt-codes",
+    status: "available",
   },
   {
-    icon: Briefcase,
-    tag: "Coming Soon · For founders",
-    title: "Founder-Led Content Planner",
-    desc: "A 30-day rolling content plan tailored to founder-led brands. Real-week templates, founder voice prompts, and a publishing rhythm built around running a business.",
-    cta: "Notify Me",
-    href: "#",
-    status: "coming_soon",
+    icon: Sparkles,
+    tag: "Free · personalized in 24 hours",
+    title: "The Edge",
+    desc: "A 90-second form. Five questions about your business. Within 24 hours, I personally email you back with a custom blueprint on the first AI workflow I'd install in your business this week.",
+    cta: "Get Your Edge",
+    href: "/the-edge",
+    status: "available",
+  },
+  {
+    icon: Target,
+    tag: "Free framework",
+    title: "The ADAPT Framework",
+    desc: "The five-step diagnostic that figures out where AI actually fits in your specific business before you install anything. Assess, Discover, Apply, Produce, Transform. The wedge behind every Virtual Employee we install.",
+    cta: "Read the Framework",
+    href: "/adapt",
+    status: "available",
   },
   {
     icon: BookOpen,
-    tag: "Coming Soon · Worksheet",
-    title: "Knowledge-to-Asset Worksheet",
-    desc: "Turn what you already know into lead magnets, courses, toolkits, and digital products. A 5-step worksheet that maps expertise to revenue-generating assets.",
+    tag: "Case studies",
+    title: "Built with ADAPT",
+    desc: "Real case studies of Virtual Employees we've installed in founders' businesses. The Virtual Proposal Writer, the Virtual Inbox Manager, the Virtual Project Manager. With outcomes in real numbers.",
+    cta: "See What We've Built",
+    href: "/built-with-adapt",
+    status: "available",
+  },
+  {
+    icon: MessageSquareQuote,
+    tag: "Coming soon · essay",
+    title: "Voice as Moat",
+    desc: "Why your craft and brand matter MORE in the AI era, not less. How to keep your voice intact while you scale, and why most AI content commoditizes the very thing you're trying to defend.",
     cta: "Notify Me",
+    href: "#",
+    status: "coming_soon",
+  },
+  {
+    icon: TrendingUp,
+    tag: "Coming soon · weekly newsletter",
+    title: "The Founder Economy Briefing",
+    desc: "A weekly read on AI, the SMB economy, and what's actually working in 2026. Sent Sunday morning. Roughly 4 minutes. Unsubscribe whenever.",
+    cta: "Subscribe",
     href: "#",
     status: "coming_soon",
   },
@@ -99,11 +99,11 @@ const HeroSection = () => (
         Resources
       </p>
       <h1 className="text-5xl md:text-7xl font-serif font-bold leading-[1.05] mb-8">
-        Tools and templates to help you{" "}
-        <span className="italic text-accent-highlight">build visibility.</span>
+        Tools and playbooks for founders who want to{" "}
+        <span className="italic text-accent-highlight">ADAPT AI</span> to the business they actually run.
       </h1>
       <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-        Practical resources for founders, businesses, and impact-driven leaders. Most are free. All are designed to live next to your real work, not on a shelf.
+        Free resources. Real depth. Built for SMB owners and creators who care about their craft and their margin.
       </p>
     </div>
   </section>
@@ -183,18 +183,18 @@ const NewsletterCTASection = () => (
   <section className="section-padding bg-foreground text-background py-16 md:py-20">
     <div className="max-w-3xl mx-auto text-center">
       <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-6">
-        New Resources
+        When You're Ready for a Personal Move
       </p>
       <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight mb-6">
-        Get new resources{" "}
-        <span className="italic text-accent">when they ship.</span>
+        Take{" "}
+        <span className="italic text-accent">The Edge.</span>
       </h2>
       <p className="opacity-70 leading-relaxed mb-10 text-base md:text-lg max-w-2xl mx-auto">
-        One email a week. New resources land first in the newsletter. Plus the field notes I write on storytelling, systems, and practical AI.
+        A 90-second form. I write back personally within 24 hours with a custom blueprint on the first AI workflow I'd install in your business.
       </p>
       <Button variant="dark-hero" size="lg" asChild>
-        <Link to="/resources/visibility-starter-kit">
-          Start with the Visibility Starter Kit <ArrowRight className="ml-2" size={16} />
+        <Link to="/the-edge">
+          Get Your Edge <ArrowRight className="ml-2" size={16} />
         </Link>
       </Button>
     </div>
@@ -205,7 +205,7 @@ const Resources = () => {
   useEffect(() => {
     setSEO({
       title: "Resources | Rovonn Russell",
-      description: "Tools, templates, and systems to help you build visibility. Practical resources for founders, businesses, and impact-driven leaders. Most are free.",
+      description: "Free playbooks, prompt codes, and tools for founders and small business owners who want to ADAPT AI to their actual business. The Playbook, the Prompt Codes, the Framework, and The Edge.",
       path: "/resources",
     });
     return resetSEO;

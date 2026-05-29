@@ -7,11 +7,11 @@ import { getAllPosts, formatPostDate } from "@/lib/blog";
 import rovonnPortrait from "@/assets/rovonn-portrait.png";
 import {
   ArrowRight,
-  BookOpen,
-  Layers,
   Bot,
-  Eye,
-  Sparkles,
+  Layers,
+  Target,
+  MessageSquareQuote,
+  TrendingUp,
   FileText,
   Building2,
   UserRoundSearch,
@@ -22,16 +22,16 @@ const HeroSection = () => (
   <section className="section-padding pt-32 md:pt-40 pb-20 md:pb-28 relative overflow-hidden">
     <div className="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
       <div className="lg:col-span-7">
-        <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent-deep mb-6 animate-fade-in">Storytelling + Systems</p>
+        <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent-deep mb-6 animate-fade-in">A practical guide for founders + small business owners</p>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-[1.05] mb-7 animate-fade-up">
-          Storytelling, systems, and AI for people building <span className="italic text-accent-highlight">something that matters.</span>
+          Don't just adopt AI. <span className="italic text-accent-highlight">ADAPT it.</span>
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed animate-fade-up" style={{ animationDelay: "0.15s" }}>
-          I help founders, businesses, and impact-driven leaders turn their ideas, expertise, and work into visibility, trust, and practical systems.
+          I help founders and small business owners build AI systems that fit the business they actually run. Hours back every week. Margin that survives the next price hike. The room to finally ship the work that's been waiting.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: "0.3s" }}>
-          <Button variant="hero" size="lg" asChild><Link to="/start-here">Start Here <ArrowRight className="ml-2" size={16} /></Link></Button>
-          <Button variant="hero-outline" size="lg" asChild><Link to="/resources">Explore Resources</Link></Button>
+          <Button variant="hero" size="lg" asChild><Link to="/the-edge">Get Your Edge <ArrowRight className="ml-2" size={16} /></Link></Button>
+          <Button variant="hero-outline" size="lg" asChild><Link to="/resources/prompt-codes">Free: 30 Prompt Codes</Link></Button>
         </div>
         <p className="mt-6 text-sm text-muted-foreground animate-fade-up" style={{ animationDelay: "0.4s" }}>
           Or <Link to="/blog" className="inline-flex items-center gap-1.5 font-medium text-foreground hover:text-accent-deep transition-colors underline decoration-accent/40 underline-offset-4"><FileText size={14} /> read the blog</Link>
@@ -42,7 +42,7 @@ const HeroSection = () => (
           <div className="absolute inset-0 bg-gradient-to-br from-accent/25 via-cream to-accent-deep/15" />
           <img
             src={rovonnPortrait}
-            alt="Rovonn Russell, Impact Story Architect"
+            alt="Rovonn Russell, AI Advisor for Founders and Small Business Owners"
             className="absolute inset-0 w-full h-full object-cover object-top"
             loading="eager"
           />
@@ -57,29 +57,29 @@ const PositioningSection = () => (
   <section className="section-padding bg-secondary">
     <div className="max-w-3xl mx-auto">
       <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent-deep mb-6">The Work I Care About</p>
-      <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight mb-8">Great work should not stay <span className="italic text-accent-highlight">invisible.</span></h2>
+      <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight mb-8">Most founders are adopting AI. Almost none are <span className="italic text-accent-highlight">ADAPTing it.</span></h2>
       <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-        <p>A lot of people are doing meaningful work, building useful ideas, and carrying valuable knowledge, but they struggle to turn it into clear stories, consistent content, and systems that create leverage.</p>
-        <p>That is the work I care about. I help people communicate what they do, organize what they know, and use practical AI to create more visibility, trust, and opportunity.</p>
+        <p>That's why most are still working Saturdays, eating the rising costs of every tool and every contractor, and watching the version of the business they actually wanted stay stuck on a napkin in a drawer.</p>
+        <p>My work is to fix that. I help founders and small business owners figure out where AI actually fits in their specific business, install the workflows that earn their place, and keep their voice intact while we do it.</p>
       </div>
     </div>
   </section>
 );
 
 const themeItems = [
-  { icon: BookOpen, title: "Storytelling That Builds Trust", desc: "How to turn ideas, work, and impact into stories people understand, remember, and support." },
-  { icon: Layers, title: "Visibility Systems", desc: "How to create content consistently without burning out or posting randomly." },
-  { icon: Bot, title: "Practical AI for Real Work", desc: "How to tailor AI and systems to what your work actually needs. Judgment first, tools second. Home of the ADAPT framework I teach." },
-  { icon: Eye, title: "Building in Public", desc: "Lessons from building Impact Loop, Nerds Creative, ADAPT, and my own personal brand." },
-  { icon: Sparkles, title: "Knowledge-to-Asset Creation", desc: "How to turn expertise into lead magnets, toolkits, workshops, digital products, and resources." },
+  { icon: Bot, title: "AI Workflows That Actually Fit", desc: "The right workflows for your specific business, not the loudest tools on LinkedIn. Voice-protected, founder-friendly, installed without bloat." },
+  { icon: Layers, title: "The ADAPT Framework", desc: "Assess, Discover, Apply, Produce, Transform. The five-step diagnostic that figures out where AI fits before you install anything." },
+  { icon: Target, title: "The Five Outcomes", desc: "Save time. Protect margin. Achieve the success you've been chasing. Stop struggling. Unlock the work that wasn't possible before." },
+  { icon: MessageSquareQuote, title: "Voice as Moat", desc: "Why your craft and brand matter MORE in the AI era, not less. How to keep your voice intact while you scale." },
+  { icon: TrendingUp, title: "The Founder Economy", desc: "What's actually happening to small businesses in 2026. What's working. What's just hype. Honest field notes from the trenches." },
 ];
 
 const ThemesSection = () => (
   <section className="section-padding">
     <div className="max-w-6xl mx-auto">
       <div className="max-w-2xl mb-14">
-        <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent-deep mb-4">What I Talk About</p>
-        <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight">Five things I think about, write about, and build around.</h2>
+        <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent-deep mb-4">What I Write About</p>
+        <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight">Five lenses on how AI actually works <span className="italic text-accent-highlight">for founders.</span></h2>
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {themeItems.map((item) => (
@@ -94,20 +94,23 @@ const ThemesSection = () => (
   </section>
 );
 
-const StarterKitSection = () => {
-  const includes = ["10 AI prompts for content + clarity", "5 content angles you can use this week", "Event-to-content checklist", "A weekly content system template", "Story capture worksheet"];
+const PlaybookSection = () => {
+  const includes = ["The five outcomes founders actually want from AI", "The full ADAPT framework, broken down", "Ten specific workflows to install (Virtual Employees included)", "The first 30 days, week by week", "A self-assessment scorecard"];
   return (
     <section className="section-padding bg-foreground text-background">
       <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div>
-          <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-5">Featured Resource</p>
-          <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight mb-6">Start turning your ideas into <span className="italic text-accent">visibility.</span></h2>
-          <p className="text-base md:text-lg opacity-75 leading-relaxed mb-8">Get a practical starter kit with prompts, content angles, and a simple system for turning your ideas, work, or expertise into content people can understand and act on.</p>
-          <Button variant="dark-hero" size="lg" asChild><Link to="/resources/visibility-starter-kit">Get the Starter Kit <ArrowRight className="ml-2" size={16} /></Link></Button>
+          <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-5">The Cornerstone Resource</p>
+          <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight mb-6">The ADAPT <span className="italic text-accent">Playbook.</span></h2>
+          <p className="text-base md:text-lg opacity-75 leading-relaxed mb-8">A 25-page guide for founders and small business owners who want to ADAPT AI to the business they actually run. The framework, the five outcomes, ten specific workflows, and the first 30 days.</p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Button variant="dark-hero" size="lg" asChild><Link to="/resources/adapt-playbook">Download the Playbook <ArrowRight className="ml-2" size={16} /></Link></Button>
+            <Button variant="dark-outline" size="lg" asChild><Link to="/the-edge">Or get your Edge</Link></Button>
+          </div>
           <p className="text-xs opacity-50 mt-4">Free. No spam. Unsubscribe anytime.</p>
         </div>
         <div className="border border-background/15 bg-background/5 rounded-md p-7 md:p-8">
-          <p className="text-xs font-semibold tracking-[0.25em] uppercase text-accent mb-5">The Visibility Starter Kit</p>
+          <p className="text-xs font-semibold tracking-[0.25em] uppercase text-accent mb-5">What's Inside</p>
           <ul className="space-y-3.5">
             {includes.map((item) => (<li key={item} className="flex items-start gap-3 text-sm md:text-base opacity-90"><span className="mt-1 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-accent" /><span>{item}</span></li>))}
           </ul>
@@ -127,7 +130,7 @@ const ArticlesSection = () => {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div>
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent-deep mb-4">Latest Articles</p>
-            <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight">Field notes on storytelling, systems, and AI.</h2>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight">Field notes on AI, ADAPT, and the <span className="italic text-accent-highlight">founder economy.</span></h2>
           </div>
           <Button variant="hero-outline" asChild><Link to="/blog">Read the Blog <ArrowRight className="ml-2" size={14} /></Link></Button>
         </div>
@@ -148,9 +151,9 @@ const ArticlesSection = () => {
             ))
           ) : (
             <div className="md:col-span-3 border border-border rounded-md p-12 text-center bg-card">
-              <p className="text-muted-foreground mb-6">First posts dropping soon. The Visibility Starter Kit is the fastest way to start now.</p>
+              <p className="text-muted-foreground mb-6">First posts dropping soon. The Edge is the fastest way to start now.</p>
               <Button variant="default" asChild>
-                <Link to="/resources/visibility-starter-kit">Get the Starter Kit <ArrowRight className="ml-2" size={14} /></Link>
+                <Link to="/the-edge">Get Your Edge <ArrowRight className="ml-2" size={14} /></Link>
               </Button>
             </div>
           )}
@@ -161,9 +164,9 @@ const ArticlesSection = () => {
 };
 
 const workWithMeCards = [
-  { icon: Building2, title: "For Organizations", desc: "Need storytelling, content visibility, ADAPT training, or campaign support for your organization?", cta: "Explore Impact Loop", href: "https://impactloop.ca", external: true },
-  { icon: UserRoundSearch, title: "For Leaders and Entrepreneurs", desc: "Want advisory, workshops, or help building your own visibility and AI-supported systems?", cta: "Work With Rovonn", href: "/work-with-me", external: false },
-  { icon: Mic, title: "For Events and Teams", desc: "Bring Rovonn in to speak or teach on storytelling, visibility, content systems, and practical AI.", cta: "View Speaking Topics", href: "/speaking", external: false },
+  { icon: UserRoundSearch, title: "For Founders + Small Business Owners", desc: "Advisory, ADAPT Strategy Sprints, and the Virtual Employees we install in your business with my team at EntrepreNerds.", cta: "See How We Work Together", href: "/work-with-me", external: false },
+  { icon: Mic, title: "For Events and Teams", desc: "Keynotes, workshops, and on-site training on AI for the founder economy. In-person and remote.", cta: "View Speaking Topics", href: "/speaking", external: false },
+  { icon: Building2, title: "For Nonprofits + CSR Teams", desc: "Cinematic storytelling, content systems, and ADAPT training for mission-driven organizations.", cta: "Explore Impact Loop", href: "https://impactloop.ca", external: true },
 ];
 
 const WorkWithMeSection = () => (
@@ -171,7 +174,7 @@ const WorkWithMeSection = () => (
     <div className="max-w-6xl mx-auto">
       <div className="text-center max-w-2xl mx-auto mb-14">
         <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent-deep mb-4">Want to Go Deeper?</p>
-        <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight">Three ways to work together.</h2>
+        <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight">Three ways to work <span className="italic text-accent-highlight">together.</span></h2>
       </div>
       <div className="grid md:grid-cols-3 gap-6">
         {workWithMeCards.map((card) => {
@@ -196,13 +199,13 @@ const WorkWithMeSection = () => (
 const FinalCTA = () => (
   <section className="section-dark section-padding">
     <div className="max-w-3xl mx-auto text-center">
-      <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-6">Build Visibility</p>
-      <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight mb-6">Build visibility around the work that <span className="italic text-accent">matters.</span></h2>
-      <p className="opacity-70 mb-10 leading-relaxed text-base md:text-lg">Start with the Visibility Starter Kit, read the blog, or explore Impact Loop for your organization.</p>
+      <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-6">When You're Ready</p>
+      <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight mb-6">Don't just adopt AI. <span className="italic text-accent">ADAPT it.</span></h2>
+      <p className="opacity-70 mb-10 leading-relaxed text-base md:text-lg">The Edge is a 90-second form. I write back personally within 24 hours with the first AI workflow I'd install in your business.</p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <Button variant="dark-hero" size="lg" asChild><Link to="/resources/visibility-starter-kit">Get the Starter Kit</Link></Button>
+        <Button variant="dark-hero" size="lg" asChild><Link to="/the-edge">Get Your Edge</Link></Button>
+        <Button variant="dark-outline" size="lg" asChild><Link to="/resources/adapt-playbook">Browse the Playbook First</Link></Button>
         <Button variant="dark-outline" size="lg" asChild><Link to="/blog">Read the Blog</Link></Button>
-        <Button variant="dark-outline" size="lg" asChild><a href="https://impactloop.ca" target="_blank" rel="noopener noreferrer">Explore Impact Loop</a></Button>
       </div>
     </div>
   </section>
@@ -212,8 +215,8 @@ const Index = () => {
   useEffect(() => {
     trackEvent("personal_brand_home_viewed");
     setSEO({
-      title: "Rovonn Russell | Storytelling, Systems and AI",
-      description: "Rovonn Russell helps founders, businesses, and impact-driven leaders turn their ideas, expertise, and work into visibility, trust, and practical systems using storytelling, content, and AI.",
+      title: "Rovonn Russell | AI Advisor for Founders and Small Business Owners",
+      description: "I help founders and small business owners build AI systems that fit the business they actually run. Hours back, margin held, the project on the napkin finally shipped. Don't just adopt AI. ADAPT it.",
       path: "/",
     });
     return resetSEO;
@@ -224,7 +227,7 @@ const Index = () => {
       <HeroSection />
       <PositioningSection />
       <ThemesSection />
-      <StarterKitSection />
+      <PlaybookSection />
       <ArticlesSection />
       <WorkWithMeSection />
       <FinalCTA />

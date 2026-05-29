@@ -29,8 +29,7 @@ const HeroSection = () => (
         <span className="italic text-accent-highlight">directed.</span>
       </h1>
       <p className="text-lg md:text-2xl text-muted-foreground max-w-3xl leading-relaxed font-serif italic">
-        For founders and companies who treat their work as legacy, not just
-        marketing.
+        Premium directorial production for founders whose personal brand is the multiplier. Not for everyone. By application only. Five to eight projects per year.
       </p>
     </div>
   </section>

@@ -31,7 +31,7 @@ const BlogPost = () => {
     if (!post) return;
     const handlers: Record<string, () => void> = {};
     const thresholds = [50, 90];
-    let fired: Record<number, boolean> = {};
+    const fired: Record<number, boolean> = {};
     const onScroll = () => {
       const doc = document.documentElement;
       const max = doc.scrollHeight - doc.clientHeight;

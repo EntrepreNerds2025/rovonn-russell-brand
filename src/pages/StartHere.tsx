@@ -5,11 +5,11 @@ import { setSEO, resetSEO } from "@/lib/seo";
 import {
   ArrowRight,
   ArrowUpRight,
-  Bot,
-  Eye,
-  Sparkles,
-  Building2,
+  UserRoundSearch,
+  Layers,
+  BookOpen,
   Film,
+  Building2,
 } from "lucide-react";
 
 interface PathAction {
@@ -20,7 +20,7 @@ interface PathAction {
 
 interface Path {
   number: string;
-  icon: typeof Bot;
+  icon: typeof UserRoundSearch;
   intent: string;
   title: string;
   desc: string;
@@ -30,60 +30,56 @@ interface Path {
 const paths: Path[] = [
   {
     number: "01",
-    icon: Bot,
-    intent: "I want to use AI in a practical way.",
-    title: "Practical AI for real work.",
-    desc: "Not chasing every tool. Building one or two workflows that actually save you time and protect your voice.",
+    icon: UserRoundSearch,
+    intent: "I want to know where AI fits in my business.",
+    title: "Take The Edge.",
+    desc: "A 90-second form. Five questions about your business. Within 24 hours, I write back personally with a custom blueprint on the first AI workflow I'd install in your business this week.",
     actions: [
-      { label: "Read the ADAPT framework", href: "/frameworks/adapt" },
-      { label: "Get the Visibility Starter Kit", href: "/resources/visibility-starter-kit" },
+      { label: "Get Your Edge", href: "/the-edge" },
       { label: "Read the blog", href: "/blog" },
     ],
   },
   {
     number: "02",
-    icon: Eye,
-    intent: "I want to become more visible.",
-    title: "Build a visibility system.",
-    desc: "Show up consistently around the work you're already doing. Without burning out, posting randomly, or losing your voice.",
+    icon: Layers,
+    intent: "I want to understand the framework first.",
+    title: "Read the ADAPT framework.",
+    desc: "Assess, Discover, Apply, Produce, Transform. The five-step diagnostic that figures out where AI actually fits in your specific business before you install anything.",
     actions: [
-      { label: "Get the Visibility Starter Kit", href: "/resources/visibility-starter-kit" },
-      { label: "Read articles on visibility", href: "https://blog.rovonnrussell.com", external: true },
-      { label: "Browse all resources", href: "/resources" },
+      { label: "Read the ADAPT framework", href: "/adapt" },
+      { label: "Download The ADAPT Playbook", href: "/resources/adapt-playbook" },
     ],
   },
   {
     number: "03",
-    icon: Sparkles,
-    intent: "I want to turn my knowledge into assets.",
-    title: "Knowledge to assets.",
-    desc: "Convert what you already know into lead magnets, courses, toolkits, and digital products that compound while you sleep.",
+    icon: BookOpen,
+    intent: "I want something I can use today.",
+    title: "Get The Founder's Prompt Codes.",
+    desc: "Free 30-page PDF. 30 prompt codes that work in ChatGPT, Claude, and any modern AI tool. Two minutes to set up, hours back every week after.",
     actions: [
-      { label: "Read knowledge-to-asset essays", href: "https://blog.rovonnrussell.com", external: true },
-      { label: "Browse all resources", href: "/resources" },
-      { label: "Work with Rovonn on advisory", href: "/work-with-me" },
+      { label: "Get the Prompt Codes", href: "/resources/prompt-codes" },
+      { label: "See what we've built", href: "/built-with-adapt" },
     ],
   },
   {
     number: "04",
     icon: Film,
-    intent: "I want my brand or company film directed.",
-    title: "Studio direction.",
-    desc: "For founders and companies who need a brand film, founder narrative, or campaign centerpiece directed end-to-end. Selective intake, modern production, AI used where it earns its keep. From $15,000.",
+    intent: "I want premium creative direction.",
+    title: "Studio direction for founders.",
+    desc: "For founders whose personal brand is the multiplier. Premium directorial production, 5-8 projects per year, by application. AI used where it earns its keep.",
     actions: [
       { label: "See Studio details", href: "/studio" },
-      { label: "Tell Rovonn about your project", href: "/contact?topic=studio" },
+      { label: "Tell me about your project", href: "/contact?topic=studio" },
     ],
   },
   {
     number: "05",
     icon: Building2,
-    intent: "I represent an organization.",
-    title: "For nonprofits, CSR teams, and impact-led companies.",
-    desc: "If you're here on behalf of a team or organization that needs storytelling, visibility, ADAPT training, or campaign work delivered, Impact Loop is the right door.",
+    intent: "I represent a nonprofit, foundation, or CSR team.",
+    title: "Visit Impact Loop.",
+    desc: "My studio for mission-driven organizations. Cinematic storytelling, ADAPT training, and content systems delivered for nonprofits, foundations, and CSR teams.",
     actions: [
       { label: "Visit Impact Loop", href: "https://impactloop.ca", external: true },
-      { label: "Take the Impact Story Diagnostic", href: "https://impactloop.ca/bookings", external: true },
       { label: "Explore ADAPT Training", href: "https://impactloop.ca/adapt-ai-training", external: true },
     ],
   },
@@ -100,7 +96,7 @@ const HeroSection = () => (
         <span className="italic text-accent-highlight">where you actually are.</span>
       </h1>
       <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-        Whether you want to use AI better, become more visible, turn your expertise into assets, get a film directed, or bring this work to your organization, here's the best place to begin.
+        Five paths. Pick yours. Each one ends with a clear next step that won't waste your time.
       </p>
     </div>
   </section>
@@ -178,15 +174,15 @@ const FinalSection = () => (
       </p>
       <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight mb-6">
         When in doubt,{" "}
-        <span className="italic text-accent">start with the kit.</span>
+        <span className="italic text-accent">take The Edge.</span>
       </h2>
       <p className="opacity-70 leading-relaxed mb-10 text-base md:text-lg max-w-2xl mx-auto">
-        The Visibility Starter Kit is the cornerstone resource. Most people who land here start there, then come back for the rest as they need it.
+        It's 90 seconds. You'll get a personal email back from me within 24 hours with the first AI workflow I'd install in your business. No pitch, no funnel, no sales call required.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Button variant="dark-hero" size="lg" asChild>
-          <Link to="/resources/visibility-starter-kit">
-            Get the Visibility Starter Kit <ArrowRight className="ml-2" size={16} />
+          <Link to="/the-edge">
+            Get Your Edge <ArrowRight className="ml-2" size={16} />
           </Link>
         </Button>
         <Button variant="dark-outline" size="lg" asChild>
@@ -201,7 +197,7 @@ const StartHere = () => {
   useEffect(() => {
     setSEO({
       title: "Start Here | Rovonn Russell",
-      description: "Pick the path that matches where you actually are. Whether you want to use AI better, become more visible, turn expertise into assets, or bring this work to your organization, here's the best place to begin.",
+      description: "Pick the path that matches where you actually are. Five paths for founders, small business owners, creators, and organizations. Each one ends with a clear next step.",
       path: "/start-here",
     });
     return resetSEO;

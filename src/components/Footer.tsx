@@ -15,7 +15,7 @@ const Footer = () => (
             Rovonn <span className="italic text-accent">Russell</span>
           </Link>
           <p className="text-base opacity-70 leading-relaxed font-serif italic max-w-md mb-6">
-            Storytelling, systems, and AI for people building something that matters.
+            Don't just adopt AI. ADAPT it. For founders and small business owners who want their hours, their margin, and their actual business back.
           </p>
           <a
             href={IMPACT_LOOP_URL}
@@ -32,10 +32,12 @@ const Footer = () => (
           <h4 className="text-xs font-semibold tracking-[0.22em] uppercase mb-5 opacity-60">Navigate</h4>
           <div className="space-y-2.5">
             <Link to="/start-here" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Start Here</Link>
+            <Link to="/the-edge" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">The Edge</Link>
+            <Link to="/built-with-adapt" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Built with ADAPT</Link>
             <Link to="/blog" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Blog</Link>
             <Link to="/resources" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Resources</Link>
-            <Link to="/speaking" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Speaking</Link>
             <Link to="/work-with-me" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Work With Me</Link>
+            <Link to="/speaking" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Speaking</Link>
           </div>
         </div>
 
@@ -43,8 +45,9 @@ const Footer = () => (
         <div className="md:col-span-2">
           <h4 className="text-xs font-semibold tracking-[0.22em] uppercase mb-5 opacity-60">Featured</h4>
           <div className="space-y-2.5">
-            <Link to="/resources/visibility-starter-kit" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Visibility Starter Kit</Link>
-            <Link to="/frameworks/adapt" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">ADAPT Framework</Link>
+            <Link to="/adapt" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">The ADAPT Framework</Link>
+            <Link to="/resources/adapt-playbook" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">The ADAPT Playbook</Link>
+            <Link to="/resources/prompt-codes" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">The Prompt Codes</Link>
             <Link to="/contact" className="block text-sm opacity-75 hover:opacity-100 transition-opacity">Contact</Link>
           </div>
         </div>
@@ -76,7 +79,7 @@ const Footer = () => (
         <div className="flex gap-5">
           <Link to="/contact" className="hover:opacity-100">Privacy</Link>
           <Link to="/contact" className="hover:opacity-100">Terms</Link>
-          <span className="font-serif italic">Storytelling + Systems</span>
+          <span className="font-serif italic">Don't just adopt AI. ADAPT it.</span>
         </div>
       </div>
     </div>

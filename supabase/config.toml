@@ -5,3 +5,9 @@ verify_jwt = false
 
 [functions.run-diagnostic]
 verify_jwt = false
+
+[functions.process-edge-submission]
+verify_jwt = false
+
+[functions.subscribe-to-list]
+verify_jwt = false

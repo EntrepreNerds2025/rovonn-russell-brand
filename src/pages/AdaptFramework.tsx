@@ -202,8 +202,8 @@ const nextStepCards = [
     label: "For Yourself",
     title: "Use ADAPT on your own work.",
     desc: "Audit your own workflow with the framework. Find the one place AI belongs. Build a small system around it.",
-    cta: "Get the ADAPT Starter Guide",
-    href: "/resources",
+    cta: "Download The ADAPT Playbook",
+    href: "/resources/adapt-playbook",
     external: false,
   },
   {
@@ -301,12 +301,12 @@ const FinalSection = () => (
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Button variant="hero" size="lg" asChild>
-          <Link to="/resources">
-            Get the ADAPT Starter Guide <ArrowRight className="ml-2" size={16} />
+          <Link to="/resources/adapt-playbook">
+            Download The ADAPT Playbook <ArrowRight className="ml-2" size={16} />
           </Link>
         </Button>
         <Button variant="hero-outline" size="lg" asChild>
-          <Link to="/work-with-me">Work With Rovonn</Link>
+          <Link to="/the-edge">Get Your Edge on your business</Link>
         </Button>
       </div>
     </div>

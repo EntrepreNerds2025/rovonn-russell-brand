@@ -20,37 +20,37 @@ const BOOKING_URL = import.meta.env.VITE_ADVISORY_BOOKING_URL || "/contact";
 
 const primaryPaths = [
   {
-    icon: Building2,
-    label: "For Organizations",
-    title: "Engage Impact Loop.",
-    desc: "Nonprofits, CSR teams, foundations, and impact-led companies that need ADAPT cycles, content systems, storytelling, or campaign work delivered.",
-    cta: "Visit Impact Loop",
-    href: "https://impactloop.ca",
-    external: true,
-  },
-  {
     icon: UserRoundSearch,
-    label: "For Leaders + Entrepreneurs",
-    title: "Work with Rovonn directly.",
-    desc: "Advisory, strategy sessions, and workshops for founders, businesses, and leaders who want help building visibility and AI-supported systems.",
+    label: "Most-common offer",
+    title: "AI Advisory for founders.",
+    desc: "One-on-one work to figure out where AI fits in your specific business and where it'll backfire. Monthly retainer or fixed-scope ADAPT Sprint. We meet, we install workflows, we measure what works.",
     cta: "See engagement options",
     href: "#leaders",
     external: false,
   },
   {
+    icon: Users,
+    label: "For builds at scale",
+    title: "Virtual Employees, built with EntrepreNerds.",
+    desc: "When you need a Virtual Employee installed in your business at SMB scale, my team at EntrepreNerds does the build. I lead the strategy. They lead the implementation. Most projects start with The Edge.",
+    cta: "See case studies",
+    href: "/built-with-adapt",
+    external: false,
+  },
+  {
     icon: Film,
-    label: "For Founders + Companies",
-    title: "Direct a film with Studio.",
-    desc: "Selective director-led production for founders and companies who need a brand film, founder narrative, or campaign centerpiece that holds up. From $15,000.",
+    label: "For founders whose brand is the multiplier",
+    title: "Studio direction.",
+    desc: "Premium directorial production for founders and companies who need a brand film, founder narrative, or campaign centerpiece. Selective intake, 5 to 8 projects per year. From $15,000.",
     cta: "See Studio details",
     href: "/studio",
     external: false,
   },
   {
     icon: Mic,
-    label: "For Events + Teams",
-    title: "Bring Rovonn to your stage.",
-    desc: "Keynotes, conference talks, and team workshops on storytelling, visibility, content systems, and practical AI.",
+    label: "For events + teams",
+    title: "Speaking + workshops.",
+    desc: "Keynotes, conference talks, and team workshops on AI for the founder economy. In-person and remote. The ADAPT framework in keynote form, voice as moat, the five outcomes, and more.",
     cta: "View speaking topics",
     href: "/speaking",
     external: false,
@@ -117,7 +117,7 @@ const HeroSection = () => (
         <span className="italic text-accent-highlight">fits where you are.</span>
       </h1>
       <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-        Whether you're a founder building your own visibility, a leader bringing this to your team, a company that needs a film directed, or a conference looking for a speaker, here's the right way in.
+        Whether you're a founder who wants AI advisory, a business that needs a Virtual Employee built, a brand that needs creative direction, or an event looking for a speaker, here's the right way in. Most people start with The Edge.
       </p>
     </div>
   </section>
@@ -175,14 +175,14 @@ const LeadersSection = () => (
     <div className="max-w-5xl mx-auto">
       <div className="max-w-3xl mb-14">
         <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent-deep mb-4">
-          For Leaders + Entrepreneurs
+          For Founders + Small Business Owners
         </p>
         <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight mb-6">
           Three ways to work{" "}
           <span className="italic">with Rovonn directly.</span>
         </h2>
         <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-          Most people start with a free discovery call. From there, the right format depends on whether you have a specific question, a one-time need, or want an ongoing thinking partner. No pressure to commit before we talk.
+          Most people start with The Edge or a discovery call. From there, the right format depends on whether you have a specific question, a one-time need, or want an ongoing thinking partner.
         </p>
       </div>
 

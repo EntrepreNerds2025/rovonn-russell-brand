@@ -247,24 +247,40 @@ const TrustNoteSection = () => (
   </section>
 );
 
+// 2026-05-23: The Visibility Starter Kit was retired with the AI-forward repositioning.
+// All traffic now redirects to /resources/prompt-codes (the new top-of-funnel lead magnet).
+// The original components above are kept as reference and for potential rollback but are
+// no longer rendered. The PDF asset remains in /public/resources/ for 90 days so any
+// existing email links don't 404 before being updated.
+import { useNavigate } from "react-router-dom";
+
 const VisibilityStarterKit = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     setSEO({
-      title: "The Visibility Starter Kit | Rovonn Russell",
-      description: "A free 25-page kit for turning your ideas, work, and expertise into content people understand and act on. 10 AI prompts, 5 content angles, weekly system, story capture worksheet, and more.",
+      title: "Redirecting | Rovonn Russell",
+      description: "The Visibility Starter Kit has been retired. Redirecting to the new resources.",
       path: "/resources/visibility-starter-kit",
     });
+    navigate("/resources/prompt-codes", { replace: true });
     return resetSEO;
-  }, []);
-
-    const [isSubmitted, setIsSubmitted] = useState(false);
+  }, [navigate]);
 
   return (
-    <main>
-      <HeroSection />
-      <InsideSection />
-      <FormSection isSubmitted={isSubmitted} onSubmitted={() => setIsSubmitted(true)} />
-      {!isSubmitted && <TrustNoteSection />}
+    <main className="section-padding pt-32 md:pt-40 min-h-[60vh]">
+      <div className="max-w-2xl mx-auto text-center">
+        <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent-deep mb-6">Redirecting</p>
+        <h1 className="text-3xl md:text-4xl font-serif font-bold leading-tight mb-6">
+          This page moved.
+        </h1>
+        <p className="text-base text-muted-foreground mb-8">
+          The Visibility Starter Kit was retired. The new top-of-funnel resource is The Founder's Prompt Codes. You're being redirected now. If it doesn't load, the link below works.
+        </p>
+        <Button variant="hero" asChild>
+          <Link to="/resources/prompt-codes">Go to The Founder's Prompt Codes</Link>
+        </Button>
+      </div>
     </main>
   );
 };

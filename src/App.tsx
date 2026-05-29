@@ -22,6 +22,10 @@ import BlogCategory from "./pages/BlogCategory";
 import BlogRedirect from "./components/BlogRedirect";
 import Portfolio from "./pages/Portfolio";
 import PortfolioCaseStudy from "./pages/PortfolioCaseStudy";
+import TheEdge from "./pages/TheEdge";
+import PromptCodes from "./pages/PromptCodes";
+import AdaptPlaybook from "./pages/AdaptPlaybook";
+import BuiltWithAdapt from "./pages/BuiltWithAdapt";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -37,9 +41,14 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/start-here" element={<StartHere />} />
+          <Route path="/the-edge" element={<TheEdge />} />
+          <Route path="/built-with-adapt" element={<BuiltWithAdapt />} />
           <Route path="/resources" element={<Resources />} />
+          <Route path="/resources/prompt-codes" element={<PromptCodes />} />
+          <Route path="/resources/adapt-playbook" element={<AdaptPlaybook />} />
           <Route path="/resources/visibility-starter-kit" element={<VisibilityStarterKit />} />
           <Route path="/frameworks/adapt" element={<AdaptFramework />} />
+          <Route path="/adapt" element={<AdaptFramework />} />
           <Route path="/youtube" element={<YouTubePage />} />
           <Route path="/speaking" element={<Speaking />} />
           <Route path="/work-with-me" element={<WorkWithMe />} />

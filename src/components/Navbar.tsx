@@ -10,9 +10,10 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   { label: "Start Here", href: "/start-here" },
-  { label: "Blog", href: "/blog" },
+  { label: "ADAPT", href: "/adapt" },
+  { label: "Built with ADAPT", href: "/built-with-adapt" },
   { label: "Resources", href: "/resources" },
-  { label: "Speaking", href: "/speaking" },
+  { label: "Blog", href: "/blog" },
   { label: "Work With Me", href: "/work-with-me" },
 ];
 
@@ -72,10 +73,10 @@ const Navbar = () => {
               )
             )}
             <Link
-              to="/resources/visibility-starter-kit"
+              to="/the-edge"
               className="ml-2 bg-foreground text-background px-5 py-2.5 text-xs font-semibold tracking-[0.18em] uppercase hover:bg-accent-deep transition-colors rounded-sm"
             >
-              Get The Kit
+              Get Your Edge
             </Link>
           </div>
 
@@ -120,11 +121,11 @@ const Navbar = () => {
             )}
           </div>
           <Link
-            to="/resources/visibility-starter-kit"
+            to="/the-edge"
             onClick={() => setOpen(false)}
             className="block bg-foreground text-background px-5 py-3.5 mt-6 text-xs font-semibold tracking-[0.18em] uppercase text-center rounded-sm"
           >
-            Get The Starter Kit
+            Get Your Edge
           </Link>
         </div>
       )}
