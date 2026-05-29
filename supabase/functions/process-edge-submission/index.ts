@@ -60,13 +60,20 @@ async function sendEmail({ to, from, subject, html, replyTo }: {
   html: string;
   replyTo?: string;
 }) {
+  // Resend requires "email@example.com" or "Name <email@example.com>".
+  // Strip stray quotes/whitespace from secret-sourced values.
+  const clean = (v?: string) => v?.replace(/^["'\s]+|["'\s]+$/g, "") || undefined;
+  const cleanReplyTo = clean(replyTo);
+  const validReplyTo = cleanReplyTo && /<[^>]+@[^>]+>|^[^\s<>@]+@[^\s<>@]+\.[^\s<>@]+$/.test(cleanReplyTo)
+    ? cleanReplyTo
+    : undefined;
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${RESEND_API_KEY}`,
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ from, to, subject, html, reply_to: replyTo }),
+    body: JSON.stringify({ from, to, subject, html, reply_to: validReplyTo }),
   });
   if (!res.ok) {
     console.error("Resend error:", await res.text());
