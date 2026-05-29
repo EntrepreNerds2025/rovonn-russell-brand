@@ -13,37 +13,7 @@ declare global {
   }
 }
 
-export type AnalyticsEvent =
-  | "personal_brand_home_viewed"
-  | "starter_kit_form_started"
-  | "starter_kit_form_submitted"
-  | "starter_kit_downloaded"
-  | "youtube_video_clicked"
-  | "youtube_subscribe_clicked"
-  | "impact_loop_cta_clicked"
-  | "advisory_cta_clicked"
-  | "speaking_form_submitted"
-  | "resource_clicked"
-  | "navbar_cta_clicked"
-  | "blog_index_viewed"
-  | "blog_category_viewed"
-  | "blog_post_viewed"
-  | "blog_cta_click"
-  | "portfolio_index_viewed"
-  | "portfolio_card_click"
-  | "portfolio_case_study_viewed"
-  | "the_edge_page_viewed"
-  | "the_edge_submission_attempted"
-  | "the_edge_submission_completed"
-  | "the_edge_submission_failed"
-  | "adapt_playbook_page_viewed"
-  | "adapt_playbook_submission_attempted"
-  | "adapt_playbook_submission_completed"
-  | "prompt_codes_page_viewed"
-  | "prompt_codes_submission_attempted"
-  | "prompt_codes_submission_completed"
-  | "built_with_adapt_page_viewed"
-  | `blog_scroll_${number}`;
+export type AnalyticsEvent = string;
 
 export function trackEvent(
   eventName: AnalyticsEvent,
