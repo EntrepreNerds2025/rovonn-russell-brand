@@ -3,7 +3,7 @@
 // Generated: 2026-05-23
 //
 // Required environment variables:
-//   ANTHROPIC_API_KEY    Claude API key
+//   LOVABLE_API_KEY      Lovable AI Gateway key (auto-provisioned)
 //   RESEND_API_KEY       Resend transactional email key
 //   FIRECRAWL_API_KEY    Firecrawl scraping key (optional, gracefully skips if absent)
 //   SUPABASE_URL         Supabase project URL
@@ -16,11 +16,10 @@
 //   IMPACT_OS_EDGE_WEBHOOK_TOKEN Optional token sent as x-impact-os-token
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
-import Anthropic from "https://esm.sh/@anthropic-ai/sdk@0.30.0";
 
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
 const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-const ANTHROPIC_API_KEY = Deno.env.get("ANTHROPIC_API_KEY")!;
+const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY")!;
 const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY")!;
 const FIRECRAWL_API_KEY = Deno.env.get("FIRECRAWL_API_KEY") ?? "";
 const ROVONN_EMAIL = Deno.env.get("ROVONN_EMAIL") ?? "rovonn@rovonnrussell.com";
@@ -31,7 +30,6 @@ const IMPACT_OS_EDGE_WEBHOOK_URL = Deno.env.get("IMPACT_OS_EDGE_WEBHOOK_URL") ??
 const IMPACT_OS_EDGE_WEBHOOK_TOKEN = Deno.env.get("IMPACT_OS_EDGE_WEBHOOK_TOKEN") ?? "";
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
-const anthropic = new Anthropic({ apiKey: ANTHROPIC_API_KEY });
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -253,17 +251,29 @@ ${scrapedContent || "(no scraped content available)"}
 
 Generate The Edge briefing now.`;
 
-    const briefingMsg = await anthropic.messages.create({
-      model: "claude-sonnet-4-5-20250929",
-      max_tokens: 2000,
-      system: BRIEFING_SYSTEM_PROMPT,
-      messages: [{ role: "user", content: userPrompt }],
+    const briefingRes = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Lovable-API-Key": LOVABLE_API_KEY,
+        "X-Lovable-AIG-SDK": "edge-function",
+      },
+      body: JSON.stringify({
+        model: "google/gemini-3-flash-preview",
+        max_tokens: 2000,
+        messages: [
+          { role: "system", content: BRIEFING_SYSTEM_PROMPT },
+          { role: "user", content: userPrompt },
+        ],
+      }),
     });
-
-    const briefingText = briefingMsg.content
-      .filter((block) => block.type === "text")
-      .map((block) => block.text)
-      .join("\n");
+    if (!briefingRes.ok) {
+      const errText = await briefingRes.text();
+      console.error("Lovable AI briefing error:", briefingRes.status, errText);
+      throw new Error(`Briefing generation failed: ${briefingRes.status}`);
+    }
+    const briefingJson = await briefingRes.json();
+    const briefingText = briefingJson?.choices?.[0]?.message?.content ?? "";
 
     // 4. Email briefing to Rovonn
     const briefingHtml = `
