@@ -32,18 +32,6 @@ export type AnalyticsEvent =
   | "portfolio_index_viewed"
   | "portfolio_card_click"
   | "portfolio_case_study_viewed"
-  | "adapt_playbook_submission_attempted"
-  | "adapt_playbook_submission_completed"
-  | "adapt_playbook_page_viewed"
-  | "built_with_adapt_page_viewed"
-  | "prompt_codes_submission_attempted"
-  | "prompt_codes_submission_completed"
-  | "prompt_codes_page_viewed"
-  | "the_edge_step_advanced"
-  | "the_edge_submission_attempted"
-  | "the_edge_submission_completed"
-  | "the_edge_submission_failed"
-  | "the_edge_page_viewed"
   | `blog_scroll_${number}`;
 
 export function trackEvent(
