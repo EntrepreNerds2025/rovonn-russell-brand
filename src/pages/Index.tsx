@@ -9,25 +9,25 @@ import {
   ArrowRight,
   Bot,
   Layers,
-  Target,
   MessageSquareQuote,
-  TrendingUp,
   FileText,
   Building2,
   UserRoundSearch,
   Mic,
+  Hammer,
+  Users,
 } from "lucide-react";
 
 const HeroSection = () => (
   <section className="section-padding pt-32 md:pt-40 pb-20 md:pb-28 relative overflow-hidden">
     <div className="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
       <div className="lg:col-span-7">
-        <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent-deep mb-6 animate-fade-in">A practical guide for founders + small business owners</p>
+        <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent-deep mb-6 animate-fade-in">Storyteller. Systems builder. For people whose work matters.</p>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-[1.05] mb-7 animate-fade-up">
           Don't just adopt AI. <span className="italic text-accent-highlight">ADAPT it.</span>
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed animate-fade-up" style={{ animationDelay: "0.15s" }}>
-          I help founders and small business owners build AI systems that fit the business they actually run. Hours back every week. Margin that survives the next price hike. The room to finally ship the work that's been waiting.
+          I help founders and mission-driven teams tell the truth about their work, and build the AI systems that carry it. Hours back every week. A story people actually feel. The room to finally ship the work that's been waiting.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: "0.3s" }}>
           <Button variant="hero" size="lg" asChild><Link to="/the-edge">Get Your Edge <ArrowRight className="ml-2" size={16} /></Link></Button>
@@ -42,7 +42,7 @@ const HeroSection = () => (
           <div className="absolute inset-0 bg-gradient-to-br from-accent/25 via-cream to-accent-deep/15" />
           <img
             src={rovonnPortrait}
-            alt="Rovonn Russell, AI Advisor for Founders and Small Business Owners"
+            alt="Rovonn Russell, storyteller and AI systems builder"
             className="absolute inset-0 w-full h-full object-cover object-top"
             loading="eager"
           />
@@ -60,18 +60,18 @@ const PositioningSection = () => (
       <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight mb-8">Most founders are adopting AI. Almost none are <span className="italic text-accent-highlight">ADAPTing it.</span></h2>
       <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
         <p>That's why most are still working Saturdays, eating the rising costs of every tool and every contractor, and watching the version of the business they actually wanted stay stuck on a napkin in a drawer.</p>
-        <p>My work is to fix that. I help founders and small business owners figure out where AI actually fits in their specific business, install the workflows that earn their place, and keep their voice intact while we do it.</p>
+        <p>My work is to fix that. I help founders and mission-driven teams figure out where AI actually fits in their specific work, install the workflows that earn their place, and keep their voice intact while we do it.</p>
       </div>
     </div>
   </section>
 );
 
 const themeItems = [
-  { icon: Bot, title: "AI Workflows That Actually Fit", desc: "The right workflows for your specific business, not the loudest tools on LinkedIn. Voice-protected, founder-friendly, installed without bloat." },
-  { icon: Layers, title: "The ADAPT Framework", desc: "Assess, Discover, Apply, Produce, Transform. The five-step diagnostic that figures out where AI fits before you install anything." },
-  { icon: Target, title: "The Five Outcomes", desc: "Save time. Protect margin. Achieve the success you've been chasing. Stop struggling. Unlock the work that wasn't possible before." },
-  { icon: MessageSquareQuote, title: "Voice as Moat", desc: "Why your craft and brand matter MORE in the AI era, not less. How to keep your voice intact while you scale." },
-  { icon: TrendingUp, title: "The Founder Economy", desc: "What's actually happening to small businesses in 2026. What's working. What's just hype. Honest field notes from the trenches." },
+  { icon: Hammer, title: "Building in Public", desc: "The operator's view from inside Impact Loop and the studio. What's actually shipping, what broke, what changed." },
+  { icon: MessageSquareQuote, title: "Storytelling", desc: "The craft. Narrative architecture, story capture, and writing that makes people feel the work, not just read it." },
+  { icon: Bot, title: "Systems & Agents", desc: "Practical AI and workflow systems. What works, what doesn't, and the math behind the choice." },
+  { icon: Users, title: "Community / Culture", desc: "Toronto, Black community organizing, youth programs, and the conditions that make community work actually work." },
+  { icon: Layers, title: "ADAPT in Practice", desc: "The ADAPT framework applied to real cycles. Assess, Discover, Apply, Produce, Transform, shown through specific moments." },
 ];
 
 const ThemesSection = () => (
@@ -79,7 +79,7 @@ const ThemesSection = () => (
     <div className="max-w-6xl mx-auto">
       <div className="max-w-2xl mb-14">
         <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent-deep mb-4">What I Write About</p>
-        <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight">Five lenses on how AI actually works <span className="italic text-accent-highlight">for founders.</span></h2>
+        <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight">Five lenses on story, systems, and <span className="italic text-accent-highlight">the work that matters.</span></h2>
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {themeItems.map((item) => (
@@ -130,7 +130,7 @@ const ArticlesSection = () => {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div>
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-accent-deep mb-4">Latest Articles</p>
-            <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight">Field notes on AI, ADAPT, and the <span className="italic text-accent-highlight">founder economy.</span></h2>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold leading-tight">Field notes on story, AI, and <span className="italic text-accent-highlight">the work that matters.</span></h2>
           </div>
           <Button variant="hero-outline" asChild><Link to="/blog">Read the Blog <ArrowRight className="ml-2" size={14} /></Link></Button>
         </div>
@@ -215,8 +215,8 @@ const Index = () => {
   useEffect(() => {
     trackEvent("personal_brand_home_viewed");
     setSEO({
-      title: "Rovonn Russell | AI Advisor for Founders and Small Business Owners",
-      description: "I help founders and small business owners build AI systems that fit the business they actually run. Hours back, margin held, the project on the napkin finally shipped. Don't just adopt AI. ADAPT it.",
+      title: "Rovonn Russell | Storyteller who builds AI systems",
+      description: "I help founders and mission-driven teams tell the truth about their work, and build the AI systems that carry it. Story is the moat. AI is the engine. Don't just adopt AI. ADAPT it.",
       path: "/",
     });
     return resetSEO;
